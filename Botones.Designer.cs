@@ -1,0 +1,206 @@
+﻿namespace grupo01ProyectoFinal
+{
+    partial class Botones
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Botones));
+            this.btnAgregar = new System.Windows.Forms.Button();
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnLimpiar = new System.Windows.Forms.Button();
+            this.btnDescargarPDF = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
+            this.btnSeleccionar = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscar = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // btnAgregar
+            // 
+            this.btnAgregar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("btnAgregar.Image")));
+            this.btnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnAgregar.Location = new System.Drawing.Point(24, 140);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(105, 79);
+            this.btnAgregar.TabIndex = 7;
+            this.btnAgregar.Text = "Ag&regar";
+            this.btnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
+            this.btnRefrescar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefrescar.Location = new System.Drawing.Point(246, 140);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(105, 79);
+            this.btnRefrescar.TabIndex = 6;
+            this.btnRefrescar.Text = "&Refrescar";
+            this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(135, 140);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(105, 79);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "&Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
+            this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnLimpiar.Location = new System.Drawing.Point(246, 55);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(105, 79);
+            this.btnLimpiar.TabIndex = 4;
+            this.btnLimpiar.Text = "&Limpiar";
+            this.btnLimpiar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnLimpiar.UseVisualStyleBackColor = true;
+            // 
+            // btnDescargarPDF
+            // 
+            this.btnDescargarPDF.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDescargarPDF.Image = ((System.Drawing.Image)(resources.GetObject("btnDescargarPDF.Image")));
+            this.btnDescargarPDF.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnDescargarPDF.Location = new System.Drawing.Point(135, 55);
+            this.btnDescargarPDF.Name = "btnDescargarPDF";
+            this.btnDescargarPDF.Size = new System.Drawing.Size(105, 79);
+            this.btnDescargarPDF.TabIndex = 3;
+            this.btnDescargarPDF.Text = "&Descargar";
+            this.btnDescargarPDF.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnDescargarPDF.UseVisualStyleBackColor = true;
+            // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Image = ((System.Drawing.Image)(resources.GetObject("btnActualizar.Image")));
+            this.btnActualizar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnActualizar.Location = new System.Drawing.Point(24, 55);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(105, 79);
+            this.btnActualizar.TabIndex = 2;
+            this.btnActualizar.Text = "&Actualizar";
+            this.btnActualizar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            // 
+            // btnSeleccionar
+            // 
+            this.btnSeleccionar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeleccionar.Image = ((System.Drawing.Image)(resources.GetObject("btnSeleccionar.Image")));
+            this.btnSeleccionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSeleccionar.Location = new System.Drawing.Point(357, 55);
+            this.btnSeleccionar.Name = "btnSeleccionar";
+            this.btnSeleccionar.Size = new System.Drawing.Size(105, 79);
+            this.btnSeleccionar.TabIndex = 1;
+            this.btnSeleccionar.Text = "&Seleccionar";
+            this.btnSeleccionar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSeleccionar.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(357, 140);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(105, 79);
+            this.btnSalir.TabIndex = 0;
+            this.btnSalir.Text = "&Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(168, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(131, 20);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Lista de botones:";
+            // 
+            // btnBuscar
+            // 
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscar.Image")));
+            this.btnBuscar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscar.Location = new System.Drawing.Point(24, 225);
+            this.btnBuscar.Name = "btnBuscar";
+            this.btnBuscar.Size = new System.Drawing.Size(105, 79);
+            this.btnBuscar.TabIndex = 9;
+            this.btnBuscar.Text = "&Buscar";
+            this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBuscar.UseVisualStyleBackColor = true;
+            // 
+            // Botones
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(511, 390);
+            this.Controls.Add(this.btnBuscar);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnAgregar);
+            this.Controls.Add(this.btnRefrescar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnLimpiar);
+            this.Controls.Add(this.btnDescargarPDF);
+            this.Controls.Add(this.btnActualizar);
+            this.Controls.Add(this.btnSeleccionar);
+            this.Controls.Add(this.btnSalir);
+            this.Name = "Botones";
+            this.Text = "Botones";
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnSeleccionar;
+        private System.Windows.Forms.Button btnActualizar;
+        private System.Windows.Forms.Button btnDescargarPDF;
+        private System.Windows.Forms.Button btnLimpiar;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnRefrescar;
+        private System.Windows.Forms.Button btnAgregar;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBuscar;
+    }
+}
