@@ -170,13 +170,16 @@
     <Content Include="Insumos\Iconos\sync-icon.ico" />
     <Content Include="Insumos\Iconos\technical-support_icon.ico" />
     <Content Include="Insumos\Iconos\warning.ico" />
-    <Content Include="Insumos\Imágenes\Candidatos\Candidato_FA.png" />
-    <Content Include="Insumos\Imágenes\Candidatos\Candidato_Liberación.png" />
-    <Content Include="Insumos\Imágenes\Candidatos\Candidato_Liberal.png" />
-    <Content Include="Insumos\Imágenes\Candidatos\Candidato_NR.png" />
-    <Content Include="Insumos\Imágenes\Candidatos\Candidato_PPSO.png" />
-    <Content Include="Insumos\Imágenes\Candidatos\Candidato_PUSC.png" />
+    <Content Include="Insumos\Imágenes\Candidatos\CandidatoPFA.png" />
+    <Content Include="Insumos\Imágenes\Candidatos\CandidatoPLN.png" />
+    <Content Include="Insumos\Imágenes\Candidatos\CandidatoPLP.png" />
+    <Content Include="Insumos\Imágenes\Candidatos\CandidatoPNR.png" />
+    <Content Include="Insumos\Imágenes\Candidatos\CandidatoPPSO.png" />
+    <Content Include="Insumos\Imágenes\Candidatos\CandidatoPUSC.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="BaseDatos\Stored Procedures\" />
+    <Folder Include="BaseDatos\Tables\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
