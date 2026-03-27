@@ -55,7 +55,6 @@ namespace grupo01ProyectoFinal
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.aVotacionToolStripMenuItem,
@@ -69,35 +68,35 @@ namespace grupo01ProyectoFinal
             this.aArchivoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1022, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(1022, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // aVotacionToolStripMenuItem
             // 
             this.aVotacionToolStripMenuItem.Name = "aVotacionToolStripMenuItem";
-            this.aVotacionToolStripMenuItem.Size = new System.Drawing.Size(97, 29);
+            this.aVotacionToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.aVotacionToolStripMenuItem.Text = "Votación";
             this.aVotacionToolStripMenuItem.Click += new System.EventHandler(this.aVotacionToolStripMenuItem_Click);
             // 
             // tsmIngresar
             // 
             this.tsmIngresar.Name = "tsmIngresar";
-            this.tsmIngresar.Size = new System.Drawing.Size(92, 29);
+            this.tsmIngresar.Size = new System.Drawing.Size(61, 20);
             this.tsmIngresar.Text = "Ingresar";
             this.tsmIngresar.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
             // 
             // aRegistroToolStripMenuItem
             // 
             this.aRegistroToolStripMenuItem.Name = "aRegistroToolStripMenuItem";
-            this.aRegistroToolStripMenuItem.Size = new System.Drawing.Size(93, 29);
+            this.aRegistroToolStripMenuItem.Size = new System.Drawing.Size(62, 20);
             this.aRegistroToolStripMenuItem.Text = "Registro";
             this.aRegistroToolStripMenuItem.Click += new System.EventHandler(this.aRegistroToolStripMenuItem_Click);
             // 
             // aMesaVotacionToolStripMenuItem
             // 
             this.aMesaVotacionToolStripMenuItem.Name = "aMesaVotacionToolStripMenuItem";
-            this.aMesaVotacionToolStripMenuItem.Size = new System.Drawing.Size(169, 29);
+            this.aMesaVotacionToolStripMenuItem.Size = new System.Drawing.Size(112, 20);
             this.aMesaVotacionToolStripMenuItem.Text = "Mesa de Votación";
             this.aMesaVotacionToolStripMenuItem.Click += new System.EventHandler(this.aMesaVotacionToolStripMenuItem_Click);
             // 
@@ -110,31 +109,31 @@ namespace grupo01ProyectoFinal
             this.bMantPartidosPoliticosToolStripMenuItem,
             this.bMantTipoEleccionToolStripMenuItem});
             this.aMantenimientosToolStripMenuItem.Name = "aMantenimientosToolStripMenuItem";
-            this.aMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(156, 29);
+            this.aMantenimientosToolStripMenuItem.Size = new System.Drawing.Size(106, 20);
             this.aMantenimientosToolStripMenuItem.Text = "Mantenimientos";
             // 
             // bMantPadronNacionalToolStripMenuItem
             // 
             this.bMantPadronNacionalToolStripMenuItem.Name = "bMantPadronNacionalToolStripMenuItem";
-            this.bMantPadronNacionalToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.bMantPadronNacionalToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantPadronNacionalToolStripMenuItem.Text = "Padrón Nacional";
             // 
             // bMantDistritoElectoralToolStripMenuItem
             // 
             this.bMantDistritoElectoralToolStripMenuItem.Name = "bMantDistritoElectoralToolStripMenuItem";
-            this.bMantDistritoElectoralToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.bMantDistritoElectoralToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantDistritoElectoralToolStripMenuItem.Text = "Distrito Electoral";
             // 
             // bMantCandidatosPoliticosToolStripMenuItem
             // 
             this.bMantCandidatosPoliticosToolStripMenuItem.Name = "bMantCandidatosPoliticosToolStripMenuItem";
-            this.bMantCandidatosPoliticosToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.bMantCandidatosPoliticosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantCandidatosPoliticosToolStripMenuItem.Text = "Candidatos";
             // 
             // bMantPartidosPoliticosToolStripMenuItem
             // 
             this.bMantPartidosPoliticosToolStripMenuItem.Name = "bMantPartidosPoliticosToolStripMenuItem";
-            this.bMantPartidosPoliticosToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.bMantPartidosPoliticosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantPartidosPoliticosToolStripMenuItem.Text = "Partidos Políticos";
             // 
             // bMantTipoEleccionToolStripMenuItem
@@ -143,37 +142,37 @@ namespace grupo01ProyectoFinal
             this.cMantPresidencialToolStripMenuItem,
             this.cMantDiputacionToolStripMenuItem});
             this.bMantTipoEleccionToolStripMenuItem.Name = "bMantTipoEleccionToolStripMenuItem";
-            this.bMantTipoEleccionToolStripMenuItem.Size = new System.Drawing.Size(248, 34);
+            this.bMantTipoEleccionToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantTipoEleccionToolStripMenuItem.Text = "Tipo Elección";
             // 
             // cMantPresidencialToolStripMenuItem
             // 
             this.cMantPresidencialToolStripMenuItem.Name = "cMantPresidencialToolStripMenuItem";
-            this.cMantPresidencialToolStripMenuItem.Size = new System.Drawing.Size(206, 34);
+            this.cMantPresidencialToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.cMantPresidencialToolStripMenuItem.Text = "Presidencial";
             // 
             // cMantDiputacionToolStripMenuItem
             // 
             this.cMantDiputacionToolStripMenuItem.Name = "cMantDiputacionToolStripMenuItem";
-            this.cMantDiputacionToolStripMenuItem.Size = new System.Drawing.Size(206, 34);
+            this.cMantDiputacionToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.cMantDiputacionToolStripMenuItem.Text = "Diputación";
             // 
             // aEstadisticasToolStripMenuItem
             // 
             this.aEstadisticasToolStripMenuItem.Name = "aEstadisticasToolStripMenuItem";
-            this.aEstadisticasToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
+            this.aEstadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.aEstadisticasToolStripMenuItem.Text = "Estadísticas";
             // 
             // aReportesToolStripMenuItem
             // 
             this.aReportesToolStripMenuItem.Name = "aReportesToolStripMenuItem";
-            this.aReportesToolStripMenuItem.Size = new System.Drawing.Size(98, 29);
+            this.aReportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.aReportesToolStripMenuItem.Text = "Reportes";
             // 
             // aAcercaDeToolStripMenuItem
             // 
             this.aAcercaDeToolStripMenuItem.Name = "aAcercaDeToolStripMenuItem";
-            this.aAcercaDeToolStripMenuItem.Size = new System.Drawing.Size(107, 29);
+            this.aAcercaDeToolStripMenuItem.Size = new System.Drawing.Size(72, 20);
             this.aAcercaDeToolStripMenuItem.Text = "Acerca De";
             this.aAcercaDeToolStripMenuItem.Click += new System.EventHandler(this.aAcercaDeToolStripMenuItem_Click);
             // 
@@ -183,25 +182,25 @@ namespace grupo01ProyectoFinal
             this.bCerrarSesionToolStripMenuItem,
             this.bSalirDelSistemaToolStripMenuItem});
             this.aArchivoToolStripMenuItem.Name = "aArchivoToolStripMenuItem";
-            this.aArchivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
+            this.aArchivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.aArchivoToolStripMenuItem.Text = "Archivo";
             // 
             // bCerrarSesionToolStripMenuItem
             // 
             this.bCerrarSesionToolStripMenuItem.Name = "bCerrarSesionToolStripMenuItem";
-            this.bCerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
+            this.bCerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.bCerrarSesionToolStripMenuItem.Text = "Cerrar Sesión";
             // 
             // bSalirDelSistemaToolStripMenuItem
             // 
             this.bSalirDelSistemaToolStripMenuItem.Name = "bSalirDelSistemaToolStripMenuItem";
-            this.bSalirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
+            this.bSalirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.bSalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
             this.bSalirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.bSalirDelSistemaToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1022, 605);
