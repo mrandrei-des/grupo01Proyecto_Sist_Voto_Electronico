@@ -10,24 +10,19 @@ using System.Windows.Forms;
 
 namespace grupo01ProyectoFinal
 {
-    public partial class frmDiputados : Form
+    public partial class Estadisticas : Form
     {
-        public frmDiputados()
+        public Estadisticas()
         {
             InitializeComponent();
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void Diputados_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void timer1_Tick(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }

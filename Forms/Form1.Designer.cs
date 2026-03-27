@@ -50,6 +50,8 @@ namespace grupo01ProyectoFinal
             this.aArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bCerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bSalirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porProvinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porCandidatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -160,6 +162,9 @@ namespace grupo01ProyectoFinal
             // 
             // aEstadisticasToolStripMenuItem
             // 
+            this.aEstadisticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.porProvinciaToolStripMenuItem,
+            this.porCandidatoToolStripMenuItem});
             this.aEstadisticasToolStripMenuItem.Name = "aEstadisticasToolStripMenuItem";
             this.aEstadisticasToolStripMenuItem.Size = new System.Drawing.Size(118, 29);
             this.aEstadisticasToolStripMenuItem.Text = "Estadísticas";
@@ -198,6 +203,18 @@ namespace grupo01ProyectoFinal
             this.bSalirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(243, 34);
             this.bSalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
             this.bSalirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.bSalirDelSistemaToolStripMenuItem_Click);
+            // 
+            // porProvinciaToolStripMenuItem
+            // 
+            this.porProvinciaToolStripMenuItem.Name = "porProvinciaToolStripMenuItem";
+            this.porProvinciaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.porProvinciaToolStripMenuItem.Text = "Por Provincia";
+            // 
+            // porCandidatoToolStripMenuItem
+            // 
+            this.porCandidatoToolStripMenuItem.Name = "porCandidatoToolStripMenuItem";
+            this.porCandidatoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.porCandidatoToolStripMenuItem.Text = "Por Candidato";
             // 
             // frmPrincipal
             // 
@@ -241,6 +258,8 @@ namespace grupo01ProyectoFinal
         private System.Windows.Forms.ToolStripMenuItem cMantDiputacionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bCerrarSesionToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bSalirDelSistemaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem porProvinciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem porCandidatoToolStripMenuItem;
     }
 }
 

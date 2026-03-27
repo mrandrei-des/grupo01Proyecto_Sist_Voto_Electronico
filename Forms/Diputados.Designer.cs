@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDiputados));
             this.grbPapeleta = new System.Windows.Forms.GroupBox();
             this.pbPln = new System.Windows.Forms.PictureBox();
@@ -53,11 +52,7 @@
             this.lblPln = new System.Windows.Forms.Label();
             this.lblPusc = new System.Windows.Forms.Label();
             this.lblInfo = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.lbltimer = new System.Windows.Forms.Label();
-            this.timer3 = new System.Windows.Forms.Timer(this.components);
-            this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.grbPapeleta.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbPln)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPlp)).BeginInit();
@@ -339,11 +334,6 @@
             this.lblInfo.TabIndex = 2;
             this.lblInfo.Text = "SOLO TIENE 1 MINUTO Y 30 SEGUNDOS";
             // 
-            // timer2
-            // 
-            this.timer2.Enabled = true;
-            this.timer2.Interval = 60;
-            // 
             // lbltimer
             // 
             this.lbltimer.AutoSize = true;
@@ -353,10 +343,6 @@
             this.lbltimer.Size = new System.Drawing.Size(270, 26);
             this.lbltimer.TabIndex = 3;
             this.lbltimer.Text = "TIEMPO DE VOTACION";
-            // 
-            // timer3
-            // 
-            this.timer3.Enabled = true;
             // 
             // frmDiputados
             // 
@@ -387,8 +373,6 @@
 
         private System.Windows.Forms.GroupBox grbPapeleta;
         private System.Windows.Forms.Label lblInfo;
-        private System.Windows.Forms.Timer timer1;
-        public System.Windows.Forms.Timer timer2;
         private System.Windows.Forms.Label lbltimer;
         private System.Windows.Forms.Label lblPusc;
         private System.Windows.Forms.Label lblPpso;
@@ -401,7 +385,6 @@
         private System.Windows.Forms.PictureBox pbPnr;
         private System.Windows.Forms.PictureBox pbPlp;
         private System.Windows.Forms.PictureBox PbPfa;
-        private System.Windows.Forms.Timer timer3;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnLimpiar;
         private System.Windows.Forms.Button btnRegresar;
@@ -412,6 +395,5 @@
         private System.Windows.Forms.RadioButton rbPnr;
         private System.Windows.Forms.RadioButton rbPusc;
         private System.Windows.Forms.PictureBox pbPln;
-        private System.Windows.Forms.Timer timer4;
     }
 }
