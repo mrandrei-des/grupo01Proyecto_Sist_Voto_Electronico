@@ -179,6 +179,7 @@
     <Content Include="Insumos\Iconos\fire_exit_emergency_door_icon.ico" />
     <Content Include="Insumos\Iconos\folders_icon.ico" />
     <Content Include="Insumos\Iconos\garbage_trash_bin_delete_icon.ico" />
+    <Content Include="Insumos\Iconos\next_arrow.ico" />
     <Content Include="Insumos\Iconos\pen_notebook_write_icon.ico" />
     <Content Include="Insumos\Iconos\plus_green.ico" />
     <Content Include="Insumos\Iconos\pointinghand_icon.ico" />
@@ -187,6 +188,7 @@
     <Content Include="Insumos\Iconos\search-icon.ico" />
     <Content Include="Insumos\Iconos\sync-icon.ico" />
     <Content Include="Insumos\Iconos\technical-support_icon.ico" />
+    <Content Include="Insumos\Iconos\voto_emitido.ico" />
     <Content Include="Insumos\Iconos\warning.ico" />
     <Content Include="Insumos\Imágenes\Candidatos\CandidatoPFA.png" />
     <Content Include="Insumos\Imágenes\Candidatos\CandidatoPLN.png" />
@@ -194,6 +196,8 @@
     <Content Include="Insumos\Imágenes\Candidatos\CandidatoPNR.png" />
     <Content Include="Insumos\Imágenes\Candidatos\CandidatoPPSO.png" />
     <Content Include="Insumos\Imágenes\Candidatos\CandidatoPUSC.png" />
+    <Content Include="Insumos\Imágenes\Votos\Voto-en-blanco.jpg" />
+    <Content Include="Insumos\Imágenes\Votos\voto-nulo.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="BaseDatos\Stored Procedures\" />

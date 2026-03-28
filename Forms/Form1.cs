@@ -54,11 +54,16 @@ namespace grupo01ProyectoFinal
 
         }
 
-        private void aVotacionToolStripMenuItem_Click(object sender, EventArgs e)
+        private void bPresidencialToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frmDiputados = new frmDiputados();
-            frmDiputados.Show();
+            frmPresidentes formPresidentes = new frmPresidentes();
+            formPresidentes.Show();
+        }
 
+        private void bDiputacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDiputados frmDiputados = new frmDiputados();
+            frmDiputados.Show();
         }
     }
 }

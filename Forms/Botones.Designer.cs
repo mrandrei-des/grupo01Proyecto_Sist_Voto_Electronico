@@ -39,6 +39,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnGuardarVoto = new System.Windows.Forms.Button();
+            this.btnContinuar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -168,11 +170,39 @@
             this.btnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnBuscar.UseVisualStyleBackColor = true;
             // 
+            // btnGuardarVoto
+            // 
+            this.btnGuardarVoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardarVoto.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardarVoto.Image")));
+            this.btnGuardarVoto.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardarVoto.Location = new System.Drawing.Point(24, 310);
+            this.btnGuardarVoto.Name = "btnGuardarVoto";
+            this.btnGuardarVoto.Size = new System.Drawing.Size(135, 79);
+            this.btnGuardarVoto.TabIndex = 10;
+            this.btnGuardarVoto.Text = "&Guardar Voto";
+            this.btnGuardarVoto.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardarVoto.UseVisualStyleBackColor = true;
+            // 
+            // btnContinuar
+            // 
+            this.btnContinuar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnContinuar.Image = ((System.Drawing.Image)(resources.GetObject("btnContinuar.Image")));
+            this.btnContinuar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnContinuar.Location = new System.Drawing.Point(135, 225);
+            this.btnContinuar.Name = "btnContinuar";
+            this.btnContinuar.Size = new System.Drawing.Size(216, 79);
+            this.btnContinuar.TabIndex = 11;
+            this.btnContinuar.Text = "&Continuar";
+            this.btnContinuar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnContinuar.UseVisualStyleBackColor = true;
+            // 
             // Botones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 390);
+            this.Controls.Add(this.btnContinuar);
+            this.Controls.Add(this.btnGuardarVoto);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAgregar);
@@ -202,5 +232,7 @@
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnGuardarVoto;
+        private System.Windows.Forms.Button btnContinuar;
     }
 }

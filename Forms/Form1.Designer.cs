@@ -33,6 +33,7 @@ namespace grupo01ProyectoFinal
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmPrincipal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aVotacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bPresidencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmIngresar = new System.Windows.Forms.ToolStripMenuItem();
             this.aRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aMesaVotacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,13 +46,14 @@ namespace grupo01ProyectoFinal
             this.cMantPresidencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cMantDiputacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aEstadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porProvinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.porCandidatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aAcercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bCerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bSalirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porProvinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.porCandidatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bDiputacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,10 +78,19 @@ namespace grupo01ProyectoFinal
             // 
             // aVotacionToolStripMenuItem
             // 
+            this.aVotacionToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bPresidencialToolStripMenuItem,
+            this.bDiputacionToolStripMenuItem});
             this.aVotacionToolStripMenuItem.Name = "aVotacionToolStripMenuItem";
             this.aVotacionToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.aVotacionToolStripMenuItem.Text = "Votación";
-            this.aVotacionToolStripMenuItem.Click += new System.EventHandler(this.aVotacionToolStripMenuItem_Click);
+            // 
+            // bPresidencialToolStripMenuItem
+            // 
+            this.bPresidencialToolStripMenuItem.Name = "bPresidencialToolStripMenuItem";
+            this.bPresidencialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bPresidencialToolStripMenuItem.Text = "Presidencial";
+            this.bPresidencialToolStripMenuItem.Click += new System.EventHandler(this.bPresidencialToolStripMenuItem_Click);
             // 
             // tsmIngresar
             // 
@@ -168,6 +179,18 @@ namespace grupo01ProyectoFinal
             this.aEstadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.aEstadisticasToolStripMenuItem.Text = "Estadísticas";
             // 
+            // porProvinciaToolStripMenuItem
+            // 
+            this.porProvinciaToolStripMenuItem.Name = "porProvinciaToolStripMenuItem";
+            this.porProvinciaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.porProvinciaToolStripMenuItem.Text = "Por Provincia";
+            // 
+            // porCandidatoToolStripMenuItem
+            // 
+            this.porCandidatoToolStripMenuItem.Name = "porCandidatoToolStripMenuItem";
+            this.porCandidatoToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.porCandidatoToolStripMenuItem.Text = "Por Candidato";
+            // 
             // aReportesToolStripMenuItem
             // 
             this.aReportesToolStripMenuItem.Name = "aReportesToolStripMenuItem";
@@ -203,17 +226,12 @@ namespace grupo01ProyectoFinal
             this.bSalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
             this.bSalirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.bSalirDelSistemaToolStripMenuItem_Click);
             // 
-            // porProvinciaToolStripMenuItem
+            // bDiputacionToolStripMenuItem
             // 
-            this.porProvinciaToolStripMenuItem.Name = "porProvinciaToolStripMenuItem";
-            this.porProvinciaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.porProvinciaToolStripMenuItem.Text = "Por Provincia";
-            // 
-            // porCandidatoToolStripMenuItem
-            // 
-            this.porCandidatoToolStripMenuItem.Name = "porCandidatoToolStripMenuItem";
-            this.porCandidatoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.porCandidatoToolStripMenuItem.Text = "Por Candidato";
+            this.bDiputacionToolStripMenuItem.Name = "bDiputacionToolStripMenuItem";
+            this.bDiputacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bDiputacionToolStripMenuItem.Text = "Diputación";
+            this.bDiputacionToolStripMenuItem.Click += new System.EventHandler(this.bDiputacionToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -259,6 +277,8 @@ namespace grupo01ProyectoFinal
         private System.Windows.Forms.ToolStripMenuItem bSalirDelSistemaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porProvinciaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem porCandidatoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bPresidencialToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem bDiputacionToolStripMenuItem;
     }
 }
 
