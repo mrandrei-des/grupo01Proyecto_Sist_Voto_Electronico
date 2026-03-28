@@ -1,4 +1,5 @@
-﻿using System;
+﻿using grupo01ProyectoFinal.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -62,8 +63,32 @@ namespace grupo01ProyectoFinal
 
         private void bDiputacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmDiputados frmDiputados = new frmDiputados();
-            frmDiputados.Show();
+            frmDiputados formDiputados = new frmDiputados();
+            formDiputados.Show();
+        }
+
+        private void bMantPadronNacionalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantPadronNacional formMantPadronNacional = new frmMantPadronNacional();
+            formMantPadronNacional.Show();
+        }
+
+        private void bMantDistritoElectoralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMantDist formMantDistritoElectoral = new frmMantDist();
+            formMantDistritoElectoral.Show();
+        }
+
+        private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
+        {
+            frmReporteProvincia formReporteProvincia = new frmReporteProvincia();
+            formReporteProvincia.Show();
+        }
+
+        private void porCandidatoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReporteCandidato formReporteCandidado = new frmReporteCandidato();
+            formReporteCandidado.Show();
         }
     }
 }

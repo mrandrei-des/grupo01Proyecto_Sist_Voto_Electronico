@@ -34,6 +34,7 @@ namespace grupo01ProyectoFinal
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.aVotacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bPresidencialToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.bDiputacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmIngresar = new System.Windows.Forms.ToolStripMenuItem();
             this.aRegistroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aMesaVotacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,11 +50,12 @@ namespace grupo01ProyectoFinal
             this.porProvinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.porCandidatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.porCandidatoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.aAcercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aArchivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bCerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bSalirDelSistemaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.bDiputacionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,9 +90,16 @@ namespace grupo01ProyectoFinal
             // bPresidencialToolStripMenuItem
             // 
             this.bPresidencialToolStripMenuItem.Name = "bPresidencialToolStripMenuItem";
-            this.bPresidencialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bPresidencialToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.bPresidencialToolStripMenuItem.Text = "Presidencial";
             this.bPresidencialToolStripMenuItem.Click += new System.EventHandler(this.bPresidencialToolStripMenuItem_Click);
+            // 
+            // bDiputacionToolStripMenuItem
+            // 
+            this.bDiputacionToolStripMenuItem.Name = "bDiputacionToolStripMenuItem";
+            this.bDiputacionToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
+            this.bDiputacionToolStripMenuItem.Text = "Diputación";
+            this.bDiputacionToolStripMenuItem.Click += new System.EventHandler(this.bDiputacionToolStripMenuItem_Click);
             // 
             // tsmIngresar
             // 
@@ -130,12 +139,14 @@ namespace grupo01ProyectoFinal
             this.bMantPadronNacionalToolStripMenuItem.Name = "bMantPadronNacionalToolStripMenuItem";
             this.bMantPadronNacionalToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantPadronNacionalToolStripMenuItem.Text = "Padrón Nacional";
+            this.bMantPadronNacionalToolStripMenuItem.Click += new System.EventHandler(this.bMantPadronNacionalToolStripMenuItem_Click);
             // 
             // bMantDistritoElectoralToolStripMenuItem
             // 
             this.bMantDistritoElectoralToolStripMenuItem.Name = "bMantDistritoElectoralToolStripMenuItem";
             this.bMantDistritoElectoralToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantDistritoElectoralToolStripMenuItem.Text = "Distrito Electoral";
+            this.bMantDistritoElectoralToolStripMenuItem.Click += new System.EventHandler(this.bMantDistritoElectoralToolStripMenuItem_Click);
             // 
             // bMantCandidatosPoliticosToolStripMenuItem
             // 
@@ -193,9 +204,26 @@ namespace grupo01ProyectoFinal
             // 
             // aReportesToolStripMenuItem
             // 
+            this.aReportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.porCandidatoToolStripMenuItem1});
             this.aReportesToolStripMenuItem.Name = "aReportesToolStripMenuItem";
             this.aReportesToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
             this.aReportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.toolStripMenuItem1.Text = "Por Provincia";
+            this.toolStripMenuItem1.Click += new System.EventHandler(this.toolStripMenuItem1_Click_1);
+            // 
+            // porCandidatoToolStripMenuItem1
+            // 
+            this.porCandidatoToolStripMenuItem1.Name = "porCandidatoToolStripMenuItem1";
+            this.porCandidatoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.porCandidatoToolStripMenuItem1.Text = "Por Candidato";
+            this.porCandidatoToolStripMenuItem1.Click += new System.EventHandler(this.porCandidatoToolStripMenuItem1_Click);
             // 
             // aAcercaDeToolStripMenuItem
             // 
@@ -225,13 +253,6 @@ namespace grupo01ProyectoFinal
             this.bSalirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.bSalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
             this.bSalirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.bSalirDelSistemaToolStripMenuItem_Click);
-            // 
-            // bDiputacionToolStripMenuItem
-            // 
-            this.bDiputacionToolStripMenuItem.Name = "bDiputacionToolStripMenuItem";
-            this.bDiputacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bDiputacionToolStripMenuItem.Text = "Diputación";
-            this.bDiputacionToolStripMenuItem.Click += new System.EventHandler(this.bDiputacionToolStripMenuItem_Click);
             // 
             // frmPrincipal
             // 
@@ -279,6 +300,8 @@ namespace grupo01ProyectoFinal
         private System.Windows.Forms.ToolStripMenuItem porCandidatoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bPresidencialToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem bDiputacionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem porCandidatoToolStripMenuItem1;
     }
 }
 

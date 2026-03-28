@@ -274,5 +274,45 @@ namespace grupo01ProyectoFinal
                 btnGuardarVoto.PerformClick(); // Simular el click en el botón de guardar voto para registrar el voto nulo
             }
         }
+
+        private void pbCandidatoPUSC_Click(object sender, EventArgs e)
+        {
+            txtVotoPUSC.Focus();
+        }
+
+        private void pbCandidatoPLN_Click(object sender, EventArgs e)
+        {
+            txtVotoPLN.Focus();
+        }
+
+        private void pbCandidatoPPSO_Click(object sender, EventArgs e)
+        {
+            txtVotoPPSO.Focus();
+        }
+
+        private void pbCandidatoVotoBlanco_Click(object sender, EventArgs e)
+        {
+            txtVotoBlanco.Focus();
+        }
+
+        private void pbCandidatoPNR_Click(object sender, EventArgs e)
+        {
+            txtVotoPNR.Focus();
+        }
+
+        private void pbCandidatoPFA_Click(object sender, EventArgs e)
+        {
+            txtVotoPFA.Focus();
+        }
+
+        private void pbCandidatoPLP_Click(object sender, EventArgs e)
+        {
+            txtVotoPLP.Focus();
+        }
+
+        private void pbCandidatoVotoNulo_Click(object sender, EventArgs e)
+        {
+            txtVotoNulo.Focus();
+        }
     }
 }

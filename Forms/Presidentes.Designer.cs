@@ -257,6 +257,7 @@
             // 
             // pbCandidatoVotoNulo
             // 
+            this.pbCandidatoVotoNulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCandidatoVotoNulo.Image = ((System.Drawing.Image)(resources.GetObject("pbCandidatoVotoNulo.Image")));
             this.pbCandidatoVotoNulo.Location = new System.Drawing.Point(943, 477);
             this.pbCandidatoVotoNulo.Margin = new System.Windows.Forms.Padding(2);
@@ -265,9 +266,11 @@
             this.pbCandidatoVotoNulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCandidatoVotoNulo.TabIndex = 209;
             this.pbCandidatoVotoNulo.TabStop = false;
+            this.pbCandidatoVotoNulo.Click += new System.EventHandler(this.pbCandidatoVotoNulo_Click);
             // 
             // pbCandidatoVotoBlanco
             // 
+            this.pbCandidatoVotoBlanco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCandidatoVotoBlanco.Image = ((System.Drawing.Image)(resources.GetObject("pbCandidatoVotoBlanco.Image")));
             this.pbCandidatoVotoBlanco.Location = new System.Drawing.Point(958, 147);
             this.pbCandidatoVotoBlanco.Margin = new System.Windows.Forms.Padding(2);
@@ -276,6 +279,7 @@
             this.pbCandidatoVotoBlanco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbCandidatoVotoBlanco.TabIndex = 208;
             this.pbCandidatoVotoBlanco.TabStop = false;
+            this.pbCandidatoVotoBlanco.Click += new System.EventHandler(this.pbCandidatoVotoBlanco_Click);
             // 
             // lblVoteXVotoNulo
             // 
@@ -535,6 +539,7 @@
             // 
             // pbCandidatoPNR
             // 
+            this.pbCandidatoPNR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCandidatoPNR.Image = ((System.Drawing.Image)(resources.GetObject("pbCandidatoPNR.Image")));
             this.pbCandidatoPNR.Location = new System.Drawing.Point(91, 476);
             this.pbCandidatoPNR.Margin = new System.Windows.Forms.Padding(2);
@@ -543,9 +548,11 @@
             this.pbCandidatoPNR.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbCandidatoPNR.TabIndex = 183;
             this.pbCandidatoPNR.TabStop = false;
+            this.pbCandidatoPNR.Click += new System.EventHandler(this.pbCandidatoPNR_Click);
             // 
             // pbCandidatoPFA
             // 
+            this.pbCandidatoPFA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCandidatoPFA.Image = ((System.Drawing.Image)(resources.GetObject("pbCandidatoPFA.Image")));
             this.pbCandidatoPFA.Location = new System.Drawing.Point(389, 476);
             this.pbCandidatoPFA.Margin = new System.Windows.Forms.Padding(2);
@@ -554,9 +561,11 @@
             this.pbCandidatoPFA.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbCandidatoPFA.TabIndex = 182;
             this.pbCandidatoPFA.TabStop = false;
+            this.pbCandidatoPFA.Click += new System.EventHandler(this.pbCandidatoPFA_Click);
             // 
             // pbCandidatoPLP
             // 
+            this.pbCandidatoPLP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCandidatoPLP.Image = ((System.Drawing.Image)(resources.GetObject("pbCandidatoPLP.Image")));
             this.pbCandidatoPLP.Location = new System.Drawing.Point(689, 476);
             this.pbCandidatoPLP.Margin = new System.Windows.Forms.Padding(2);
@@ -565,9 +574,11 @@
             this.pbCandidatoPLP.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbCandidatoPLP.TabIndex = 181;
             this.pbCandidatoPLP.TabStop = false;
+            this.pbCandidatoPLP.Click += new System.EventHandler(this.pbCandidatoPLP_Click);
             // 
             // pbCandidatoPPSO
             // 
+            this.pbCandidatoPPSO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCandidatoPPSO.Image = ((System.Drawing.Image)(resources.GetObject("pbCandidatoPPSO.Image")));
             this.pbCandidatoPPSO.Location = new System.Drawing.Point(689, 133);
             this.pbCandidatoPPSO.Margin = new System.Windows.Forms.Padding(2);
@@ -576,9 +587,11 @@
             this.pbCandidatoPPSO.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbCandidatoPPSO.TabIndex = 180;
             this.pbCandidatoPPSO.TabStop = false;
+            this.pbCandidatoPPSO.Click += new System.EventHandler(this.pbCandidatoPPSO_Click);
             // 
             // pbCandidatoPLN
             // 
+            this.pbCandidatoPLN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCandidatoPLN.Image = ((System.Drawing.Image)(resources.GetObject("pbCandidatoPLN.Image")));
             this.pbCandidatoPLN.Location = new System.Drawing.Point(388, 133);
             this.pbCandidatoPLN.Margin = new System.Windows.Forms.Padding(2);
@@ -587,9 +600,11 @@
             this.pbCandidatoPLN.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbCandidatoPLN.TabIndex = 179;
             this.pbCandidatoPLN.TabStop = false;
+            this.pbCandidatoPLN.Click += new System.EventHandler(this.pbCandidatoPLN_Click);
             // 
             // pbCandidatoPUSC
             // 
+            this.pbCandidatoPUSC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCandidatoPUSC.Image = ((System.Drawing.Image)(resources.GetObject("pbCandidatoPUSC.Image")));
             this.pbCandidatoPUSC.Location = new System.Drawing.Point(91, 132);
             this.pbCandidatoPUSC.Margin = new System.Windows.Forms.Padding(2);
@@ -598,6 +613,7 @@
             this.pbCandidatoPUSC.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbCandidatoPUSC.TabIndex = 178;
             this.pbCandidatoPUSC.TabStop = false;
+            this.pbCandidatoPUSC.Click += new System.EventHandler(this.pbCandidatoPUSC_Click);
             // 
             // pbBanderaPLN
             // 

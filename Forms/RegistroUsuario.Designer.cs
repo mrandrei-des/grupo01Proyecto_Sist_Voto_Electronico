@@ -75,6 +75,7 @@
             // 
             // txtApellidos
             // 
+            this.txtApellidos.Enabled = false;
             this.txtApellidos.Location = new System.Drawing.Point(444, 34);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.ReadOnly = true;
@@ -93,6 +94,7 @@
             // 
             // txtNombre
             // 
+            this.txtNombre.Enabled = false;
             this.txtNombre.Location = new System.Drawing.Point(130, 31);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
@@ -115,6 +117,7 @@
             this.txtIdentificacion.Name = "txtIdentificacion";
             this.txtIdentificacion.Size = new System.Drawing.Size(210, 26);
             this.txtIdentificacion.TabIndex = 3;
+            this.txtIdentificacion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtIdentificacion_KeyPress);
             // 
             // lblIdentificacion
             // 

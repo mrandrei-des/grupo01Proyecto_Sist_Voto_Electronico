@@ -41,6 +41,7 @@
             this.btnBuscar = new System.Windows.Forms.Button();
             this.btnGuardarVoto = new System.Windows.Forms.Button();
             this.btnContinuar = new System.Windows.Forms.Button();
+            this.btnGenerar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAgregar
@@ -196,11 +197,25 @@
             this.btnContinuar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnContinuar.UseVisualStyleBackColor = true;
             // 
+            // btnGenerar
+            // 
+            this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerar.Image")));
+            this.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGenerar.Location = new System.Drawing.Point(357, 225);
+            this.btnGenerar.Name = "btnGenerar";
+            this.btnGenerar.Size = new System.Drawing.Size(105, 79);
+            this.btnGenerar.TabIndex = 12;
+            this.btnGenerar.Text = "&Generar";
+            this.btnGenerar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGenerar.UseVisualStyleBackColor = true;
+            // 
             // Botones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 390);
+            this.Controls.Add(this.btnGenerar);
             this.Controls.Add(this.btnContinuar);
             this.Controls.Add(this.btnGuardarVoto);
             this.Controls.Add(this.btnBuscar);
@@ -234,5 +249,6 @@
         private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Button btnGuardarVoto;
         private System.Windows.Forms.Button btnContinuar;
+        private System.Windows.Forms.Button btnGenerar;
     }
 }
