@@ -60,5 +60,10 @@ namespace grupo01ProyectoFinal
             frmDiputados.Show();
 
         }
+
+        private void bCerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
