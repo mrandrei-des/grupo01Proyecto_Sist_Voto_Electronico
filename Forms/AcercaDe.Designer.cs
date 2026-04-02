@@ -161,6 +161,7 @@
             this.Name = "frmAcercade";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Acerca de";
+            this.Load += new System.EventHandler(this.frmAcercade_Load);
             this.grbCreditos.ResumeLayout(false);
             this.grbCreditos.PerformLayout();
             this.grbManualUsuario.ResumeLayout(false);
