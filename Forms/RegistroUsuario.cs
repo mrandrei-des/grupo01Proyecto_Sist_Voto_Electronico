@@ -84,6 +84,7 @@ namespace grupo01ProyectoFinal
 
         private void CargarComboBoxes()
         {
+            //Idealmente que la lista sea del tipo clase OpcionCombo que tenga 2 atributos: CodigoProvincia y NombreProvincia
             string[] listaProvincias = ConsultarProvincias();
             CargarCmbProvincias(listaProvincias);
             MoverCmbProvincias("1");
@@ -111,6 +112,10 @@ namespace grupo01ProyectoFinal
                 if (!string.IsNullOrEmpty(listaProvincias[i]))
                 {
                     //cmbProvincias.Items.Add(listaProvincias[i]);
+                    // Cargar el combo box con un DataSource
+                    //cmbProvincias.DataSource = listaProvincias[i];
+                    //cmbProvincias.DisplayMember = "NombreProvincia";
+                    //cmbProvincias.ValueMember = "CodigoProvincia";
                 }
             }
         }
@@ -129,6 +134,7 @@ namespace grupo01ProyectoFinal
         // Procesos y funciones para consultar, cargar y mover el combobox de cantones
         private string[] ConsultarCantones(string idProvincia)
         {
+            //Idealmente que la lista sea del tipo clase OpcionCombo que tenga 2 atributos: CodigoProvincia y NombreProvincia
             return new string[1];
         }
 
@@ -140,6 +146,10 @@ namespace grupo01ProyectoFinal
                 if (!string.IsNullOrEmpty(listaCantones[i]))
                 {
                     //cmbCantones.Items.Add(listaCantones[i]);
+                    // Cargar el combo box con un DataSource
+                    //cmbProvincias.DataSource = listaProvincias[i];
+                    //cmbProvincias.DisplayMember = "NombreProvincia";
+                    //cmbProvincias.ValueMember = "CodigoProvincia";
                 }
             }
         }
@@ -159,6 +169,7 @@ namespace grupo01ProyectoFinal
         // Procesos y funciones para consultar, cargar y mover el combobox de distritos 
         private string[] ConsultarDistritos(string idProvincia, string idCanton)
         {
+            //Idealmente que la lista sea del tipo clase OpcionCombo que tenga 2 atributos: CodigoProvincia y NombreProvincia
             return new string[1];
         }
 
@@ -170,6 +181,10 @@ namespace grupo01ProyectoFinal
                 if (!string.IsNullOrEmpty(listaDistritos[i]))
                 {
                     //cmbDistritos.Items.Add(listaDistritos[i]);
+                    // Cargar el combo box con un DataSource
+                    //cmbProvincias.DataSource = listaProvincias[i];
+                    //cmbProvincias.DisplayMember = "NombreProvincia";
+                    //cmbProvincias.ValueMember = "CodigoProvincia";
                 }
             }
         }
@@ -204,6 +219,15 @@ namespace grupo01ProyectoFinal
             string[] listaDistritos = ConsultarDistritos(idProvincia, idCanton);
             CargarCmbDistritos(listaDistritos);
             MoverCmbDistritos("001");
+        }
+
+        private void txtIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            // Validar que solo ingrese números o letras
+            if (!char.IsLetter(e.KeyChar) || !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }
