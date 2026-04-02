@@ -43,17 +43,14 @@ namespace grupo01ProyectoFinal
         {
             Form formRegistroUsuario = new frmRegistroUsuario();
             formRegistroUsuario.Show();
-        }
-
-        private void aMesaVotacionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
+            this.Hide();
         }
 
         private void bPresidencialToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmPresidentes formPresidentes = new frmPresidentes();
             formPresidentes.Show();
+            this.Hide();
         }
 
         private void bDiputacionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -66,47 +63,31 @@ namespace grupo01ProyectoFinal
         {
             frmMantPadronNacional formMantPadronNacional = new frmMantPadronNacional();
             formMantPadronNacional.Show();
+            this.Hide();
         }
 
         private void bMantDistritoElectoralToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmMantDist formMantDistritoElectoral = new frmMantDist();
             formMantDistritoElectoral.Show();
+            this.Hide();
         }
 
         private void toolStripMenuItem1_Click_1(object sender, EventArgs e)
         {
             frmReporteProvincia formReporteProvincia = new frmReporteProvincia();
             formReporteProvincia.Show();
+            this.Hide();
         }
 
         private void porCandidatoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             frmReporteCandidato formReporteCandidado = new frmReporteCandidato();
             formReporteCandidado.Show();
+            this.Hide();
         }
 
         private void bCerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bPresidencialToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bDiputacionToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bMantPadronNacionalToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bMantDistritoElectoralToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
@@ -126,13 +107,32 @@ namespace grupo01ProyectoFinal
 
         }
 
-        private void bReportePorProvinciastoolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void bReportePorCandidatoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            frmReporteCandidato formReporteCandidato = new frmReporteCandidato();
+            formReporteCandidato.Show();
+            this.Hide();
+        }
+
+        private void bReportePorProvinciastoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmReporteProvincia formReporteProvincia = new frmReporteProvincia();
+            formReporteProvincia.Show();
+            this.Hide();
+        }
+
+        private void bMantPadronNacionalToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmMantPadronNacional formMantPadron = new frmMantPadronNacional();
+            formMantPadron.Show();
+            this.Hide();
+        }
+
+        private void bPresidencialToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            frmPresidentes formPresidentes = new frmPresidentes();
+            formPresidentes.Show();
+            this.Hide();
 
         }
     }

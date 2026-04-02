@@ -19,6 +19,8 @@ namespace grupo01ProyectoFinal.Forms
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
+            frmPrincipal formPrincipal = new frmPrincipal();
+            formPrincipal.Show();
             this.Close();
         }
 
