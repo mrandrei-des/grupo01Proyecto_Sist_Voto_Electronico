@@ -232,5 +232,11 @@
     <Folder Include="BaseDatos\Stored Procedures\" />
     <Folder Include="BaseDatos\Tables\" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="mylibreria2026\mylibreria2026.csproj">
+      <Project>{9060351c-d921-4c92-b493-800b6cb73e51}</Project>
+      <Name>mylibreria2026</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
