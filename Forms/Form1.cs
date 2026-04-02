@@ -22,11 +22,6 @@ namespace grupo01ProyectoFinal
             Application.Exit();
         }
 
-        private void toolStripMenuItem1_Click(object sender, EventArgs e)
-        {
-         
-        }
-
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
 
@@ -62,6 +57,51 @@ namespace grupo01ProyectoFinal
         }
 
         private void bCerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bPresidencialToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bDiputacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bMantPadronNacionalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bMantDistritoElectoralToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bMantCandidatosPoliticosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bEstadisticasPorProvinciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bEstadisticasPorCandidatoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bReportePorProvinciastoolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bReportePorCandidatoToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
