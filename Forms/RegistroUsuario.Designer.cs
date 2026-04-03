@@ -76,17 +76,17 @@
             // txtApellidos
             // 
             this.txtApellidos.Enabled = false;
-            this.txtApellidos.Location = new System.Drawing.Point(444, 34);
+            this.txtApellidos.Location = new System.Drawing.Point(499, 34);
             this.txtApellidos.Name = "txtApellidos";
             this.txtApellidos.ReadOnly = true;
-            this.txtApellidos.Size = new System.Drawing.Size(324, 26);
+            this.txtApellidos.Size = new System.Drawing.Size(459, 26);
             this.txtApellidos.TabIndex = 9;
             // 
             // lblApellidos
             // 
             this.lblApellidos.AutoSize = true;
             this.lblApellidos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblApellidos.Location = new System.Drawing.Point(346, 37);
+            this.lblApellidos.Location = new System.Drawing.Point(401, 37);
             this.lblApellidos.Name = "lblApellidos";
             this.lblApellidos.Size = new System.Drawing.Size(92, 20);
             this.lblApellidos.TabIndex = 8;
@@ -98,7 +98,7 @@
             this.txtNombre.Location = new System.Drawing.Point(130, 31);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.ReadOnly = true;
-            this.txtNombre.Size = new System.Drawing.Size(210, 26);
+            this.txtNombre.Size = new System.Drawing.Size(265, 26);
             this.txtNombre.TabIndex = 7;
             // 
             // lblNombre
@@ -256,13 +256,16 @@
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(210, 26);
             this.txtCorreo.TabIndex = 11;
+            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
             // 
             // txtContrasenna
             // 
             this.txtContrasenna.Location = new System.Drawing.Point(151, 35);
             this.txtContrasenna.Name = "txtContrasenna";
+            this.txtContrasenna.PasswordChar = '*';
             this.txtContrasenna.Size = new System.Drawing.Size(210, 26);
             this.txtContrasenna.TabIndex = 10;
+            this.txtContrasenna.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtContrasenna_KeyPress);
             // 
             // lblCorreo
             // 

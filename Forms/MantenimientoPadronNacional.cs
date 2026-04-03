@@ -50,7 +50,7 @@ namespace grupo01ProyectoFinal.Forms
         private void txtIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Validar que solo ingrese números o letras
-            if (!char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
             {
                 e.Handled = true;
             }
