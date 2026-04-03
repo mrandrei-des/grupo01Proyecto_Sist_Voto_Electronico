@@ -231,6 +231,7 @@
   <ItemGroup>
     <Folder Include="BaseDatos\Stored Procedures\" />
     <Folder Include="BaseDatos\Tables\" />
+    <Folder Include="Insumos\Imágenes\BanderasPartidos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="mylibreria2026\mylibreria2026.csproj">

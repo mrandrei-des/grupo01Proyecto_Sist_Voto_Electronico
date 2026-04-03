@@ -80,3 +80,27 @@ GROUP BY LEFT(CODELE, 1), SUBSTRING(CODELE, 2, 2),CANTON
 FROM [dbo].[DISTRITOS_ELECTORALES] A
 GROUP BY LEFT(CODELE, 1), SUBSTRING(CODELE, 2, 2), RIGHT(CODELE, 3), DISTRITO
 */
+
+/*
+-- INSERTAR PARTIDOS POLÍTICOS
+INSERT INTO PartidosPoliticos (CodigoPartido, Descripcion, NombreImagenBandera, IdEstado, FechaHoraProceso)
+VALUES
+('PUSC', 'Partido Unidad Social Cristiana', 'Bandera_PUSC.png', 2, GETDATE()),
+('PLN', 'Partido Liberación Nacional', 'Bandera_PLN.png', 2, GETDATE()),
+('PPSO', 'Partido Pueblo Soberano', 'Bandera_PPSO.png', 2, GETDATE()),
+('PNR', 'Partido Nueva República', 'Bandera_PNR.png', 2, GETDATE()),
+('PFA', 'Partido Frente Amplio', 'Bandera_PFA.png', 2, GETDATE()),
+('PLP', 'Partido Liberal Progresista', 'Bandera_PLP.png', 2, GETDATE())
+*/
+
+/*
+INSERT INTO Candidatos (CodigoCandidato, Nombre, PrimerApellido, SegundoApellido, 
+NombreImagenFoto, IdEstado, CodigoPartido)
+VALUES 
+('CandPUSC', 'Juan Carlos', 'Hidalgo', 'Bogantes', 'Candidato_PUSC.png', 2, 'PUSC'), 
+('CandPLN', 'Álvaro Roberto', 'Ramos', 'Chaves', 'Candidato_PLN.png', 2, 'PLN'), 
+('CandPPSO', 'Laura', 'Fernández', 'Delgado', 'Candidato_PPSO.png', 2, 'PPSO'), 
+('CandPNR', 'Gerardo Fabricio', 'Alvarado', 'Muñoz', 'Candidato_PNR.png', 2, 'PNR'), 
+('CandPFA', 'Andrés Ariel', 'Robles', 'Barrantes', 'Candidato_PFA.png', 2, 'PFA'), 
+('CandPLP', 'Eliecer', 'Feinzaig', 'Mintz', 'Candidato_PLP.png', 2, 'PLP')
+*/

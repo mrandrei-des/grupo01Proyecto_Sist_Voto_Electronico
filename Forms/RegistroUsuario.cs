@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mylibreria2026;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,11 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using mylibreria2026;
 
 namespace grupo01ProyectoFinal
 {
     public partial class frmRegistroUsuario : Form
     {
+        DataSet ds = new DataSet();
+
         public frmRegistroUsuario()
         {
             InitializeComponent();
@@ -34,9 +38,6 @@ namespace grupo01ProyectoFinal
             txtIdentificacion.Clear();
             txtNombre.Clear();
             txtApellidos.Clear();
-            MoverCmbProvincias("1");
-            MoverCmbCantones("01");
-            MoverCmbDistritos("001");
             txtContrasenna.Clear();
             txtCorreo.Clear();
             txtIdentificacion.Focus();
@@ -66,9 +67,6 @@ namespace grupo01ProyectoFinal
             txtApellidos.Text = "";
             // Al mover un combo box se activa el evento de SelectedIndexChanged que hace que cargue el otro combo box
             // Mover los combos según el distrito electoral que le corresponda
-            MoverCmbProvincias("1");
-            MoverCmbCantones("01");
-            MoverCmbDistritos("001");
         }
 
         private void frmRegistroUsuario_Load(object sender, EventArgs e)
@@ -87,9 +85,11 @@ namespace grupo01ProyectoFinal
         private void CargarComboBoxes()
         {
             //Idealmente que la lista sea del tipo clase OpcionCombo que tenga 2 atributos: CodigoProvincia y NombreProvincia
-            string[] listaProvincias = ConsultarProvincias();
-            CargarCmbProvincias(listaProvincias);
-            MoverCmbProvincias("1");
+            CargarCmbProvincias();
+            CargarCmbCantones();
+            CargarCmbDistritos();
+
+            MoverCmbProvincias("5");
 
             //string[] listaCantones = ConsultarCantones("1");
             //CargarCmbCantones(listaCantones);
@@ -100,105 +100,77 @@ namespace grupo01ProyectoFinal
             //MoverCmbDistritos("001");
         }
 
-        // Procesos y funciones para consultar, cargar y mover el combobox de provincias
-        private string[] ConsultarProvincias()
-        {
-            return new string[1];
-        }
-
-        private void CargarCmbProvincias(string[] listaProvincias)
+        private void CargarCmbProvincias()
         {
             cmbProvincias.Items.Clear();
-            for (int i = 0; i < listaProvincias.Length; i++) {
 
-                if (!string.IsNullOrEmpty(listaProvincias[i]))
+            string cmd = "SELECT CodigoProvincia as Valor, Descripcion as Texto FROM Provincias ORDER BY CodigoProvincia ASC";
+
+            ds = Utilidades.Ejecutar(cmd);
+
+            if (ds.Tables.Count > 0)
+            {
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    //cmbProvincias.Items.Add(listaProvincias[i]);
-                    // Cargar el combo box con un DataSource
-                    //cmbProvincias.DataSource = listaProvincias[i];
-                    //cmbProvincias.DisplayMember = "NombreProvincia";
-                    //cmbProvincias.ValueMember = "CodigoProvincia";
+                    cmbProvincias.DataSource = ds.Tables[0];
+                    cmbProvincias.DisplayMember = "Texto";
+                    cmbProvincias.ValueMember = "Valor";
                 }
             }
         }
 
-        private void MoverCmbProvincias(string idProvincia)
+        private void MoverCmbProvincias(string codigoProvincia)
         {
-            for (int i = 0; i < cmbProvincias.Items.Count; i++) {
-                if (cmbProvincias.Items[i].ToString().Substring(0, 1) == idProvincia)
-                {
-                    cmbProvincias.SelectedIndex = i;
-                    break;
-                }
-            }
+            //for (int i = 0; i < cmbProvincias.Items.Count; i++)
+            //{
+            //    if (cmbProvincias.Items[i] == codigoProvincia)
+            //    {
+            //        cmbProvincias.SelectedIndex = i;
+            //        break;
+            //    }
+            //}
         }
 
-        // Procesos y funciones para consultar, cargar y mover el combobox de cantones
-        private string[] ConsultarCantones(string idProvincia)
+        private void CargarCmbCantones()
         {
-            //Idealmente que la lista sea del tipo clase OpcionCombo que tenga 2 atributos: CodigoProvincia y NombreProvincia
-            return new string[1];
-        }
 
-        private void CargarCmbCantones(string[] listaCantones)
-        {
+            string CodigoProvincia = cmbProvincias.SelectedValue.ToString();
+
             cmbCantones.Items.Clear();
-            for (int i = 0; i < listaCantones.Length; i++)
+
+            string cmd = string.Format("SELECT CodigoCanton as Valor, Descripcion as Texto FROM Cantones WHERE CodigoProvincia = '{0}' ORDER BY CodigoProvincia ASC, CodigoCanton ASC", CodigoProvincia);
+
+            ds = Utilidades.Ejecutar(cmd);
+
+            if (ds.Tables.Count > 0)
             {
-                if (!string.IsNullOrEmpty(listaCantones[i]))
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    //cmbCantones.Items.Add(listaCantones[i]);
-                    // Cargar el combo box con un DataSource
-                    //cmbProvincias.DataSource = listaProvincias[i];
-                    //cmbProvincias.DisplayMember = "NombreProvincia";
-                    //cmbProvincias.ValueMember = "CodigoProvincia";
+                    cmbCantones.DataSource = ds.Tables[0];
+                    cmbCantones.DisplayMember = "Texto";
+                    cmbCantones.ValueMember = "Valor";
                 }
             }
         }
 
-        private void MoverCmbCantones(string idCanton)
+        private void CargarCmbDistritos()
         {
-            for (int i = 0; i < cmbCantones.Items.Count; i++)
-            {
-                if (cmbCantones.Items[i].ToString().Substring(0, 2) == idCanton)
-                {
-                    cmbCantones.SelectedIndex = i;
-                    break;
-                }
-            }
-        }
+            string CodigoProvincia = cmbProvincias.SelectedValue.ToString();
+            string CodigoCanton = cmbCantones.SelectedValue.ToString();
 
-        // Procesos y funciones para consultar, cargar y mover el combobox de distritos 
-        private string[] ConsultarDistritos(string idProvincia, string idCanton)
-        {
-            //Idealmente que la lista sea del tipo clase OpcionCombo que tenga 2 atributos: CodigoProvincia y NombreProvincia
-            return new string[1];
-        }
-
-        private void CargarCmbDistritos(string[] listaDistritos)
-        {
             cmbDistritos.Items.Clear();
-            for (int i = 0; i < listaDistritos.Length; i++)
-            {
-                if (!string.IsNullOrEmpty(listaDistritos[i]))
-                {
-                    //cmbDistritos.Items.Add(listaDistritos[i]);
-                    // Cargar el combo box con un DataSource
-                    //cmbProvincias.DataSource = listaProvincias[i];
-                    //cmbProvincias.DisplayMember = "NombreProvincia";
-                    //cmbProvincias.ValueMember = "CodigoProvincia";
-                }
-            }
-        }
 
-        private void MoverCmbDistritos(string idDistrito)
-        {
-            for (int i = 0; i < cmbDistritos.Items.Count; i++)
+            string cmd = string.Format("SELECT CodigoDistrito as Valor, Descripcion as Texto FROM Distritos WHERE CodigoProvincia = '{0}' AND CodigoCanton = '{1}' ORDER BY CodigoProvincia ASC, CodigoCanton ASC, CodigoDistrito ASC", CodigoProvincia, CodigoCanton);
+
+            ds = Utilidades.Ejecutar(cmd);
+
+            if (ds.Tables.Count > 0)
             {
-                if (cmbDistritos.Items[i].ToString().Substring(0, 3) == idDistrito)
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    cmbDistritos.SelectedIndex = i;
-                    break;
+                    cmbDistritos.DataSource = ds.Tables[0];
+                    cmbDistritos.DisplayMember = "Texto";
+                    cmbDistritos.ValueMember = "Valor";
                 }
             }
         }
@@ -206,27 +178,22 @@ namespace grupo01ProyectoFinal
         private void cmbProvincias_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Obtener el id de la provincia para cargar los cantones
-            string idProvincia = cmbProvincias.SelectedItem.ToString().Substring(0, 1);
-            string[] listaCantones = ConsultarCantones(idProvincia);
-            CargarCmbCantones(listaCantones);
-            MoverCmbCantones("01");
+            string idProvincia = cmbProvincias.SelectedItem.ToString();
+            CargarCmbCantones();
         }
 
         private void cmbCantones_SelectedIndexChanged(object sender, EventArgs e)
         {
             // Obtener el id de la provincia y cantón para cargar los distritos
-            string idProvincia = cmbProvincias.SelectedItem.ToString().Substring(0, 1);
-            string idCanton = cmbCantones.SelectedItem.ToString().Substring(0, 2);
-
-            string[] listaDistritos = ConsultarDistritos(idProvincia, idCanton);
-            CargarCmbDistritos(listaDistritos);
-            MoverCmbDistritos("001");
+            string idProvincia = cmbProvincias.SelectedValue.ToString();
+            string idCanton = cmbCantones.SelectedValue.ToString();
+            CargarCmbDistritos();
         }
 
         private void txtIdentificacion_KeyPress(object sender, KeyPressEventArgs e)
         {
             // Validar que solo ingrese números o letras
-            if (!char.IsLetter(e.KeyChar) || !char.IsDigit(e.KeyChar))
+            if (!char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
                 e.Handled = true;
             }

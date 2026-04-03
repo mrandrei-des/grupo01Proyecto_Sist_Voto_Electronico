@@ -38,12 +38,10 @@ PrimerApellido varchar(30) NOT NULL,
 SegundoApellido varchar(30) NOT NULL,
 NombreImagenFoto varchar(300) NOT NULL DEFAULT (''),
 IdEstado smallint NOT NULL,
-CodigoPartido varchar(5) NOT NULL,
-IdTipoEleccion smallint NOT NULL,
+CodigoPartido varchar(5) NOT NULL
 PRIMARY KEY (CodigoCandidato),
 FOREIGN KEY (IdEstado) REFERENCES Estados(IdEstado),
-FOREIGN KEY (CodigoPartido) REFERENCES PartidosPoliticos(CodigoPartido),
-FOREIGN KEY (IdTipoEleccion) REFERENCES TiposEleccion(IdTipoEleccion)
+FOREIGN KEY (CodigoPartido) REFERENCES PartidosPoliticos(CodigoPartido)
 )
 
 -- TABLA DE DISTRITOS_ELECTORALES CON SU CÓDIGO DE PROVINCIA, CANTÓN Y DISTRITO
@@ -156,8 +154,10 @@ FOREIGN KEY (IdPermiso) REFERENCES Permisos(IdPermiso)
 CREATE TABLE Usuarios
 (
 Cedula varchar(9) NOT NULL,
-Contrasenna varchar(50) NOT NULL,
+Contrasenna varchar(max) NOT NULL,
 CorreoElectronico varchar(30) NOT NULL,
+VotoPresidenteEmitido bit default 0,
+VotoDiputadoEmitido bit default 0,
 IdEstado smallint NOT NULL,
 IdPerfil smallint NOT NULL
 PRIMARY KEY (Cedula),

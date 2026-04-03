@@ -87,14 +87,14 @@ namespace grupo01ProyectoFinal
             // bPresidencialToolStripMenuItem
             // 
             this.bPresidencialToolStripMenuItem.Name = "bPresidencialToolStripMenuItem";
-            this.bPresidencialToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bPresidencialToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.bPresidencialToolStripMenuItem.Text = "Presidencial";
             this.bPresidencialToolStripMenuItem.Click += new System.EventHandler(this.bPresidencialToolStripMenuItem_Click_1);
             // 
             // bDiputacionToolStripMenuItem
             // 
             this.bDiputacionToolStripMenuItem.Name = "bDiputacionToolStripMenuItem";
-            this.bDiputacionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bDiputacionToolStripMenuItem.Size = new System.Drawing.Size(137, 22);
             this.bDiputacionToolStripMenuItem.Text = "Diputación";
             // 
             // aIngresar
@@ -130,27 +130,27 @@ namespace grupo01ProyectoFinal
             // bMantPadronNacionalToolStripMenuItem
             // 
             this.bMantPadronNacionalToolStripMenuItem.Name = "bMantPadronNacionalToolStripMenuItem";
-            this.bMantPadronNacionalToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bMantPadronNacionalToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantPadronNacionalToolStripMenuItem.Text = "Padrón Nacional";
             this.bMantPadronNacionalToolStripMenuItem.Click += new System.EventHandler(this.bMantPadronNacionalToolStripMenuItem_Click_1);
             // 
             // bMantDistritoElectoralToolStripMenuItem
             // 
             this.bMantDistritoElectoralToolStripMenuItem.Name = "bMantDistritoElectoralToolStripMenuItem";
-            this.bMantDistritoElectoralToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bMantDistritoElectoralToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantDistritoElectoralToolStripMenuItem.Text = "Distrito Electoral";
             // 
             // bMantCandidatosPoliticosToolStripMenuItem
             // 
             this.bMantCandidatosPoliticosToolStripMenuItem.Name = "bMantCandidatosPoliticosToolStripMenuItem";
-            this.bMantCandidatosPoliticosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bMantCandidatosPoliticosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantCandidatosPoliticosToolStripMenuItem.Text = "Candidatos";
             this.bMantCandidatosPoliticosToolStripMenuItem.Click += new System.EventHandler(this.bMantCandidatosPoliticosToolStripMenuItem_Click);
             // 
             // bMantPartidosPoliticosToolStripMenuItem
             // 
             this.bMantPartidosPoliticosToolStripMenuItem.Name = "bMantPartidosPoliticosToolStripMenuItem";
-            this.bMantPartidosPoliticosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bMantPartidosPoliticosToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.bMantPartidosPoliticosToolStripMenuItem.Text = "Partidos Políticos";
             // 
             // aEstadisticasToolStripMenuItem
@@ -188,14 +188,14 @@ namespace grupo01ProyectoFinal
             // bReportePorProvinciastoolStripMenuItem1
             // 
             this.bReportePorProvinciastoolStripMenuItem1.Name = "bReportePorProvinciastoolStripMenuItem1";
-            this.bReportePorProvinciastoolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.bReportePorProvinciastoolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.bReportePorProvinciastoolStripMenuItem1.Text = "Por Provincia";
             this.bReportePorProvinciastoolStripMenuItem1.Click += new System.EventHandler(this.bReportePorProvinciastoolStripMenuItem1_Click);
             // 
             // bReportePorCandidatoToolStripMenuItem1
             // 
             this.bReportePorCandidatoToolStripMenuItem1.Name = "bReportePorCandidatoToolStripMenuItem1";
-            this.bReportePorCandidatoToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.bReportePorCandidatoToolStripMenuItem1.Size = new System.Drawing.Size(150, 22);
             this.bReportePorCandidatoToolStripMenuItem1.Text = "Por Candidato";
             this.bReportePorCandidatoToolStripMenuItem1.Click += new System.EventHandler(this.bReportePorCandidatoToolStripMenuItem1_Click);
             // 
@@ -218,14 +218,14 @@ namespace grupo01ProyectoFinal
             // bCerrarSesionToolStripMenuItem
             // 
             this.bCerrarSesionToolStripMenuItem.Name = "bCerrarSesionToolStripMenuItem";
-            this.bCerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.bCerrarSesionToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bCerrarSesionToolStripMenuItem.Text = "Cerrar Sesión";
             this.bCerrarSesionToolStripMenuItem.Click += new System.EventHandler(this.bCerrarSesionToolStripMenuItem_Click);
             // 
             // bSalirDelSistemaToolStripMenuItem
             // 
             this.bSalirDelSistemaToolStripMenuItem.Name = "bSalirDelSistemaToolStripMenuItem";
-            this.bSalirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
+            this.bSalirDelSistemaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bSalirDelSistemaToolStripMenuItem.Text = "Salir del Sistema";
             this.bSalirDelSistemaToolStripMenuItem.Click += new System.EventHandler(this.bSalirDelSistemaToolStripMenuItem_Click);
             // 
