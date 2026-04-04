@@ -31,5 +31,12 @@ namespace grupo01ProyectoFinal
         {
 
         }
+
+        private void btnRegresar_Click(object sender, EventArgs e)
+        {
+            frmPrincipal principal = new frmPrincipal();
+            principal.Show();
+            Close();
+        }
     }
 }

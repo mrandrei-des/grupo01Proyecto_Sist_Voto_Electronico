@@ -69,12 +69,12 @@ namespace grupo01ProyectoFinal.Forms
                 if (!string.IsNullOrEmpty(identificacionBuscar))
                 {
                     // Busca la información por cédula
-                    cmd = string.Format("SELECT Cedula as 'CÉDULA', PrimerApellido AS 'PRIMER APELLIDO', SegundoApellido AS 'SEGUNDO APELLIDO', Nombre as NOMBRE, FechaVencimientoCedula AS 'FECHA VENCIMIENTO CÉDULA' FROM PadronNacional WHERE Cedula = '{0}'", identificacionBuscar);
+                    cmd = string.Format("EXEC sp_Consulta_PadronNacional_x_Cedula '{0}'", identificacionBuscar);
                 }
                 else
                 {
                     // Busca la información por provincia
-                    cmd = string.Format("SELECT TOP 25 Cedula as 'CÉDULA', PrimerApellido AS 'PRIMER APELLIDO', SegundoApellido AS 'SEGUNDO APELLIDO', Nombre as NOMBRE, FORMAT(FechaVencimientoCedula, 'dd-MM-yyyy') AS 'FECHA VENCIMIENTO CÉDULA' FROM PadronNacional WHERE LEFT(CODELE, 1) = '{0}' ORDER BY PrimerApellido ASC, SegundoApellido ASC, Nombre ASC, Cedula ASC ", provinciaBuscar);
+                    cmd = string.Format("EXEC sp_Consulta_PadronNacional_x_Provincia '{0}'", provinciaBuscar);
                 }
 
                 ds = Utilidades.Ejecutar(cmd);
@@ -82,9 +82,10 @@ namespace grupo01ProyectoFinal.Forms
                 if (ds.Tables[0].Rows.Count == 0)
                 {
                     MessageBox.Show("No se encontraron registros en el padrón nacional.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }else
+                {
+                    dgvPadronNacional.DataSource = ds.Tables[0].DefaultView;
                 }
-
-                dgvPadronNacional.DataSource = ds.Tables[0].DefaultView;
             }
             catch (Exception ex)
             {
@@ -122,6 +123,7 @@ namespace grupo01ProyectoFinal.Forms
             cmbProvincias.SelectedIndex = 0;
             txtIdentificacion.Focus();
             ds.Clear();
+            dgvPadronNacional.DataSource = ds;
         }
     }
 

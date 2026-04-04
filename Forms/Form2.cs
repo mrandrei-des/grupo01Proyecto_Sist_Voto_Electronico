@@ -12,9 +12,9 @@ using System.Windows.Forms;
 
 namespace grupo01ProyectoFinal
 {
-    public partial class btnIngresar : Form
+    public partial class frmLogin : Form
     {
-        public btnIngresar()
+        public frmLogin()
         {
             InitializeComponent();
         }

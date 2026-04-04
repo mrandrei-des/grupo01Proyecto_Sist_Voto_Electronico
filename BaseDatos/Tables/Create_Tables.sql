@@ -20,7 +20,7 @@ PRIMARY KEY (IdTipoEleccion)
 -- TABLA PARA LOS PARTIDOS POLÍTICOS
 CREATE TABLE PartidosPoliticos
 (
-CodigoPartido varchar(5) NOT NULL,
+CodigoPartido varchar(6) NOT NULL,
 Descripcion varchar(100) NOT NULL,
 NombreImagenBandera varchar(300) NOT NULL DEFAULT (''),
 IdEstado smallint NOT NULL,
@@ -38,7 +38,7 @@ PrimerApellido varchar(30) NOT NULL,
 SegundoApellido varchar(30) NOT NULL,
 NombreImagenFoto varchar(300) NOT NULL DEFAULT (''),
 IdEstado smallint NOT NULL,
-CodigoPartido varchar(5) NOT NULL
+CodigoPartido varchar(6) NOT NULL
 PRIMARY KEY (CodigoCandidato),
 FOREIGN KEY (IdEstado) REFERENCES Estados(IdEstado),
 FOREIGN KEY (CodigoPartido) REFERENCES PartidosPoliticos(CodigoPartido)
@@ -172,13 +172,15 @@ CREATE TABLE VotosEmitidos
 idVoto int NOT NULL IDENTITY(1,1),
 Cedula varchar(9) NOT NULL,
 IdTipoEleccion smallint NOT NULL,
+Codele varchar(6) NOT NULL,
 NumeroJuntaReceptora varchar(5) NOT NULL,
-CodigoPartido varchar(5) NOT NULL,
+CodigoPartido varchar(6) NOT NULL,
 CodigoCandidato varchar(50) NOT NULL,
 FechaEmisionVoto datetime NOT NULL DEFAULT(GETDATE()),
-PRIMARY KEY (idVoto, Cedula, IdTipoEleccion),
+PRIMARY KEY (Cedula, IdTipoEleccion),
 FOREIGN KEY (Cedula) REFERENCES PadronNacional(Cedula),
 FOREIGN KEY (IdTipoEleccion) REFERENCES TiposEleccion(IdTipoEleccion),
+FOREIGN KEY (Codele) REFERENCES DistritosElectorales(Codele),
 FOREIGN KEY (CodigoPartido) REFERENCES PartidosPoliticos(CodigoPartido),
 FOREIGN KEY (CodigoCandidato) REFERENCES Candidatos(CodigoCandidato)
 )

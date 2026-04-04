@@ -1,4 +1,5 @@
-﻿using System;
+﻿using mylibreria2026;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,39 +32,27 @@ namespace grupo01ProyectoFinal.Forms
 
         private void Limpiar()
         {
-            //cmbProvincias.SelectedIndex = 0;
             rdoTipoVotacionPresidente.Checked = true;
+            cmbProvincias.SelectedIndex = 0;
         }
 
         private void CargarComboProvincias()
         {
-            //Idealmente que la lista sea del tipo clase OpcionCombo que tenga 2 atributos: CodigoProvincia y NombreProvincia
-            string[] listaProvincias = ConsultarProvincias();
-            CargarCmbProvincias(listaProvincias);
-        }
+            string cmd = "SELECT CodigoProvincia as Valor, Descripcion as Texto FROM Provincias ORDER BY CodigoProvincia ASC";
+            DataSet ds = new DataSet();
 
-        // Procesos y funciones para consultar, cargar y mover el combobox de provincias
-        private string[] ConsultarProvincias()
-        {
-            return new string[1];
-        }
+            ds = Utilidades.Ejecutar(cmd);
 
-        private void CargarCmbProvincias(string[] listaProvincias)
-        {
-            cmbProvincias.Items.Clear();
-            for (int i = 0; i < listaProvincias.Length; i++)
+            if (ds.Tables.Count > 0)
             {
-
-                if (!string.IsNullOrEmpty(listaProvincias[i]))
+                if (ds.Tables[0].Rows.Count > 0)
                 {
-                    //cmbProvincias.Items.Add(listaProvincias[i]);
-                    // Cargar el combo box con un DataSource
-                    //cmbProvincias.DataSource = listaProvincias[i];
-                    //cmbProvincias.DisplayMember = "NombreProvincia";
-                    //cmbProvincias.ValueMember = "CodigoProvincia";
+                    cmbProvincias.DataSource = ds.Tables[0];
+                    cmbProvincias.DisplayMember = "Texto";
+                    cmbProvincias.ValueMember = "Valor";
                 }
             }
-        }
+        }        
 
         private void frmReporteProvincia_Load(object sender, EventArgs e)
         {

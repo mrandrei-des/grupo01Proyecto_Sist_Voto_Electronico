@@ -49,8 +49,6 @@ namespace grupo01ProyectoFinal
 
         private void btnRegistro_Click(object sender, EventArgs e)
         {
-            // Valida los datos (constraseña y correo)
-            // Guarda los datos
             RegistrarUsuario();
         }
 
@@ -67,7 +65,9 @@ namespace grupo01ProyectoFinal
 
                     Utilidades.Ejecutar(cmd);
                     MessageBox.Show("Usuario registrado exitosamente. Por favor inicie sesión para proceder con la emisión del voto.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    LimpiarFormulario();
+                    frmLogin formLogin = new frmLogin();
+                    formLogin.Show();
+                    Close();
                 }
             }
             catch (Exception ex)
@@ -85,6 +85,8 @@ namespace grupo01ProyectoFinal
             if (numIdentificacion.Equals(""))
             {
                 MessageBox.Show("Por favor digite un número de identificación válido.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                txtIdentificacion.ReadOnly = false;
+                txtIdentificacion.Enabled = true;
                 txtIdentificacion.Focus();
                 return false;
             }
@@ -130,8 +132,11 @@ namespace grupo01ProyectoFinal
                                 if (ds.Tables[0].Rows.Count > 0)
                                 {
                                     MessageBox.Show("La identificación ya cuenta con un usuario en el sistema. Por favor inicie sesión.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                                    LimpiarFormulario();
-                                    txtIdentificacion.Focus();
+                                    frmLogin formLogin = new frmLogin();
+                                    formLogin.Show();
+                                    Close();
+                                    //LimpiarFormulario();
+                                    //txtIdentificacion.Focus();
                                 }
                                 else
                                 {
@@ -337,7 +342,6 @@ namespace grupo01ProyectoFinal
             if(txtContrasenna.Text.Length >= 15)
             {
                 e.Handled = true; 
-                // Se valida 
             }
         }
     }

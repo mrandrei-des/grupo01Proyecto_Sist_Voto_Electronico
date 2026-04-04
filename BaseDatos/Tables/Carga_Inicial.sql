@@ -6,7 +6,7 @@ VALUES(1, 'Presidencial'), (2, 'Diputación')
 
 -- SE INSERTAN LOS ESTADOS BASE
 INSERT INTO Estados(IdEstado, Descripcion)
-VALUES (1, 'Eliminado'), (2, 'Activo')
+VALUES (1, 'Eliminado'), (2, 'Activo'), (3, 'Ambos Votos Emitidos')
 
 -- SE INSERTAN LOS PERFILES BASE
 INSERT INTO Perfiles (Descripcion)
@@ -85,6 +85,8 @@ GROUP BY LEFT(CODELE, 1), SUBSTRING(CODELE, 2, 2), RIGHT(CODELE, 3), DISTRITO
 -- INSERTAR PARTIDOS POLÍTICOS
 INSERT INTO PartidosPoliticos (CodigoPartido, Descripcion, NombreImagenBandera, IdEstado, FechaHoraProceso)
 VALUES
+('NULO', 'Voto Nulo', 'Bandera_NULO.png', 2, GETDATE()),
+('BLANCO', 'Voto Blanco', 'Bandera_BLANCO.png', 2, GETDATE()),
 ('PUSC', 'Partido Unidad Social Cristiana', 'Bandera_PUSC.png', 2, GETDATE()),
 ('PLN', 'Partido Liberación Nacional', 'Bandera_PLN.png', 2, GETDATE()),
 ('PPSO', 'Partido Pueblo Soberano', 'Bandera_PPSO.png', 2, GETDATE()),
@@ -102,5 +104,7 @@ VALUES
 ('CandPPSO', 'Laura', 'Fernández', 'Delgado', 'Candidato_PPSO.png', 2, 'PPSO'), 
 ('CandPNR', 'Gerardo Fabricio', 'Alvarado', 'Muñoz', 'Candidato_PNR.png', 2, 'PNR'), 
 ('CandPFA', 'Andrés Ariel', 'Robles', 'Barrantes', 'Candidato_PFA.png', 2, 'PFA'), 
-('CandPLP', 'Eliecer', 'Feinzaig', 'Mintz', 'Candidato_PLP.png', 2, 'PLP')
+('CandPLP', 'Eliecer', 'Feinzaig', 'Mintz', 'Candidato_PLP.png', 2, 'PLP'),
+('CandNULO', 'Voto Nulo', '', '', 'Candidato_NULO.png', 2, 'NULO'), 
+('CandBLANCO', 'Voto Blanco', '', '', 'Candidato_BLANCO.png', 2, 'BLANCO')
 */

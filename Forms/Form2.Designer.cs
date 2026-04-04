@@ -1,6 +1,6 @@
 ﻿namespace grupo01ProyectoFinal
 {
-    partial class btnIngresar
+    partial class frmLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -147,7 +147,7 @@
             this.txtpassword.Size = new System.Drawing.Size(107, 20);
             this.txtpassword.TabIndex = 8;
             // 
-            // btnIngresar
+            // frmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -162,7 +162,7 @@
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.lblCedula);
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "btnIngresar";
+            this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso e Inicio de Sesión";
             this.ResumeLayout(false);

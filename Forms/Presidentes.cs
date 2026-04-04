@@ -8,21 +8,24 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using mylibreria2026;
 
 namespace grupo01ProyectoFinal
 {
     public partial class frmPresidentes : Form
     {
+        public int tiempoRestante = 90;
+        public string cedulaUsuario = string.Empty;
         private string partidoVotado = "";
-        private int tiempoRestante = 90;
-        private bool puedeContinuarDiputados = true;
+        public bool puedeContinuarDiputados = true;
         private bool votoGuardado = false;
+        private bool puedeContinuarPresidente = true;
         public frmPresidentes()
         {
             InitializeComponent();
         }
 
-        private void ValidarContenidoSoloUnTextbox(string nombreTxtPermitido)
+        private void ValidarContenidoSoloUnTextbox(string nombretxtPermitido)
         {
             // Lo que hace este método es validar que solo un TextBox tenga contenido, y el resto estén vacíos. El parámetro nombreTxtPermitido es el nombre del TextBox que se permite tener contenido, mientras que los demás serán limpiados.
             for (int i = 0; i < this.Controls.Count; i++)
@@ -36,7 +39,7 @@ namespace grupo01ProyectoFinal
                         Control innerCtrl = ctrl.Controls[j];
                         if (innerCtrl is TextBox)
                         {
-                            if (innerCtrl.Name != nombreTxtPermitido)
+                            if (innerCtrl.Name != nombretxtPermitido)
                             {
                                 innerCtrl.Text = ""; // Limpiar el contenido de los TextBoxes que no están permitidos
                             }else
@@ -100,17 +103,69 @@ namespace grupo01ProyectoFinal
             txtVotoNulo.Enabled = false;
         }
 
+        private void PuedeEmitirVotos()
+        {
+            DataSet ds = new DataSet();
+            string cmd = string.Format("SELECT Cedula, VotoPresidenteEmitido AS estadoVotoPresidente, VotoDiputadoEmitido AS estadoVotoDiputado, IdEstado AS numEstado FROM Usuarios WHERE Cedula = '{0}'", cedulaUsuario);
+            ds = Utilidades.Ejecutar(cmd);
+
+            if (Convert.ToBoolean(ds.Tables[0].Rows[0]["estadoVotoDiputado"]) == false)
+            {
+                puedeContinuarDiputados = true;
+            }
+            else
+            {
+                puedeContinuarDiputados = false;
+            }
+
+            if (Convert.ToBoolean(ds.Tables[0].Rows[0]["estadoVotoPresidente"]) == false)
+            {
+                puedeContinuarPresidente = true;
+                votoGuardado = false;
+            }
+            else
+            {
+                puedeContinuarPresidente = false;
+                votoGuardado = true;
+            }
+        }
+
         private void frmPresidentes_Load(object sender, EventArgs e)
         {
-            if(!votoGuardado)
+            frmPrincipal formPrincipal = new frmPrincipal();
+            PuedeEmitirVotos();
+
+            if(!puedeContinuarPresidente && !puedeContinuarDiputados)
+            {
+                MessageBox.Show("Ya ha emitido sus dos sufragio. Gracias por emitir su voto.", "Votos Emitidos", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                formPrincipal.Show();
+                Close();
+                return;
+            }
+
+            if (puedeContinuarPresidente)
             {
                 timTiempoVotacion.Interval = 1000;
                 timTiempoVotacion.Start(); // Iniciar el temporizador al cargar el formulario                
-            }
-            
-            if(!puedeContinuarDiputados)
+            }else
             {
-                btnContinuarVotacion.Enabled = false;
+                btnGuardarVoto.Enabled = false;
+                BloquearTextBoxes();
+                MessageBox.Show("Ya ha emitido su sufragio para las votaciones Presidenciales.", "Revisión Voto", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+
+                if (!puedeContinuarDiputados)
+                {
+                    btnContinuarVotacion.Enabled = false;
+                    MessageBox.Show("Ya ha emitido su sufragio para las votaciones de Diputaciones.", "Revisión Voto", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    formPrincipal.Show();
+                    Close();
+                }
+                else
+                {
+                    frmDiputados formDiputados = new frmDiputados();
+                    formDiputados.Show();
+                    Close();
+                }
             }
         }
 
@@ -204,35 +259,83 @@ namespace grupo01ProyectoFinal
 
         private void btnGuardarVoto_Click(object sender, EventArgs e)
         {
-            // Si no hay tiempo, el voto se guarda como nulo, sin importar si el usuario marcó alguna opción o no
-            if (tiempoRestante == 0)
+            try
             {
-                partidoVotado = "NULO";
-            }else
-            {
-                if (string.IsNullOrEmpty(partidoVotado))
+                frmPrincipal formPrincipal = new frmPrincipal();
+
+                // Si no hay tiempo, el voto se guarda como nulo, sin importar si el usuario marcó alguna opción o no
+                if (tiempoRestante == 0)
                 {
-                    MessageBox.Show("No ha emitido su voto. Por favor marque una opción.", "Revisión Voto", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                    return;
+                    partidoVotado = "NULO";
                 }
                 else
                 {
-                    if(MessageBox.Show("¿Está seguro que desea emitir así su voto?", "Confirmación de Sufragio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                    if (string.IsNullOrEmpty(partidoVotado))
                     {
+                        MessageBox.Show("No ha emitido su voto. Por favor marque una opción.", "Revisión Voto", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                         return;
                     }
+                    else
+                    {
+                        if (MessageBox.Show("¿Está seguro que desea emitir su voto con esta elección?", "Confirmación de Sufragio", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.No)
+                        {
+                            return;
+                        }
+                    }
                 }
+
+                if(cedulaUsuario.Equals(""))
+                {
+                    MessageBox.Show("No se encontró la identificación del votante. Por favor inténtelo nuevamente. [002]", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    formPrincipal.Show();
+                    Close();
+                }
+
+                BloquearTextBoxes();
+                btnGuardarVoto.Enabled = false;
+                int tipoEleccion = 1;
+                string candidatoVoto = string.Empty, codelec = string.Empty;
+                DataSet ds = new DataSet();
+                
+                // Trae datos del candidato escogido
+                string cmd = string.Format("SELECT CodigoCandidato as CodCandidato FROM Candidatos WHERE CodigoPartido = '{0}'", partidoVotado);
+                ds = Utilidades.Ejecutar(cmd);
+                candidatoVoto = ds.Tables[0].Rows[0]["CodCandidato"].ToString();
+
+                cmd = string.Format("EXEC sp_Consulta_PadronNacional_x_Cedula '{0}'", cedulaUsuario);
+                ds = Utilidades.Ejecutar(cmd);
+                codelec = ds.Tables[0].Rows[0]["COD_ELECTORAL"].ToString();
+
+                //Guardar el voto
+                cmd = string.Format("EXEC sp_Inserta_Voto_Emitido '{0}','{1}','{2}','{3}','{4}'", cedulaUsuario, tipoEleccion, codelec, partidoVotado, candidatoVoto);
+                Utilidades.Ejecutar(cmd);
+
+                //Actualiza estado de voto para presidente
+                cmd = string.Format("EXEC sp_Actualiza_Estado_Voto_Presidente '{0}'", cedulaUsuario);
+                Utilidades.Ejecutar(cmd);
+
+                MessageBox.Show("Su voto ha sido registrado. Gracias por ejercer su derecho al voto.", "Voto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                votoGuardado = true;
+                puedeContinuarPresidente = false;
+
+                if (puedeContinuarDiputados)
+                {
+                    frmDiputados formDiputados = new frmDiputados();
+                    formDiputados.Show();
+                    Close();
+                    return;
+                }
+
+                formPrincipal.Show();
+                Close();
             }
-
-            BloquearTextBoxes();
-
-            // Procede a guardar el voto en la base de datos o donde se requiera. Por ahora, solo se muestra un mensaje de confirmación.
-            MessageBox.Show("Su voto ha sido registrado. Gracias por ejercer su derecho al voto.", "Voto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            votoGuardado = true;
-            frmDiputados formDiputados = new frmDiputados();
-            formDiputados.Show();
-            this.Close();
-
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema a la hora de guardar el voto. Por favor inténtelo nuevamente. [001][" + ex.Message + "]", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                frmPrincipal formPrincipal = new frmPrincipal();
+                formPrincipal.Show();
+                Close();
+            }
         }
 
         private void btnContinuarVotacion_Click(object sender, EventArgs e)

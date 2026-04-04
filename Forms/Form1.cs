@@ -13,6 +13,7 @@ namespace grupo01ProyectoFinal
 {
     public partial class frmPrincipal : Form
     {
+        public string cedulaUsuarioLoggeado;
         public frmPrincipal()
         {
             InitializeComponent();
@@ -25,7 +26,7 @@ namespace grupo01ProyectoFinal
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-
+            cedulaUsuarioLoggeado = "101440305";
         }
 
         private void bSalirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -131,9 +132,9 @@ namespace grupo01ProyectoFinal
         private void bPresidencialToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
             frmPresidentes formPresidentes = new frmPresidentes();
+            formPresidentes.cedulaUsuario = cedulaUsuarioLoggeado;
             formPresidentes.Show();
             this.Hide();
-
         }
     }
 }
