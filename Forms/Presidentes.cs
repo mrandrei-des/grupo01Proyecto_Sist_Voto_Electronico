@@ -8,6 +8,7 @@ using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using grupo01ProyectoFinal.Clases;
 using mylibreria2026;
 
 namespace grupo01ProyectoFinal
@@ -105,11 +106,14 @@ namespace grupo01ProyectoFinal
 
         private void PuedeEmitirVotos()
         {
-            DataSet ds = new DataSet();
-            string cmd = string.Format("SELECT Cedula, VotoPresidenteEmitido AS estadoVotoPresidente, VotoDiputadoEmitido AS estadoVotoDiputado, IdEstado AS numEstado FROM Usuarios WHERE Cedula = '{0}'", cedulaUsuario);
-            ds = Utilidades.Ejecutar(cmd);
 
-            if (Convert.ToBoolean(ds.Tables[0].Rows[0]["estadoVotoDiputado"]) == false)
+            DataTable dtUsuario = new DataTable();
+            Usuario objUsuario = new Usuario();
+
+            objUsuario.Cedula = cedulaUsuario;
+            dtUsuario = objUsuario.Consultar();
+
+            if (Convert.ToBoolean(dtUsuario.Rows[0]["estadoVotoDiputado"]) == false)
             {
                 puedeContinuarDiputados = true;
             }
@@ -118,7 +122,7 @@ namespace grupo01ProyectoFinal
                 puedeContinuarDiputados = false;
             }
 
-            if (Convert.ToBoolean(ds.Tables[0].Rows[0]["estadoVotoPresidente"]) == false)
+            if (Convert.ToBoolean(dtUsuario.Rows[0]["estadoVotoPresidente"]) == false)
             {
                 puedeContinuarPresidente = true;
                 votoGuardado = false;
@@ -295,39 +299,60 @@ namespace grupo01ProyectoFinal
                 btnGuardarVoto.Enabled = false;
                 int tipoEleccion = 1;
                 string candidatoVoto = string.Empty, codelec = string.Empty;
-                DataSet ds = new DataSet();
                 
                 // Trae datos del candidato escogido
-                string cmd = string.Format("SELECT CodigoCandidato as CodCandidato FROM Candidatos WHERE CodigoPartido = '{0}'", partidoVotado);
-                ds = Utilidades.Ejecutar(cmd);
-                candidatoVoto = ds.Tables[0].Rows[0]["CodCandidato"].ToString();
+                DataTable dt = new DataTable();
+                Candidato objCandidato = new Candidato();
+                objCandidato.CodPartido = partidoVotado;
+                dt = objCandidato.Consultar();
+                
+                candidatoVoto = dt.Rows[0]["CodCandidato"].ToString();
+                dt.Clear();
 
-                cmd = string.Format("EXEC sp_Consulta_PadronNacional_x_Cedula '{0}'", cedulaUsuario);
-                ds = Utilidades.Ejecutar(cmd);
-                codelec = ds.Tables[0].Rows[0]["COD_ELECTORAL"].ToString();
+                PadronNacional objPadron = new PadronNacional();
+                objPadron.Cedula = cedulaUsuario;
+                dt = objPadron.Listar_x_Cedula();
+
+                codelec = dt.Rows[0]["COD_ELECTORAL"].ToString();
+
+                Voto objVoto = new Voto();
+                objVoto.Cedula = cedulaUsuario;
+                objVoto.TipoEleccion = tipoEleccion;
+                objVoto.Codelec = codelec;
+                objVoto.CodigoPartido = partidoVotado;
+                objVoto.CodigoCandidato = candidatoVoto;
 
                 //Guardar el voto
-                cmd = string.Format("EXEC sp_Inserta_Voto_Emitido '{0}','{1}','{2}','{3}','{4}'", cedulaUsuario, tipoEleccion, codelec, partidoVotado, candidatoVoto);
-                Utilidades.Ejecutar(cmd);
-
-                //Actualiza estado de voto para presidente
-                cmd = string.Format("EXEC sp_Actualiza_Estado_Voto_Presidente '{0}'", cedulaUsuario);
-                Utilidades.Ejecutar(cmd);
-
-                MessageBox.Show("Su voto ha sido registrado. Gracias por ejercer su derecho al voto.", "Voto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                votoGuardado = true;
-                puedeContinuarPresidente = false;
-
-                if (puedeContinuarDiputados)
+                if(objVoto.GuardarVoto())
                 {
-                    frmDiputados formDiputados = new frmDiputados();
-                    formDiputados.Show();
-                    Close();
-                    return;
-                }
+                    //Actualiza estado de voto para presidente
+                    Usuario objUsuario = new Usuario();
+                    objUsuario.Cedula = cedulaUsuario;
 
-                formPrincipal.Show();
-                Close();
+                    if(objUsuario.ActualizarEstadoVotoPresidente())
+                    {
+                        MessageBox.Show("Su voto ha sido registrado. Gracias por ejercer su derecho al voto.", "Voto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        votoGuardado = true;
+                        puedeContinuarPresidente = false;
+
+                        if (puedeContinuarDiputados)
+                        {
+                            frmDiputados formDiputados = new frmDiputados();
+                            formDiputados.Show();
+                            Close();
+                            return;
+                        }
+
+                        formPrincipal.Show();
+                        Close();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se logró guardar su voto. Por favor inténtelo nuevamente.", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    formPrincipal.Show();
+                    Close();
+                }                
             }
             catch (Exception ex)
             {

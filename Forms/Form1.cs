@@ -26,7 +26,7 @@ namespace grupo01ProyectoFinal
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
-            cedulaUsuarioLoggeado = "101440305";
+            cedulaUsuarioLoggeado = "305310569";
         }
 
         private void bSalirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)

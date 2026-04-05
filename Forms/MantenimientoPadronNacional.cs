@@ -1,4 +1,5 @@
-﻿using mylibreria2026;
+﻿using grupo01ProyectoFinal.Clases;
+using mylibreria2026;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,7 @@ namespace grupo01ProyectoFinal.Forms
 
         private void frmMantPadronNacional_Load(object sender, EventArgs e)
         {
-            CargarComboProvincia();
+            CargarCmbProvincias();
             txtIdentificacion.Focus();
         }
 
@@ -61,30 +62,28 @@ namespace grupo01ProyectoFinal.Forms
             try
             {
                 string identificacionBuscar = txtIdentificacion.Text;
-                //string codigoProvincia = cmbProvincias.Text;
                 string provinciaBuscar = cmbProvincias.SelectedValue.ToString();
-                string cmd = "";
-
+                DataTable dtPadron = new DataTable();
+                PadronNacional objPadron = new PadronNacional();
 
                 if (!string.IsNullOrEmpty(identificacionBuscar))
                 {
                     // Busca la información por cédula
-                    cmd = string.Format("EXEC sp_Consulta_PadronNacional_x_Cedula '{0}'", identificacionBuscar);
+                    objPadron.Cedula = identificacionBuscar;
+                    dtPadron = objPadron.Listar_x_Cedula();
                 }
                 else
                 {
                     // Busca la información por provincia
-                    cmd = string.Format("EXEC sp_Consulta_PadronNacional_x_Provincia '{0}'", provinciaBuscar);
+                    dtPadron = objPadron.Listar_x_Provincia(provinciaBuscar);
                 }
 
-                ds = Utilidades.Ejecutar(cmd);
-
-                if (ds.Tables[0].Rows.Count == 0)
+                if (dtPadron.Rows.Count == 0)
                 {
                     MessageBox.Show("No se encontraron registros en el padrón nacional.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }else
                 {
-                    dgvPadronNacional.DataSource = ds.Tables[0].DefaultView;
+                    dgvPadronNacional.DataSource = dtPadron.DefaultView;
                 }
             }
             catch (Exception ex)
@@ -93,27 +92,15 @@ namespace grupo01ProyectoFinal.Forms
             }
         }
 
-        private void CargarComboProvincia()
-        {
-            CargarCmbProvincias();
-        }
-        
         private void CargarCmbProvincias()
         {
-            cmbProvincias.Items.Clear();
-
-            string cmd = "SELECT CodigoProvincia as Valor, Descripcion as Texto FROM Provincias ORDER BY CodigoProvincia ASC";
-
-            ds = Utilidades.Ejecutar(cmd);
-
-            if (ds.Tables.Count > 0)
+            Provincia objProvincia = new Provincia();
+            DataTable dtProvincias = objProvincia.Listar();
+            if (dtProvincias.Rows.Count > 0)
             {
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    cmbProvincias.DataSource = ds.Tables[0];
-                    cmbProvincias.DisplayMember = "Texto";
-                    cmbProvincias.ValueMember = "Valor";
-                }
+                cmbProvincias.DataSource = dtProvincias;
+                cmbProvincias.DisplayMember = "Texto";
+                cmbProvincias.ValueMember = "Valor";
             }
         }
 

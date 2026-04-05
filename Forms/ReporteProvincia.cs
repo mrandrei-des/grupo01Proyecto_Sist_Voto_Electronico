@@ -1,4 +1,5 @@
-﻿using mylibreria2026;
+﻿using grupo01ProyectoFinal.Clases;
+using mylibreria2026;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -36,27 +37,21 @@ namespace grupo01ProyectoFinal.Forms
             cmbProvincias.SelectedIndex = 0;
         }
 
-        private void CargarComboProvincias()
+        private void CargarCmbProvincias()
         {
-            string cmd = "SELECT CodigoProvincia as Valor, Descripcion as Texto FROM Provincias ORDER BY CodigoProvincia ASC";
-            DataSet ds = new DataSet();
-
-            ds = Utilidades.Ejecutar(cmd);
-
-            if (ds.Tables.Count > 0)
+            Provincia objProvincia = new Provincia();
+            DataTable dtProvincias = objProvincia.Listar();
+            if (dtProvincias.Rows.Count > 0)
             {
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    cmbProvincias.DataSource = ds.Tables[0];
-                    cmbProvincias.DisplayMember = "Texto";
-                    cmbProvincias.ValueMember = "Valor";
-                }
+                cmbProvincias.DataSource = dtProvincias;
+                cmbProvincias.DisplayMember = "Texto";
+                cmbProvincias.ValueMember = "Valor";
             }
-        }        
+        }
 
         private void frmReporteProvincia_Load(object sender, EventArgs e)
         {
-            CargarComboProvincias();
+            CargarCmbProvincias();
         }
 
         private void btnGenerar_Click(object sender, EventArgs e)

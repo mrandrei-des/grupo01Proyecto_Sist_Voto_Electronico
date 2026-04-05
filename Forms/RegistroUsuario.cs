@@ -1,4 +1,5 @@
-﻿using mylibreria2026;
+﻿using grupo01ProyectoFinal.Clases;
+using mylibreria2026;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -61,13 +62,23 @@ namespace grupo01ProyectoFinal
                     string numIdentificacion = txtIdentificacion.Text.Trim();
                     string contrasenna = Utilidades.Codificar(txtContrasenna.Text.Trim());
                     string correoElectronico = txtCorreo.Text.Trim();
-                    string cmd = string.Format("EXEC sp_Ingresar_Usuario_Votante '{0}','{1}','{2}'", numIdentificacion, contrasenna, correoElectronico);
+                    Usuario objUsuario = new Usuario();
 
-                    Utilidades.Ejecutar(cmd);
-                    MessageBox.Show("Usuario registrado exitosamente. Por favor inicie sesión para proceder con la emisión del voto.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    frmLogin formLogin = new frmLogin();
-                    formLogin.Show();
-                    Close();
+                    objUsuario.Cedula = numIdentificacion;
+                    objUsuario.Contrasenna = contrasenna;
+                    objUsuario.Correo = correoElectronico;
+
+                    if(objUsuario.Registrar())
+                    {
+                        MessageBox.Show("Usuario registrado exitosamente. Por favor inicie sesión para proceder con la emisión del voto.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        frmLogin formLogin = new frmLogin();
+                        formLogin.Show();
+                        Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logró registrar el usuario. Por favor inténtelo nuevamente.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
                 }
             }
             catch (Exception ex)
@@ -116,58 +127,45 @@ namespace grupo01ProyectoFinal
                 if(!numIdentificacion.Equals(""))
                 {
                     // Valida que la identificación no esté registrada en el padrón nacional
-                    string cmd = string.Format("SELECT p.Nombre as Nombre, p.PrimerApellido + ' ' + p.SegundoApellido as Apellidos, d.CodigoProvincia as CodProvincia, d.CodigoCanton as CodCanton, d.CodigoDistrito as CodDistrito FROM PadronNacional p, DistritosElectorales d WHERE p.Codele = d.Codele and p.Cedula = '{0}'", numIdentificacion);
-                    DataSet datosPersona = Utilidades.Ejecutar(cmd);
+                    PadronNacional objPadron = new PadronNacional();
+                    objPadron.Cedula = numIdentificacion;
 
-                    if(datosPersona.Tables.Count > 0)
+                    DataTable dtDatosPersona = objPadron.ListarInformacionVotacion_x_Cedula();
+                    if (dtDatosPersona.Rows.Count > 0)
                     {
-                        if (datosPersona.Tables[0].Rows.Count > 0)
+                        // Existe la persona en el padrón
+                        Usuario objUsuario = new Usuario();
+                        objUsuario.Cedula = numIdentificacion;
+                        DataTable dtUsuario = objUsuario.Consultar();
+
+                        if (dtUsuario.Rows.Count > 0)
                         {
-                            // Existe la persona en el padrón
-
-                            cmd = string.Format("SELECT * FROM Usuarios WHERE Cedula = '{0}'", numIdentificacion);
-                            ds = Utilidades.Ejecutar(cmd);
-
-                            if (ds.Tables.Count > 0) {
-                                if (ds.Tables[0].Rows.Count > 0)
-                                {
-                                    MessageBox.Show("La identificación ya cuenta con un usuario en el sistema. Por favor inicie sesión.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                                    frmLogin formLogin = new frmLogin();
-                                    formLogin.Show();
-                                    Close();
-                                    //LimpiarFormulario();
-                                    //txtIdentificacion.Focus();
-                                }
-                                else
-                                {
-                                    // Carga en pantalla la información
-
-                                    txtNombre.Text = datosPersona.Tables[0].Rows[0]["Nombre"].ToString();
-                                    txtApellidos.Text = datosPersona.Tables[0].Rows[0]["Apellidos"].ToString();
-                                    string codProvincia = datosPersona.Tables[0].Rows[0]["CodProvincia"].ToString();
-                                    string codCanton = datosPersona.Tables[0].Rows[0]["CodCanton"].ToString();
-                                    string codDistrito = datosPersona.Tables[0].Rows[0]["CodDistrito"].ToString();
-
-                                    MoverCmbProvincias(codProvincia);
-                                    MoverCmbCantones(codCanton);
-                                    MoverCmbDistritos(codDistrito);
-                                    txtIdentificacion.ReadOnly = true;
-                                    txtIdentificacion.Enabled = false;
-                                    txtContrasenna.Focus();
-                                }                            
-                            }else
-                            {
-                                MessageBox.Show("No se pudo comprobar si la identificación ya cuenta con un usuario registrado. [003]", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                            }
+                            MessageBox.Show("La identificación ya cuenta con un usuario en el sistema. Por favor inicie sesión.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                            frmLogin formLogin = new frmLogin();
+                            formLogin.Show();
+                            Close();
                         }
                         else
                         {
-                            MessageBox.Show("La identificación ingresada no se encuentra en el padrón nacional.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                            txtIdentificacion.Focus();
-                        }
-                    }else
+                            // Carga en pantalla la información
+                            txtNombre.Text = dtDatosPersona.Rows[0]["Nombre"].ToString();
+                            txtApellidos.Text = dtDatosPersona.Rows[0]["Apellidos"].ToString();
+                            string codProvincia = dtDatosPersona.Rows[0]["CodProvincia"].ToString();
+                            string codCanton = dtDatosPersona.Rows[0]["CodCanton"].ToString();
+                            string codDistrito = dtDatosPersona.Rows[0]["CodDistrito"].ToString();
+
+                            MoverCmbProvincias(codProvincia);
+                            MoverCmbCantones(codCanton);
+                            MoverCmbDistritos(codDistrito);
+                            txtIdentificacion.ReadOnly = true;
+                            txtIdentificacion.Enabled = false;
+                            txtContrasenna.Focus();
+                        }                               
+                    }
+                    else
                     {
-                        MessageBox.Show("No se pudo corroborar si la identificación se encuentra en el padrón nacional. [002]", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show("La identificación ingresada no se encuentra en el padrón nacional.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        txtIdentificacion.Focus();
                     }
                 }else
                 {
@@ -181,10 +179,6 @@ namespace grupo01ProyectoFinal
                 MessageBox.Show("Ha ocurrido un problema al momento de consultar en el padrón nacional. [001][" + ex.Message + "]", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 throw;
             }
-
-
-            // Al mover un combo box se activa el evento de SelectedIndexChanged que hace que cargue el otro combo box
-            // Mover los combos según el distrito electoral que le corresponda
         }
 
         private void frmRegistroUsuario_Load(object sender, EventArgs e)
@@ -210,19 +204,14 @@ namespace grupo01ProyectoFinal
 
         private void CargarCmbProvincias()
         {
-            string cmd = "SELECT CodigoProvincia as Valor, Descripcion as Texto FROM Provincias ORDER BY CodigoProvincia ASC";
-
-            ds = Utilidades.Ejecutar(cmd);
-
-            if (ds.Tables.Count > 0)
+            Provincia objProvincia = new Provincia();
+            DataTable dtProvincias = objProvincia.Listar();
+            if (dtProvincias.Rows.Count > 0)
             {
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    cmbProvincias.DataSource = ds.Tables[0];
-                    cmbProvincias.DisplayMember = "Texto";
-                    cmbProvincias.ValueMember = "Valor";
-                }
-            }
+                cmbProvincias.DataSource = dtProvincias;
+                cmbProvincias.DisplayMember = "Texto";
+                cmbProvincias.ValueMember = "Valor";
+            }          
         }
 
         private void MoverCmbProvincias(string codigoProvincia)
@@ -242,19 +231,17 @@ namespace grupo01ProyectoFinal
         {
             string CodigoProvincia = cmbProvincias.SelectedValue.ToString();
 
-            string cmd = string.Format("SELECT CodigoCanton as Valor, Descripcion as Texto FROM Cantones WHERE CodigoProvincia = '{0}' ORDER BY CodigoProvincia ASC, CodigoCanton ASC", CodigoProvincia);
+            Canton objCanton = new Canton();
+            objCanton.CodProvincia = CodigoProvincia;
 
-            ds = Utilidades.Ejecutar(cmd);
+            DataTable dtCantones = objCanton.Listar();
 
-            if (ds.Tables.Count > 0)
+            if (dtCantones.Rows.Count > 0)
             {
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    cmbCantones.DataSource = ds.Tables[0];
-                    cmbCantones.DisplayMember = "Texto";
-                    cmbCantones.ValueMember = "Valor";
-                }
-            }
+                cmbCantones.DataSource = dtCantones;
+                cmbCantones.DisplayMember = "Texto";
+                cmbCantones.ValueMember = "Valor";
+            }            
         }
 
         private void MoverCmbCantones(string codigoCanton)
@@ -274,20 +261,17 @@ namespace grupo01ProyectoFinal
         {
             string CodigoProvincia = cmbProvincias.SelectedValue.ToString();
             string CodigoCanton = cmbCantones.SelectedValue.ToString();
+            Distrito objDistrito = new Distrito();
+            objDistrito.CodProvincia = CodigoProvincia;
+            objDistrito.CodCanton = CodigoCanton;
+            DataTable dtDistritos = objDistrito.Listar();
 
-            string cmd = string.Format("SELECT CodigoDistrito as Valor, Descripcion as Texto FROM Distritos WHERE CodigoProvincia = '{0}' AND CodigoCanton = '{1}' ORDER BY CodigoProvincia ASC, CodigoCanton ASC, CodigoDistrito ASC", CodigoProvincia, CodigoCanton);
-
-            ds = Utilidades.Ejecutar(cmd);
-
-            if (ds.Tables.Count > 0)
+            if (dtDistritos.Rows.Count > 0)
             {
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    cmbDistritos.DataSource = ds.Tables[0];
-                    cmbDistritos.DisplayMember = "Texto";
-                    cmbDistritos.ValueMember = "Valor";
-                }
-            }
+                cmbDistritos.DataSource = dtDistritos;
+                cmbDistritos.DisplayMember = "Texto";
+                cmbDistritos.ValueMember = "Valor";
+            }            
         }
 
         private void MoverCmbDistritos(string codigoDistrito)
