@@ -33,11 +33,11 @@
             this.cmbProvincias = new System.Windows.Forms.ComboBox();
             this.lblProvincia = new System.Windows.Forms.Label();
             this.dgvPadronNacional = new System.Windows.Forms.DataGridView();
-            this.btnRefrescar = new System.Windows.Forms.Button();
             this.txtIdentificacion = new System.Windows.Forms.TextBox();
             this.lblIdentificacion = new System.Windows.Forms.Label();
             this.btnLimpiar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
+            this.btnRefrescar = new System.Windows.Forms.Button();
             this.grbPadronNacional.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPadronNacional)).BeginInit();
             this.SuspendLayout();
@@ -98,20 +98,6 @@
             this.dgvPadronNacional.Size = new System.Drawing.Size(957, 325);
             this.dgvPadronNacional.TabIndex = 26;
             // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
-            this.btnRefrescar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRefrescar.Location = new System.Drawing.Point(858, 25);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(105, 79);
-            this.btnRefrescar.TabIndex = 25;
-            this.btnRefrescar.Text = "&Refrescar";
-            this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRefrescar.UseVisualStyleBackColor = true;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
-            // 
             // txtIdentificacion
             // 
             this.txtIdentificacion.Location = new System.Drawing.Point(226, 54);
@@ -157,6 +143,20 @@
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
+            this.btnRefrescar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefrescar.Location = new System.Drawing.Point(858, 25);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(105, 79);
+            this.btnRefrescar.TabIndex = 25;
+            this.btnRefrescar.Text = "&Refrescar";
+            this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
             // frmMantPadronNacional
             // 
