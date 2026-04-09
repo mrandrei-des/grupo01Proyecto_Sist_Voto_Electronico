@@ -46,24 +46,27 @@
             // lblCedula
             // 
             this.lblCedula.AutoSize = true;
-            this.lblCedula.Location = new System.Drawing.Point(56, 77);
+            this.lblCedula.Location = new System.Drawing.Point(37, 50);
+            this.lblCedula.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCedula.Name = "lblCedula";
-            this.lblCedula.Size = new System.Drawing.Size(138, 20);
+            this.lblCedula.Size = new System.Drawing.Size(94, 13);
             this.lblCedula.TabIndex = 0;
             this.lblCedula.Text = "Número de cédula";
             // 
             // txtCedula
             // 
-            this.txtCedula.Location = new System.Drawing.Point(250, 71);
+            this.txtCedula.Location = new System.Drawing.Point(167, 46);
+            this.txtCedula.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Size = new System.Drawing.Size(198, 26);
+            this.txtCedula.Size = new System.Drawing.Size(133, 20);
             this.txtCedula.TabIndex = 1;
             // 
             // btnIngresa
             // 
-            this.btnIngresa.Location = new System.Drawing.Point(411, 291);
+            this.btnIngresa.Location = new System.Drawing.Point(274, 189);
+            this.btnIngresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnIngresa.Name = "btnIngresa";
-            this.btnIngresa.Size = new System.Drawing.Size(117, 89);
+            this.btnIngresa.Size = new System.Drawing.Size(78, 58);
             this.btnIngresa.TabIndex = 2;
             this.btnIngresa.Text = "Ingresar";
             this.btnIngresa.UseVisualStyleBackColor = true;
@@ -71,9 +74,10 @@
             // 
             // btnConsultar
             // 
-            this.btnConsultar.Location = new System.Drawing.Point(586, 23);
+            this.btnConsultar.Location = new System.Drawing.Point(391, 15);
+            this.btnConsultar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnConsultar.Name = "btnConsultar";
-            this.btnConsultar.Size = new System.Drawing.Size(114, 74);
+            this.btnConsultar.Size = new System.Drawing.Size(76, 48);
             this.btnConsultar.TabIndex = 3;
             this.btnConsultar.Text = "Consultar";
             this.btnConsultar.UseVisualStyleBackColor = true;
@@ -88,9 +92,10 @@
             this.lsvconsulta.FullRowSelect = true;
             this.lsvconsulta.GridLines = true;
             this.lsvconsulta.HideSelection = false;
-            this.lsvconsulta.Location = new System.Drawing.Point(60, 129);
+            this.lsvconsulta.Location = new System.Drawing.Point(40, 84);
+            this.lsvconsulta.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.lsvconsulta.Name = "lsvconsulta";
-            this.lsvconsulta.Size = new System.Drawing.Size(640, 106);
+            this.lsvconsulta.Size = new System.Drawing.Size(428, 70);
             this.lsvconsulta.TabIndex = 4;
             this.lsvconsulta.UseCompatibleStateImageBehavior = false;
             // 
@@ -108,43 +113,48 @@
             // 
             // txtCedulaingresa
             // 
-            this.txtCedulaingresa.Location = new System.Drawing.Point(194, 275);
+            this.txtCedulaingresa.Location = new System.Drawing.Point(129, 179);
+            this.txtCedulaingresa.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCedulaingresa.Name = "txtCedulaingresa";
-            this.txtCedulaingresa.Size = new System.Drawing.Size(158, 26);
+            this.txtCedulaingresa.Size = new System.Drawing.Size(107, 20);
             this.txtCedulaingresa.TabIndex = 5;
             // 
             // lblCedulaingresa
             // 
             this.lblCedulaingresa.AutoSize = true;
-            this.lblCedulaingresa.Location = new System.Drawing.Point(74, 291);
+            this.lblCedulaingresa.Location = new System.Drawing.Point(49, 189);
+            this.lblCedulaingresa.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCedulaingresa.Name = "lblCedulaingresa";
-            this.lblCedulaingresa.Size = new System.Drawing.Size(67, 20);
+            this.lblCedulaingresa.Size = new System.Drawing.Size(46, 13);
             this.lblCedulaingresa.TabIndex = 6;
             this.lblCedulaingresa.Text = "Cédula: ";
             // 
             // lblpassword
             // 
             this.lblpassword.AutoSize = true;
-            this.lblpassword.Location = new System.Drawing.Point(74, 369);
+            this.lblpassword.Location = new System.Drawing.Point(49, 240);
+            this.lblpassword.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblpassword.Name = "lblpassword";
-            this.lblpassword.Size = new System.Drawing.Size(96, 20);
+            this.lblpassword.Size = new System.Drawing.Size(64, 13);
             this.lblpassword.TabIndex = 7;
             this.lblpassword.Text = "Contraseña ";
             this.lblpassword.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtpassword
             // 
-            this.txtpassword.Location = new System.Drawing.Point(194, 365);
+            this.txtpassword.Location = new System.Drawing.Point(129, 237);
+            this.txtpassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtpassword.Name = "txtpassword";
             this.txtpassword.PasswordChar = '*';
-            this.txtpassword.Size = new System.Drawing.Size(158, 26);
+            this.txtpassword.Size = new System.Drawing.Size(107, 20);
             this.txtpassword.TabIndex = 8;
             // 
             // btnSalir
             // 
-            this.btnSalir.Location = new System.Drawing.Point(586, 291);
+            this.btnSalir.Location = new System.Drawing.Point(391, 189);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(117, 89);
+            this.btnSalir.Size = new System.Drawing.Size(78, 58);
             this.btnSalir.TabIndex = 9;
             this.btnSalir.Text = "Salir";
             this.btnSalir.UseVisualStyleBackColor = true;
@@ -152,9 +162,9 @@
             // 
             // frmLogin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(812, 500);
+            this.ClientSize = new System.Drawing.Size(541, 325);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.txtpassword);
             this.Controls.Add(this.lblpassword);
@@ -165,9 +175,11 @@
             this.Controls.Add(this.btnIngresa);
             this.Controls.Add(this.txtCedula);
             this.Controls.Add(this.lblCedula);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ingreso e Inicio de Sesión";
+            this.Load += new System.EventHandler(this.frmLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

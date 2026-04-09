@@ -34,55 +34,74 @@ namespace grupo01ProyectoFinal
                 //vamos a trabajar con el login datos contra db y los perfiles de usuario
                 string contrasena;
                 contrasena = Utilidades.Codificar(txtpassword.Text.Trim());
-                string cmd = string.Format("select * from Usuarios where Cedula=@Cedula AND Contrasena=@Contrasenna", txtCedulaingresa.Text, contrasena); //revisar .Trim
+                //string cmd = string.Format("select * from Usuarios where Cedula=@Cedula AND Contrasena=@Contrasenna", txtCedulaingresa.Text.Trim(), contrasena); //revisar .Trim
+                string cmd = string.Format("select * from Usuarios where Cedula= '{0}' AND Contrasenna= '{1}'", txtCedulaingresa.Text.Trim(), contrasena); //revisar .Trim
                 DataSet ds = Utilidades.Ejecutar(cmd);
-                
-                string usuario = ds.Tables[0].Rows[0]["Cedula"].ToString();
-                string clave = ds.Tables[0].Rows[0]["contrasenna"].ToString();
-                string perfil = ds.Tables[0].Rows[0]["NOPERFIL"].ToString();
 
-                //vamos a relacionar el perfil con el Menu
-
-                if (usuario == txtCedulaingresa.Text && clave == Utilidades.Codificar(txtpassword.Text.Trim())) 
+                if (ds.Tables.Count > 0) // Devuelve 0 tables si ocurrió un problema en la consulta
                 {
-
-
-                    //perfil de administador
-
-                    if (perfil == "1")
+                    if (ds.Tables[0].Rows.Count > 0) // Se valida que reamente haya traído al menos 1 registro
                     {
+                        string usuario = ds.Tables[0].Rows[0]["Cedula"].ToString();
+                        string clave = ds.Tables[0].Rows[0]["contrasenna"].ToString();
+                        //string perfil = ds.Tables[0].Rows[0]["NOPERFIL"].ToString();
+                        string perfil = ds.Tables[0].Rows[0]["IdPerfil"].ToString();
 
-                        this.Hide();
-                        frmPrincipal menu1 = new frmPrincipal();
-                        menu1.Show();
+                        //vamos a relacionar el perfil con el Menu
+
+                        if (usuario == txtCedulaingresa.Text && clave == Utilidades.Codificar(txtpassword.Text.Trim()))
+                        {
+                            //perfil de administador
+
+                            if (perfil == "1")
+                            {
+
+                                this.Hide();
+                                frmPrincipal menu1 = new frmPrincipal();
+                                menu1.cedulaUsuarioLoggeado = usuario;
+                                menu1.Show();
+                            }
+                            else if (perfil == "2")
+                            {
+                                this.Hide();
+                                frmPrincipal menu1 = new frmPrincipal();
+                                menu1.cedulaUsuarioLoggeado = usuario;
+
+                                //voy a negar partes del menu dependiendo del perfil
+                                menu1.aReportesToolStripMenuItem.Visible = false;
+                                menu1.aMantenimientosToolStripMenuItem.Visible = false;
+
+                                // Deshabilita opciones, pero no muestra la pantalla
+                                menu1.Show();
+                            }
+
+                            else
+                            {
+                                this.Hide();
+                                frmPrincipal menu1 = new frmPrincipal();
+                                menu1.cedulaUsuarioLoggeado = usuario;
+
+                                //voy a negar partes del menu dependiendo del perfil
+                                menu1.aReportesToolStripMenuItem.Visible = false;
+                                menu1.aMantenimientosToolStripMenuItem.Visible = false;
+                                menu1.Show();
+                            }
+                        }
+                        else
+                        {
+                            MessageBox.Show("La contraseña y la clave no coinciden, por favor verificar...", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            txtCedulaingresa.Focus();
+                        }
                     }
-                    else if (perfil == "2")
-                    {
-                        this.Hide();
-                        frmPrincipal menu1 = new frmPrincipal();
-                        //voy a negar partes del menu dependiendo del perfil
-                        menu1.aReportesToolStripMenuItem.Visible = false;
-                        menu1.aMantenimientosToolStripMenuItem.Visible = false;
-
-                    }
-
                     else
                     {
-                        this.Hide();
-                        frmPrincipal menu1 = new frmPrincipal();
-                        //voy a negar partes del menu dependiendo del perfil
-                        menu1.aReportesToolStripMenuItem.Visible = false;
-                        menu1.aMantenimientosToolStripMenuItem.Visible = false;
-                        menu1.Show();
+                        MessageBox.Show("No se encontró ningún usuario registrado.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                        txtCedulaingresa.Focus();
                     }
-                }
-                else
-                {
-                    MessageBox.Show("La contraseña y la clave no coinciden, por favor verificar...", "Guardar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                } else {
+                    MessageBox.Show("No se logró establecer comunicación con el servidor. Por favor inténtelo nuevamente.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtCedulaingresa.Focus();
-                }
-             
-
+                }             
             }
 
             catch (Exception ex)
@@ -114,6 +133,11 @@ namespace grupo01ProyectoFinal
         private void btnSalir_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
