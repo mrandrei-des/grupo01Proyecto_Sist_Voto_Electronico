@@ -22,7 +22,29 @@ namespace grupo01ProyectoFinal.Forms
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            frmPrincipal formPrincipal = new frmPrincipal();
+            formPrincipal.Show();
+            Close();
+        }
+
+        private int ConsultarCantidadDiputados_x_Provincia(string codProvincia)
+        {
+            Diputados_x_Provincia objDip_x_Provincia = new Diputados_x_Provincia();
+            objDip_x_Provincia.CodProvincia = codProvincia;
+            return objDip_x_Provincia.ConsultaCantidadDiputados_x_Provincia();
+        }
+
+        private DataTable ConsultaVotosValidos_x_Provincia(string codProvincia)
+        {
+            DataSet dsTablas = new DataSet();
+            string cmd = string.Format("EXEC sp_Consulta_Resultados_CantidadVotosEmitidos '{0}'", codProvincia);
+            dsTablas = Utilidades.Ejecutar(cmd);
+            return dsTablas.Tables[0];
+        }
+
+        private double CalculoCociente(double dividendo, int diputados_x_provincia, int cantDecimales) 
+        {
+            return Math.Round(dividendo / diputados_x_provincia, cantDecimales);
         }
 
         private void btnRefrescar_Click(object sender, EventArgs e)
@@ -34,15 +56,14 @@ namespace grupo01ProyectoFinal.Forms
                 string codProvincia = cmbProvincias.SelectedValue.ToString();
 
                 // 1. Consulta de cantidad de diputados por provincia
-                Diputados_x_Provincia objDip_x_Provincia = new Diputados_x_Provincia();
-                objDip_x_Provincia.CodProvincia = codProvincia;
-                DiputadosxProvincia = objDip_x_Provincia.ConsultaCantidadDiputados_x_Provincia();
+                DiputadosxProvincia = ConsultarCantidadDiputados_x_Provincia(codProvincia);
 
                 // 2. Consulta de votos emitidos por partido excluyendo votos NULOS y en BLANCO
-                DataSet ds = new DataSet();
-                string cmd = "EXEC sp_Consulta_Resultados_CantidadVotosEmitidos";
-                ds = Utilidades.Ejecutar(cmd);
-                DataTable dt = ds.Tables[0];
+                //DataSet ds = new DataSet();
+                //string cmd = string.Format("EXEC sp_Consulta_Resultados_CantidadVotosEmitidos '{0}'", codProvincia);
+                //ds = Utilidades.Ejecutar(cmd);
+                //DataTable dt = ds.Tables[0];
+                DataTable dt = ConsultaVotosValidos_x_Provincia(codProvincia);
 
                 dgvVotosValidos.Rows.Clear();
                 dgvVotosValidos.Columns.Clear();
@@ -54,7 +75,8 @@ namespace grupo01ProyectoFinal.Forms
                 }
 
                 // 4. Cálculo del Cociente
-                Cociente = Math.Round(Dividendo / DiputadosxProvincia, 3);
+                //Cociente = Math.Round(Dividendo / DiputadosxProvincia, 3);
+                Cociente = CalculoCociente(Dividendo, DiputadosxProvincia, 3);
 
                 // 5. Cálculo del Subcociente
                 Subcociente = Math.Round(Cociente / 2, 3);
@@ -109,7 +131,7 @@ namespace grupo01ProyectoFinal.Forms
                     dtAsignacionCociente.Rows.Add(filaCalculo);
                 }
 
-                dgvAsignacionCociente.DataSource= dtAsignacionCociente;
+                dgvAsignacionCociente.DataSource = dtAsignacionCociente;
                 txtDiputadosAsignados.Text = DiputadosAsignadosCocienteTotal.ToString();
                 DiputadosxResidual = DiputadosxProvincia - DiputadosAsignadosCocienteTotal;
                 txtDiputadosxAsignar.Text = DiputadosxResidual.ToString();

@@ -90,7 +90,9 @@ namespace grupo01ProyectoFinal
 
         private void bCerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmLogin formLogin = new frmLogin();
+            formLogin.Show();
+            Close();
         }
 
         private void bMantCandidatosPoliticosToolStripMenuItem_Click(object sender, EventArgs e)

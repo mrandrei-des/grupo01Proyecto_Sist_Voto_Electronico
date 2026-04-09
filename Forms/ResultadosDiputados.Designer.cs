@@ -104,7 +104,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(885, 124);
+            this.btnSalir.Location = new System.Drawing.Point(996, 39);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(105, 79);
             this.btnSalir.TabIndex = 29;
@@ -389,9 +389,9 @@
             this.lblDeclaracionEleccion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDeclaracionEleccion.Location = new System.Drawing.Point(22, 568);
             this.lblDeclaracionEleccion.Name = "lblDeclaracionEleccion";
-            this.lblDeclaracionEleccion.Size = new System.Drawing.Size(281, 20);
+            this.lblDeclaracionEleccion.Size = new System.Drawing.Size(297, 20);
             this.lblDeclaracionEleccion.TabIndex = 192;
-            this.lblDeclaracionEleccion.Text = "Resultados Finales Momentaneos";
+            this.lblDeclaracionEleccion.Text = "Resultados Finales a este momento";
             // 
             // dgvResultadosMomentaneos
             // 
@@ -418,6 +418,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1521, 734);
+            this.ControlBox = false;
             this.Controls.Add(this.lblDeclaracionEleccion);
             this.Controls.Add(this.dgvResultadosMomentaneos);
             this.Controls.Add(this.lblAsignacionResiduo);
