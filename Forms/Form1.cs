@@ -143,5 +143,10 @@ namespace grupo01ProyectoFinal
             formResDiputados.Show();
             this.Hide();
         }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

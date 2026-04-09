@@ -19,8 +19,7 @@ namespace mylibreria2026
             SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-JO26UBD\MSSQLSERVER2025;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True");
 
             // String de conexión César
-            //SqlConnection conn = new SqlConnection(@"Data Source=;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True");
-            conn.Open();
+            //SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True");
             DataSet ds = new DataSet();
             SqlDataAdapter adaptador = new SqlDataAdapter(comando, conn);
             adaptador.Fill(ds);
