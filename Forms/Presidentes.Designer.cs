@@ -108,7 +108,7 @@
             this.lblTiempoDisponible.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTiempoDisponible.Location = new System.Drawing.Point(1129, 8);
             this.lblTiempoDisponible.Name = "lblTiempoDisponible";
-            this.lblTiempoDisponible.Size = new System.Drawing.Size(273, 20);
+            this.lblTiempoDisponible.Size = new System.Drawing.Size(403, 29);
             this.lblTiempoDisponible.TabIndex = 113;
             this.lblTiempoDisponible.Text = "Tiempo Disponible para Votación";
             // 
@@ -119,7 +119,7 @@
             this.txtTiempoVotacionMinutos.Location = new System.Drawing.Point(1200, 31);
             this.txtTiempoVotacionMinutos.Name = "txtTiempoVotacionMinutos";
             this.txtTiempoVotacionMinutos.ReadOnly = true;
-            this.txtTiempoVotacionMinutos.Size = new System.Drawing.Size(65, 26);
+            this.txtTiempoVotacionMinutos.Size = new System.Drawing.Size(65, 35);
             this.txtTiempoVotacionMinutos.TabIndex = 114;
             this.txtTiempoVotacionMinutos.Text = "00";
             this.txtTiempoVotacionMinutos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -131,7 +131,7 @@
             this.txtTiempoVotacionSegundos.Location = new System.Drawing.Point(1297, 32);
             this.txtTiempoVotacionSegundos.Name = "txtTiempoVotacionSegundos";
             this.txtTiempoVotacionSegundos.ReadOnly = true;
-            this.txtTiempoVotacionSegundos.Size = new System.Drawing.Size(65, 26);
+            this.txtTiempoVotacionSegundos.Size = new System.Drawing.Size(65, 35);
             this.txtTiempoVotacionSegundos.TabIndex = 116;
             this.txtTiempoVotacionSegundos.Text = "00";
             this.txtTiempoVotacionSegundos.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
@@ -240,7 +240,7 @@
             this.lblNombrePartidoVotoNulo.Location = new System.Drawing.Point(939, 393);
             this.lblNombrePartidoVotoNulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoVotoNulo.Name = "lblNombrePartidoVotoNulo";
-            this.lblNombrePartidoVotoNulo.Size = new System.Drawing.Size(88, 20);
+            this.lblNombrePartidoVotoNulo.Size = new System.Drawing.Size(128, 29);
             this.lblNombrePartidoVotoNulo.TabIndex = 211;
             this.lblNombrePartidoVotoNulo.Text = "Voto Nulo";
             // 
@@ -251,7 +251,7 @@
             this.lblNombrePartidoVotoBlanco.Location = new System.Drawing.Point(939, 47);
             this.lblNombrePartidoVotoBlanco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoVotoBlanco.Name = "lblNombrePartidoVotoBlanco";
-            this.lblNombrePartidoVotoBlanco.Size = new System.Drawing.Size(132, 20);
+            this.lblNombrePartidoVotoBlanco.Size = new System.Drawing.Size(189, 29);
             this.lblNombrePartidoVotoBlanco.TabIndex = 210;
             this.lblNombrePartidoVotoBlanco.Text = "Voto en Blanco";
             // 
@@ -288,7 +288,7 @@
             this.lblVoteXVotoNulo.Location = new System.Drawing.Point(939, 665);
             this.lblVoteXVotoNulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoteXVotoNulo.Name = "lblVoteXVotoNulo";
-            this.lblVoteXVotoNulo.Size = new System.Drawing.Size(119, 20);
+            this.lblVoteXVotoNulo.Size = new System.Drawing.Size(175, 29);
             this.lblVoteXVotoNulo.TabIndex = 207;
             this.lblVoteXVotoNulo.Text = "Vote con una X";
             // 
@@ -297,7 +297,7 @@
             this.txtVotoNulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVotoNulo.Location = new System.Drawing.Point(943, 615);
             this.txtVotoNulo.Name = "txtVotoNulo";
-            this.txtVotoNulo.Size = new System.Drawing.Size(99, 47);
+            this.txtVotoNulo.Size = new System.Drawing.Size(99, 67);
             this.txtVotoNulo.TabIndex = 206;
             this.txtVotoNulo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVotoNulo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoNulo_KeyPress);
@@ -309,7 +309,7 @@
             this.lblNombreCandidatoVotoNulo.Location = new System.Drawing.Point(955, 594);
             this.lblNombreCandidatoVotoNulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCandidatoVotoNulo.Name = "lblNombreCandidatoVotoNulo";
-            this.lblNombreCandidatoVotoNulo.Size = new System.Drawing.Size(74, 18);
+            this.lblNombreCandidatoVotoNulo.Size = new System.Drawing.Size(119, 29);
             this.lblNombreCandidatoVotoNulo.TabIndex = 205;
             this.lblNombreCandidatoVotoNulo.Text = "Voto Nulo";
             // 
@@ -320,7 +320,7 @@
             this.lblVoteXVotoBlanco.Location = new System.Drawing.Point(954, 321);
             this.lblVoteXVotoBlanco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoteXVotoBlanco.Name = "lblVoteXVotoBlanco";
-            this.lblVoteXVotoBlanco.Size = new System.Drawing.Size(119, 20);
+            this.lblVoteXVotoBlanco.Size = new System.Drawing.Size(175, 29);
             this.lblVoteXVotoBlanco.TabIndex = 204;
             this.lblVoteXVotoBlanco.Text = "Vote con una X";
             // 
@@ -329,7 +329,7 @@
             this.txtVotoBlanco.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVotoBlanco.Location = new System.Drawing.Point(958, 271);
             this.txtVotoBlanco.Name = "txtVotoBlanco";
-            this.txtVotoBlanco.Size = new System.Drawing.Size(99, 47);
+            this.txtVotoBlanco.Size = new System.Drawing.Size(99, 67);
             this.txtVotoBlanco.TabIndex = 203;
             this.txtVotoBlanco.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVotoBlanco.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoBlanco_KeyPress);
@@ -341,7 +341,7 @@
             this.lblNombreCandidatoVotoBlanco.Location = new System.Drawing.Point(955, 250);
             this.lblNombreCandidatoVotoBlanco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCandidatoVotoBlanco.Name = "lblNombreCandidatoVotoBlanco";
-            this.lblNombreCandidatoVotoBlanco.Size = new System.Drawing.Size(109, 18);
+            this.lblNombreCandidatoVotoBlanco.Size = new System.Drawing.Size(175, 29);
             this.lblNombreCandidatoVotoBlanco.TabIndex = 202;
             this.lblNombreCandidatoVotoBlanco.Text = "Voto en Blanco";
             // 
@@ -352,7 +352,7 @@
             this.lblVoteXPNR.Location = new System.Drawing.Point(87, 664);
             this.lblVoteXPNR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoteXPNR.Name = "lblVoteXPNR";
-            this.lblVoteXPNR.Size = new System.Drawing.Size(119, 20);
+            this.lblVoteXPNR.Size = new System.Drawing.Size(175, 29);
             this.lblVoteXPNR.TabIndex = 201;
             this.lblVoteXPNR.Text = "Vote con una X";
             // 
@@ -361,7 +361,7 @@
             this.txtVotoPNR.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVotoPNR.Location = new System.Drawing.Point(91, 614);
             this.txtVotoPNR.Name = "txtVotoPNR";
-            this.txtVotoPNR.Size = new System.Drawing.Size(99, 47);
+            this.txtVotoPNR.Size = new System.Drawing.Size(99, 67);
             this.txtVotoPNR.TabIndex = 200;
             this.txtVotoPNR.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVotoPNR.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoPNR_KeyPress);
@@ -373,7 +373,7 @@
             this.lblNombreCandidatoPNR.Location = new System.Drawing.Point(33, 593);
             this.lblNombreCandidatoPNR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCandidatoPNR.Name = "lblNombreCandidatoPNR";
-            this.lblNombreCandidatoPNR.Size = new System.Drawing.Size(231, 18);
+            this.lblNombreCandidatoPNR.Size = new System.Drawing.Size(373, 29);
             this.lblNombreCandidatoPNR.TabIndex = 199;
             this.lblNombreCandidatoPNR.Text = "Gerardo Fabricio Alvarado Muñoz";
             // 
@@ -384,7 +384,7 @@
             this.lblVoteXPFA.Location = new System.Drawing.Point(384, 664);
             this.lblVoteXPFA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoteXPFA.Name = "lblVoteXPFA";
-            this.lblVoteXPFA.Size = new System.Drawing.Size(119, 20);
+            this.lblVoteXPFA.Size = new System.Drawing.Size(175, 29);
             this.lblVoteXPFA.TabIndex = 198;
             this.lblVoteXPFA.Text = "Vote con una X";
             // 
@@ -393,7 +393,7 @@
             this.txtVotoPFA.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVotoPFA.Location = new System.Drawing.Point(388, 614);
             this.txtVotoPFA.Name = "txtVotoPFA";
-            this.txtVotoPFA.Size = new System.Drawing.Size(99, 47);
+            this.txtVotoPFA.Size = new System.Drawing.Size(99, 67);
             this.txtVotoPFA.TabIndex = 197;
             this.txtVotoPFA.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVotoPFA.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoPFA_KeyPress);
@@ -405,7 +405,7 @@
             this.lblNombreCandidatoPFA.Location = new System.Drawing.Point(341, 594);
             this.lblNombreCandidatoPFA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCandidatoPFA.Name = "lblNombreCandidatoPFA";
-            this.lblNombreCandidatoPFA.Size = new System.Drawing.Size(205, 18);
+            this.lblNombreCandidatoPFA.Size = new System.Drawing.Size(336, 29);
             this.lblNombreCandidatoPFA.TabIndex = 196;
             this.lblNombreCandidatoPFA.Text = "Andrés Ariel Robles Barrantes";
             // 
@@ -416,7 +416,7 @@
             this.lblVoteXPPSO.Location = new System.Drawing.Point(685, 321);
             this.lblVoteXPPSO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoteXPPSO.Name = "lblVoteXPPSO";
-            this.lblVoteXPPSO.Size = new System.Drawing.Size(119, 20);
+            this.lblVoteXPPSO.Size = new System.Drawing.Size(175, 29);
             this.lblVoteXPPSO.TabIndex = 195;
             this.lblVoteXPPSO.Text = "Vote con una X";
             // 
@@ -425,7 +425,7 @@
             this.txtVotoPPSO.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVotoPPSO.Location = new System.Drawing.Point(689, 271);
             this.txtVotoPPSO.Name = "txtVotoPPSO";
-            this.txtVotoPPSO.Size = new System.Drawing.Size(99, 47);
+            this.txtVotoPPSO.Size = new System.Drawing.Size(99, 67);
             this.txtVotoPPSO.TabIndex = 194;
             this.txtVotoPPSO.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVotoPPSO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoPPSO_KeyPress);
@@ -437,7 +437,7 @@
             this.lblNombreCandidatoPPSO.Location = new System.Drawing.Point(658, 251);
             this.lblNombreCandidatoPPSO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCandidatoPPSO.Name = "lblNombreCandidatoPPSO";
-            this.lblNombreCandidatoPPSO.Size = new System.Drawing.Size(178, 18);
+            this.lblNombreCandidatoPPSO.Size = new System.Drawing.Size(292, 29);
             this.lblNombreCandidatoPPSO.TabIndex = 193;
             this.lblNombreCandidatoPPSO.Text = "Laura Fernández Delgado";
             // 
@@ -448,7 +448,7 @@
             this.lblVoteXPLP.Location = new System.Drawing.Point(685, 665);
             this.lblVoteXPLP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoteXPLP.Name = "lblVoteXPLP";
-            this.lblVoteXPLP.Size = new System.Drawing.Size(119, 20);
+            this.lblVoteXPLP.Size = new System.Drawing.Size(175, 29);
             this.lblVoteXPLP.TabIndex = 192;
             this.lblVoteXPLP.Text = "Vote con una X";
             // 
@@ -457,7 +457,7 @@
             this.txtVotoPLP.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVotoPLP.Location = new System.Drawing.Point(689, 615);
             this.txtVotoPLP.Name = "txtVotoPLP";
-            this.txtVotoPLP.Size = new System.Drawing.Size(99, 47);
+            this.txtVotoPLP.Size = new System.Drawing.Size(99, 67);
             this.txtVotoPLP.TabIndex = 191;
             this.txtVotoPLP.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVotoPLP.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoPLP_KeyPress);
@@ -469,7 +469,7 @@
             this.lblNombreCandidatoPLP.Location = new System.Drawing.Point(658, 593);
             this.lblNombreCandidatoPLP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCandidatoPLP.Name = "lblNombreCandidatoPLP";
-            this.lblNombreCandidatoPLP.Size = new System.Drawing.Size(152, 18);
+            this.lblNombreCandidatoPLP.Size = new System.Drawing.Size(249, 29);
             this.lblNombreCandidatoPLP.TabIndex = 190;
             this.lblNombreCandidatoPLP.Text = "Eliecer Feinzaig Mintz";
             // 
@@ -480,7 +480,7 @@
             this.lblVoteXPLN.Location = new System.Drawing.Point(384, 321);
             this.lblVoteXPLN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoteXPLN.Name = "lblVoteXPLN";
-            this.lblVoteXPLN.Size = new System.Drawing.Size(119, 20);
+            this.lblVoteXPLN.Size = new System.Drawing.Size(175, 29);
             this.lblVoteXPLN.TabIndex = 189;
             this.lblVoteXPLN.Text = "Vote con una X";
             // 
@@ -489,7 +489,7 @@
             this.txtVotoPLN.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVotoPLN.Location = new System.Drawing.Point(388, 271);
             this.txtVotoPLN.Name = "txtVotoPLN";
-            this.txtVotoPLN.Size = new System.Drawing.Size(99, 47);
+            this.txtVotoPLN.Size = new System.Drawing.Size(99, 67);
             this.txtVotoPLN.TabIndex = 188;
             this.txtVotoPLN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtVotoPLN.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoPLN_KeyPress);
@@ -501,7 +501,7 @@
             this.lblNombreCandidatoPLN.Location = new System.Drawing.Point(341, 250);
             this.lblNombreCandidatoPLN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCandidatoPLN.Name = "lblNombreCandidatoPLN";
-            this.lblNombreCandidatoPLN.Size = new System.Drawing.Size(214, 18);
+            this.lblNombreCandidatoPLN.Size = new System.Drawing.Size(341, 29);
             this.lblNombreCandidatoPLN.TabIndex = 187;
             this.lblNombreCandidatoPLN.Text = "Álvaro Roberto Ramos Chaves";
             // 
@@ -512,7 +512,7 @@
             this.lblVoteXPUSC.Location = new System.Drawing.Point(87, 321);
             this.lblVoteXPUSC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblVoteXPUSC.Name = "lblVoteXPUSC";
-            this.lblVoteXPUSC.Size = new System.Drawing.Size(119, 20);
+            this.lblVoteXPUSC.Size = new System.Drawing.Size(175, 29);
             this.lblVoteXPUSC.TabIndex = 186;
             this.lblVoteXPUSC.Text = "Vote con una X";
             // 
@@ -521,9 +521,10 @@
             this.txtVotoPUSC.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtVotoPUSC.Location = new System.Drawing.Point(91, 271);
             this.txtVotoPUSC.Name = "txtVotoPUSC";
-            this.txtVotoPUSC.Size = new System.Drawing.Size(99, 47);
+            this.txtVotoPUSC.Size = new System.Drawing.Size(99, 67);
             this.txtVotoPUSC.TabIndex = 185;
             this.txtVotoPUSC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtVotoPUSC.TextChanged += new System.EventHandler(this.txtVotoPUSC_TextChanged);
             this.txtVotoPUSC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoPUSC_KeyPress);
             // 
             // lblNombreCandidatoPUSC
@@ -533,7 +534,7 @@
             this.lblNombreCandidatoPUSC.Location = new System.Drawing.Point(44, 250);
             this.lblNombreCandidatoPUSC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombreCandidatoPUSC.Name = "lblNombreCandidatoPUSC";
-            this.lblNombreCandidatoPUSC.Size = new System.Drawing.Size(209, 18);
+            this.lblNombreCandidatoPUSC.Size = new System.Drawing.Size(338, 29);
             this.lblNombreCandidatoPUSC.TabIndex = 184;
             this.lblNombreCandidatoPUSC.Text = "Juan Carlos Hidalgo Bogantes";
             // 
@@ -691,7 +692,7 @@
             this.lblNombrePartidoPLP.Location = new System.Drawing.Point(642, 393);
             this.lblNombrePartidoPLP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPLP.Name = "lblNombrePartidoPLP";
-            this.lblNombrePartidoPLP.Size = new System.Drawing.Size(221, 20);
+            this.lblNombrePartidoPLP.Size = new System.Drawing.Size(326, 29);
             this.lblNombrePartidoPLP.TabIndex = 171;
             this.lblNombrePartidoPLP.Text = "Partido Liberal Progresista";
             // 
@@ -702,7 +703,7 @@
             this.lblNombrePartidoPFA.Location = new System.Drawing.Point(361, 393);
             this.lblNombrePartidoPFA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPFA.Name = "lblNombrePartidoPFA";
-            this.lblNombrePartidoPFA.Size = new System.Drawing.Size(183, 20);
+            this.lblNombrePartidoPFA.Size = new System.Drawing.Size(268, 29);
             this.lblNombrePartidoPFA.TabIndex = 170;
             this.lblNombrePartidoPFA.Text = "Partido Frente Amplio";
             // 
@@ -713,7 +714,7 @@
             this.lblNombrePartidoPNR.Location = new System.Drawing.Point(47, 393);
             this.lblNombrePartidoPNR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPNR.Name = "lblNombrePartidoPNR";
-            this.lblNombrePartidoPNR.Size = new System.Drawing.Size(206, 20);
+            this.lblNombrePartidoPNR.Size = new System.Drawing.Size(303, 29);
             this.lblNombrePartidoPNR.TabIndex = 169;
             this.lblNombrePartidoPNR.Text = "Partido Nueva República";
             // 
@@ -724,7 +725,7 @@
             this.lblNombrePartidoPPSO.Location = new System.Drawing.Point(642, 47);
             this.lblNombrePartidoPPSO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPPSO.Name = "lblNombrePartidoPPSO";
-            this.lblNombrePartidoPPSO.Size = new System.Drawing.Size(209, 20);
+            this.lblNombrePartidoPPSO.Size = new System.Drawing.Size(308, 29);
             this.lblNombrePartidoPPSO.TabIndex = 168;
             this.lblNombrePartidoPPSO.Text = "Partido Pueblo Soberano";
             // 
@@ -735,7 +736,7 @@
             this.lblNombrePartidoPLN.Location = new System.Drawing.Point(334, 47);
             this.lblNombrePartidoPLN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPLN.Name = "lblNombrePartidoPLN";
-            this.lblNombrePartidoPLN.Size = new System.Drawing.Size(228, 20);
+            this.lblNombrePartidoPLN.Size = new System.Drawing.Size(337, 29);
             this.lblNombrePartidoPLN.TabIndex = 167;
             this.lblNombrePartidoPLN.Text = "Partido Liberación Nacional";
             // 
@@ -746,7 +747,7 @@
             this.lblNombrePartidoPUSC.Location = new System.Drawing.Point(16, 47);
             this.lblNombrePartidoPUSC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPUSC.Name = "lblNombrePartidoPUSC";
-            this.lblNombrePartidoPUSC.Size = new System.Drawing.Size(258, 20);
+            this.lblNombrePartidoPUSC.Size = new System.Drawing.Size(377, 29);
             this.lblNombrePartidoPUSC.TabIndex = 166;
             this.lblNombrePartidoPUSC.Text = "Partido Unidad Social Cristiana";
             // 
@@ -761,13 +762,13 @@
             this.lblDivisorTiempo.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDivisorTiempo.Location = new System.Drawing.Point(1271, 28);
             this.lblDivisorTiempo.Name = "lblDivisorTiempo";
-            this.lblDivisorTiempo.Size = new System.Drawing.Size(20, 29);
+            this.lblDivisorTiempo.Size = new System.Drawing.Size(28, 40);
             this.lblDivisorTiempo.TabIndex = 121;
             this.lblDivisorTiempo.Text = ":";
             // 
             // frmPresidentes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1411, 756);
             this.ControlBox = false;

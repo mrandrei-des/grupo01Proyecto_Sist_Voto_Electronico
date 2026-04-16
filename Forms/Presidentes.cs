@@ -442,5 +442,10 @@ namespace grupo01ProyectoFinal
         {
             txtVotoNulo.Focus();
         }
+
+        private void txtVotoPUSC_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

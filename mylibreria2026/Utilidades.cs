@@ -16,10 +16,10 @@ namespace mylibreria2026
         {
             // Data Source=DESKTOP-JO26UBD\MSSQLSERVER2025;Initial Catalog=BD_SALDOS;Integrated Security=True;Trust Server Certificate=True
             // String de conexión Andrei
-            SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-JO26UBD\MSSQLSERVER2025;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True");
+            //SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-JO26UBD\MSSQLSERVER2025;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True");
 
             // String de conexión César
-            //SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True");
+            SqlConnection conn = new SqlConnection(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True");
             DataSet ds = new DataSet();
             SqlDataAdapter adaptador = new SqlDataAdapter(comando, conn);
             adaptador.Fill(ds);
