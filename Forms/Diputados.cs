@@ -17,7 +17,7 @@ namespace grupo01ProyectoFinal
     {
         private System.Windows.Forms.Timer timer;
         private int tipoRestante;
-        private int tiempoRestante = 60; // 1 minuto en segundos
+        private int tiempoRestante = 90; // 1 minuto y 30 segundos
         private Label lblMinutos;
         private Label lblSegundos;
         private string partidoSeleccionado = "";
