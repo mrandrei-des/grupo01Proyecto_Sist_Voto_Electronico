@@ -1,4 +1,6 @@
-﻿using grupo01ProyectoFinal.Forms;
+﻿using grupo01ProyectoFinal.Clases;
+using grupo01ProyectoFinal.Forms;
+using mylibreria2026;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -21,6 +23,7 @@ namespace grupo01ProyectoFinal
 
         private void frmPrincipal_Load(object sender, EventArgs e)
         {
+            OcultarOpcionesMenu();
         }
 
         private void bSalirDelSistemaToolStripMenuItem_Click(object sender, EventArgs e)
@@ -114,6 +117,42 @@ namespace grupo01ProyectoFinal
         private void aMesaVotacionToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+        }
+
+        // Cada vez que se carga el formulario, se deben ocultar las opciones de menú porque se crean cada vez que se crea un formulario principal
+        private void OcultarOpcionesMenu()
+        {
+            Usuario objUsuario = new Usuario();
+            objUsuario.Cedula = cedulaUsuarioLoggeado;
+
+            DataTable dtConsulta = new DataTable();
+            dtConsulta = objUsuario.Consultar();
+
+            if (dtConsulta.Rows.Count > 0)
+            {
+                string perfil = dtConsulta.Rows[0]["numPerfil"].ToString();
+
+                if (perfil == "1") // Es usuario administrador, puede ver todas las opciones
+                {
+                    
+                }
+                else if (perfil == "2") // Es un votante, se restringen las opciones
+                {
+                    this.aReportesToolStripMenuItem.Visible = false;
+                    this.aMantenimientosToolStripMenuItem.Visible = false;
+                }
+                else // Cualquier otro perfil se restringe
+                {
+                    this.aReportesToolStripMenuItem.Visible = false;
+                    this.aMantenimientosToolStripMenuItem.Visible = false;
+                }
+            }else
+            {            
+                MessageBox.Show("No se logró establecer comunicación con el servidor. Por favor inténtelo nuevamente.", "Consulta de usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmLogin formLogin = new frmLogin();
+                formLogin.Show();
+                Close();
+            }
         }
     }
 }

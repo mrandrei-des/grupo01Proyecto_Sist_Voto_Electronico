@@ -67,19 +67,32 @@ namespace grupo01ProyectoFinal.Forms
                 tipoVotacion = "Presidente";
             }
 
-            GenerarReporteProvincia(tipoVotacion, codigoProvincia, nombreProvincia);
+            ReporteProvincia objReporteProvincia = new ReporteProvincia();
+            objReporteProvincia.CodProvincia = codigoProvincia;
+
+            DataTable dtReporte = objReporteProvincia.ResultadosPresidente();
+
+            if (dtReporte.Rows.Count > 0)
+            {
+                GenerarReporteProvincia(tipoVotacion, codigoProvincia, nombreProvincia);
+            }
+            else
+            {
+                MessageBox.Show("No se han emitido votos en el sistema.", "Generación Reporte", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+            }
         }
 
         private void GenerarReporteProvincia(string tipoVotacion, string codigoProvincia, string nombreProvincia)
         {
-            //Consulta la base de datos para obtener el número de votantes por cada provincia
-            //Hay que estudiar la posibilida de traer la cantidad de votos por cada partido político
             if(tipoVotacion == "Presidente")
             {
                 frmShowReportePresidencialProvincia reportePresidente = new frmShowReportePresidencialProvincia();
                 reportePresidente.CodigoProvincia = codigoProvincia;
                 reportePresidente.NombreProvincia = nombreProvincia;
                 reportePresidente.ShowDialog();
+            }else
+            {
+
             }
         }
     }

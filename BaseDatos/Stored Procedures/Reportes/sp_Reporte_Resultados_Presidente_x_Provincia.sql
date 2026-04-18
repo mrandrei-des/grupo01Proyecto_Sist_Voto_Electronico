@@ -6,11 +6,10 @@ CREATE OR ALTER PROC sp_Reporte_Resultados_Presidente_x_Provincia
 )
 AS
 BEGIN
-	SELECT a.CodigoPartido, d.Descripcion as 'NombrePartido', COUNT(*) as CantVotos
-	FROM VotosEmitidos a, DistritosElectorales b, Provincias c, PartidosPoliticos d
-	WHERE a.Codele = b.Codele and b.CodigoProvincia = c.CodigoProvincia and a.CodigoPartido = d.CodigoPartido 
-	and a.IdTipoEleccion = 1 and c.CodigoProvincia = @CodProvincia
-	GROUP BY a.CodigoPartido, d.Descripcion
+	SELECT a.PartidoVotado as CodigoPartido, d.Descripcion as 'NombrePartido', COUNT(*) as CantVotos
+	FROM VotosRecibidos_Presidente a, DistritosElectorales b, Provincias c, PartidosPoliticos d
+	WHERE a.Codelec = b.Codele and b.CodigoProvincia = c.CodigoProvincia and a.PartidoVotado = d.CodigoPartido 
+	and c.CodigoProvincia = @CodProvincia
+	GROUP BY a.PartidoVotado, d.Descripcion
 	ORDER BY d.Descripcion ASC
 END
-

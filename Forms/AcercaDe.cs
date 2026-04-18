@@ -20,9 +20,7 @@ namespace grupo01ProyectoFinal
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmPrincipal formPrincipal = new frmPrincipal();
-            formPrincipal.Show();
-            this.Close();
+            Close();
         }
 
         private void btnDescargarManualUsuario_Click(object sender, EventArgs e)

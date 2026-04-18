@@ -76,6 +76,7 @@
     <Compile Include="Clases\Distrito.cs" />
     <Compile Include="Clases\PadronNacional.cs" />
     <Compile Include="Clases\Provincia.cs" />
+    <Compile Include="Clases\ReporteProvincia.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Voto.cs" />
     <Compile Include="DataSet_Reportes\DataSetReporteProvincia.cs">
