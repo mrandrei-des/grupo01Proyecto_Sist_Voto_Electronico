@@ -56,7 +56,8 @@ namespace grupo01ProyectoFinal.Forms
 
         private void btnGenerar_Click(object sender, EventArgs e)
         {
-            string codigoProvincia = ""; //cmbProvincias.SelectedValue.ToString();
+            string codigoProvincia = cmbProvincias.SelectedValue.ToString();
+            string nombreProvincia = cmbProvincias.Text.Trim();
             string tipoVotacion = "Diputado";
 
             if(rdoTipoVotacionPresidente.Checked)
@@ -64,13 +65,20 @@ namespace grupo01ProyectoFinal.Forms
                 tipoVotacion = "Presidente";
             }
 
-            GenerarReporteProvincia(tipoVotacion, codigoProvincia);
+            GenerarReporteProvincia(tipoVotacion, codigoProvincia, nombreProvincia);
         }
 
-        private void GenerarReporteProvincia(string tipoVotacion, string codigoProvincia)
+        private void GenerarReporteProvincia(string tipoVotacion, string codigoProvincia, string nombreProvincia)
         {
             //Consulta la base de datos para obtener el número de votantes por cada provincia
             //Hay que estudiar la posibilida de traer la cantidad de votos por cada partido político
+            if(tipoVotacion == "Presidente")
+            {
+                frmShowReportePresidencialProvincia reportePresidente = new frmShowReportePresidencialProvincia();
+                reportePresidente.CodigoProvincia = codigoProvincia;
+                reportePresidente.NombreProvincia = nombreProvincia;
+                reportePresidente.ShowDialog();
+            }
         }
     }
 }
