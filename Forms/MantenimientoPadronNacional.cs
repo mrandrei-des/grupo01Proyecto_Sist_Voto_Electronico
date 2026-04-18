@@ -15,6 +15,7 @@ namespace grupo01ProyectoFinal.Forms
     public partial class frmMantPadronNacional : Form
     {
         DataSet ds = new DataSet();
+        public string cedulaUsuario = string.Empty;
         public frmMantPadronNacional()
         {
             InitializeComponent();
@@ -23,6 +24,7 @@ namespace grupo01ProyectoFinal.Forms
         private void btnSalir_Click(object sender, EventArgs e)
         {
             frmPrincipal formPrincipal = new frmPrincipal();
+            formPrincipal.cedulaUsuarioLoggeado = cedulaUsuario;
             formPrincipal.Show();
             this.Close();
         }

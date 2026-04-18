@@ -14,6 +14,7 @@ namespace grupo01ProyectoFinal.Forms
 {
     public partial class frmReporteProvincia : Form
     {
+        public string cedulaUsuario = string.Empty;
         public frmReporteProvincia()
         {
             InitializeComponent();
@@ -22,6 +23,7 @@ namespace grupo01ProyectoFinal.Forms
         private void btnSalir_Click(object sender, EventArgs e)
         {
             frmPrincipal formPrincipal = new frmPrincipal();
+            formPrincipal.cedulaUsuarioLoggeado = cedulaUsuario;
             formPrincipal.Show();
             this.Close();
         }

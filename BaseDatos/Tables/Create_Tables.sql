@@ -166,21 +166,48 @@ FOREIGN KEY (IdPerfil) REFERENCES Perfiles(IdPerfil),
 FOREIGN KEY (IdEstado) REFERENCES Estados(IdEstado)
 )
 
--- TABLA PARA GUARDAR LOS VOTOS EMITIDOS
-CREATE TABLE VotosEmitidos
+-- TABLA PARA GUARDAR LOS VOTOS EMITIDOS PARA PRESIDENTE
+CREATE TABLE VotosRecibidos_Presidente
+(
+idVoto int NOT NULL IDENTITY(1,1),
+Codelec varchar(6) NOT NULL,
+PartidoVotado varchar(6) NOT NULL,
+CandidatoVotado varchar(50) NOT NULL,
+FechaEmisionVoto datetime NOT NULL DEFAULT(GETDATE()),
+PRIMARY KEY (idVoto),
+FOREIGN KEY (Codelec) REFERENCES DistritosElectorales(Codele),
+FOREIGN KEY (PartidoVotado) REFERENCES PartidosPoliticos(CodigoPartido),
+FOREIGN KEY (CandidatoVotado) REFERENCES Candidatos(CodigoCandidato)
+)
+
+-- TABLA PARA GUARDAR LOS VOTOS EMITIDOS PARA PRESIDENTE
+CREATE TABLE BitacoraVotoEmitido_Presidente
 (
 idVoto int NOT NULL IDENTITY(1,1),
 Cedula varchar(9) NOT NULL,
-IdTipoEleccion smallint NOT NULL,
-Codele varchar(6) NOT NULL,
-NumeroJuntaReceptora varchar(5) NOT NULL,
-CodigoPartido varchar(6) NOT NULL,
-CodigoCandidato varchar(50) NOT NULL,
 FechaEmisionVoto datetime NOT NULL DEFAULT(GETDATE()),
-PRIMARY KEY (Cedula, IdTipoEleccion),
-FOREIGN KEY (Cedula) REFERENCES PadronNacional(Cedula),
-FOREIGN KEY (IdTipoEleccion) REFERENCES TiposEleccion(IdTipoEleccion),
-FOREIGN KEY (Codele) REFERENCES DistritosElectorales(Codele),
-FOREIGN KEY (CodigoPartido) REFERENCES PartidosPoliticos(CodigoPartido),
-FOREIGN KEY (CodigoCandidato) REFERENCES Candidatos(CodigoCandidato)
+PRIMARY KEY (Cedula),
+FOREIGN KEY (Cedula) REFERENCES PadronNacional(Cedula)
+)
+
+-- TABLA PARA GUARDAR LOS VOTOS EMITIDOS PARA DIPUTADOS
+CREATE TABLE VotosRecibidos_Diputados
+(
+idVoto int NOT NULL IDENTITY(1,1),
+Codelec varchar(6) NOT NULL,
+PartidoVotado varchar(6) NOT NULL,
+FechaEmisionVoto datetime NOT NULL DEFAULT(GETDATE()),
+PRIMARY KEY (idVoto),
+FOREIGN KEY (Codelec) REFERENCES DistritosElectorales(Codele),
+FOREIGN KEY (PartidoVotado) REFERENCES PartidosPoliticos(CodigoPartido)
+)
+
+-- TABLA PARA GUARDAR LOS VOTOS EMITIDOS PARA PRESIDENTE
+CREATE TABLE BitacoraVotoEmitido_Diputados
+(
+idVoto int NOT NULL IDENTITY(1,1),
+Cedula varchar(9) NOT NULL,
+FechaEmisionVoto datetime NOT NULL DEFAULT(GETDATE()),
+PRIMARY KEY (Cedula),
+FOREIGN KEY (Cedula) REFERENCES PadronNacional(Cedula)
 )

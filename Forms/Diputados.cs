@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
+using grupo01ProyectoFinal.Clases;
 
 
 namespace grupo01ProyectoFinal
@@ -22,6 +23,7 @@ namespace grupo01ProyectoFinal
         private Label lblSegundos;
         private string partidoSeleccionado = "";
         private TextBox[] txtBoxes = new TextBox[8]; // tus 8 textboxes de voto
+        public string cedulaUsuario = string.Empty;
 
         public frmDiputados()
         {
@@ -50,6 +52,7 @@ namespace grupo01ProyectoFinal
         private void btnRegresar_Click(object sender, EventArgs e)
         {
             frmPrincipal principal = new frmPrincipal();
+            principal.cedulaUsuarioLoggeado = cedulaUsuario;
             principal.Show();
             Close();
         }
@@ -94,38 +97,85 @@ namespace grupo01ProyectoFinal
 
         private void Guardar()
         {
-            timer?.Stop();
-
-            string codigoPartido = string.IsNullOrEmpty(partidoSeleccionado) ? "NULO" : partidoSeleccionado;
-
-            string connStr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True";
-
-            using (SqlConnection conn = new SqlConnection(connStr))
+            try
             {
-                string comando = @"INSERT INTO VotosEmitidos 
-                          (Cedula, IdTipoEleccion, Codele, NumeroJuntaReceptora, CodigoPartido, CodigoCandidato, FechaEmisionVoto) 
-                          VALUES 
-                          (@Cedula, @IdTipoEleccion, @Codele, @NumeroJuntaReceptora, @CodigoPartido, @CodigoCandidato, @FechaEmisionVoto)";
+                timer?.Stop();
 
-                SqlCommand cmd = new SqlCommand(comando, conn);
+                // Para obtener el código electoral del votante
+                PadronNacional objPadron = new PadronNacional();
+                objPadron.Cedula = cedulaUsuario;
+                DataTable dt = objPadron.Listar_x_Cedula();
+                string codelec = dt.Rows[0]["COD_ELECTORAL"].ToString();
 
-                cmd.Parameters.AddWithValue("@Cedula", ""); // variable de cédula
-                cmd.Parameters.AddWithValue("@IdTipoEleccion", 2);
-                cmd.Parameters.AddWithValue("@Codele", "");    // variable de codele
-                cmd.Parameters.AddWithValue("@NumeroJuntaReceptora", "");     // variable de junta
-                cmd.Parameters.AddWithValue("@CodigoPartido", codigoPartido);
-                cmd.Parameters.AddWithValue("@CodigoCandidato", "");    //variable de candidato
-                cmd.Parameters.AddWithValue("@FechaEmisionVoto", DateTime.Now);
+                string codigoPartido = string.IsNullOrEmpty(partidoSeleccionado) ? "NULO" : partidoSeleccionado;
+                /*
+                string connStr = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Sist_Votaciones_Electronicos;Integrated Security=True";
 
-                conn.Open();
-                cmd.ExecuteNonQuery();
+                using (SqlConnection conn = new SqlConnection(connStr))
+                {
+                    string comando = @"INSERT INTO VotosEmitidos 
+                                (Cedula, IdTipoEleccion, Codele, NumeroJuntaReceptora, CodigoPartido, CodigoCandidato, FechaEmisionVoto) 
+                                VALUES 
+                                (@Cedula, @IdTipoEleccion, @Codele, @NumeroJuntaReceptora, @CodigoPartido, @CodigoCandidato, @FechaEmisionVoto)";
+
+                    SqlCommand cmd = new SqlCommand(comando, conn);
+
+                    cmd.Parameters.AddWithValue("@Cedula", ""); // variable de cédula
+                    cmd.Parameters.AddWithValue("@IdTipoEleccion", 2);
+                    cmd.Parameters.AddWithValue("@Codele", "");    // variable de codele
+                    cmd.Parameters.AddWithValue("@NumeroJuntaReceptora", "");     // variable de junta
+                    cmd.Parameters.AddWithValue("@CodigoPartido", codigoPartido);
+                    cmd.Parameters.AddWithValue("@CodigoCandidato", "");    //variable de candidato
+                    cmd.Parameters.AddWithValue("@FechaEmisionVoto", DateTime.Now);
+
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                */
+
+                Voto objVoto = new Voto();
+                objVoto.Cedula = cedulaUsuario;
+                objVoto.Codelec = codelec;
+                objVoto.CodigoPartido = codigoPartido;
+
+                if (objVoto.GuardarVotoDiputado() && objVoto.GuardarBitacoraVotoEmitido_Diputado())
+                {
+                    Usuario objUsuario = new Usuario();
+                    objUsuario.Cedula = cedulaUsuario;
+
+                    if (objUsuario.ActualizarEstadoVotoDiputado())
+                    {
+                        MessageBox.Show($"Voto guardado exitosamente.\nPartido: {codigoPartido}",
+                            "Voto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        frmPrincipal principal = new frmPrincipal();
+                        principal.cedulaUsuarioLoggeado = cedulaUsuario;
+                        principal.Show();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("No se logró actualizar la información del estado del usuario. Por favor comunicarse con Soporte Técnico.", "Requiere Soporte Técnico", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("No se logró guardar su voto. Por favor inténtelo nuevamente.", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    frmPrincipal principal = new frmPrincipal();
+                    principal.cedulaUsuarioLoggeado = cedulaUsuario;
+                    principal.Show();
+                    this.Close();
+                }
             }
-
-            MessageBox.Show($"Voto guardado exitosamente.\nPartido: {codigoPartido}",
-                "Voto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-            this.Close();
+            catch (Exception ex) { 
+                MessageBox.Show("Ha ocurrido un problema a la hora de guardar el voto. Por favor inténtelo nuevamente. [001][" + ex.Message + "]", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                frmPrincipal formPrincipal = new frmPrincipal();
+                formPrincipal.cedulaUsuarioLoggeado = cedulaUsuario;
+                formPrincipal.Show();
+                Close();            
+            }
         }
+
         private void timer1_Tick_1(object sender, EventArgs e)
         {
      

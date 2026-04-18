@@ -57,19 +57,25 @@ namespace grupo01ProyectoFinal.Clases
 
         public DataTable Consultar()
         {
-            DataSet ds = new DataSet();
-            string cmd = string.Format("SELECT Cedula, Contrasenna, CorreoElectronico as Correo, VotoPresidenteEmitido AS estadoVotoPresidente, VotoDiputadoEmitido AS estadoVotoDiputado, IdEstado AS numEstado, IdPerfil as numPerfil FROM Usuarios WHERE Cedula = '{0}'", this.Cedula);
-
-            ds = Utilidades.Ejecutar(cmd);
-
-            if (ds.Tables.Count > 0)
+            try
             {
-                if (ds.Tables[0].Rows.Count > 0)
-                {
-                    return ds.Tables[0];
-                }
-            }
+                DataSet ds = new DataSet();
+                string cmd = string.Format("SELECT Cedula, Contrasenna, CorreoElectronico as Correo, VotoPresidenteEmitido AS estadoVotoPresidente, VotoDiputadoEmitido AS estadoVotoDiputado, IdEstado AS numEstado, IdPerfil as numPerfil FROM Usuarios WHERE Cedula = '{0}'", this.Cedula);
 
+                ds = Utilidades.Ejecutar(cmd);
+
+                if (ds.Tables.Count > 0)
+                {
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        return ds.Tables[0];
+                    }
+                }
+
+            }catch(Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema al momento de consultar la información del usuario. [001][" + ex.Message + "]", "Consulta de información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
             return new DataTable();
         }
 
@@ -79,14 +85,28 @@ namespace grupo01ProyectoFinal.Clases
             {
                 string cmd = string.Format("EXEC sp_Actualiza_Estado_Voto_Presidente '{0}'", this.cedula);
                 Utilidades.Ejecutar(cmd);
-
                 return true;
             }
             catch (Exception ex)
             {
-
-                return false;
+                MessageBox.Show("Ha ocurrido un problema a la hora actualizar el estado del usuario. [002]["+ ex.Message +"]", "Actualización de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            return false;
+        }
+
+        public bool ActualizarEstadoVotoDiputado()
+        {
+            try
+            {
+                string cmd = string.Format("EXEC sp_Actualiza_Estado_Voto_Diputado '{0}'", this.cedula);
+                Utilidades.Ejecutar(cmd);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema a la hora actualizar el estado del usuario. [002][" + ex.Message + "]", "Actualización de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return false;
         }
     }
 }

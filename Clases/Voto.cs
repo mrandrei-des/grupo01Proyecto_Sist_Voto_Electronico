@@ -33,11 +33,11 @@ namespace grupo01ProyectoFinal.Clases
         public string CodigoPartido { get => codigoPartido; set => codigoPartido = value; }
         public string CodigoCandidato { get => codigoCandidato; set => codigoCandidato = value; }
 
-        public bool GuardarVoto()
+        public bool GuardarVotoPresidente()
         {
             try
             {
-                string cmd = string.Format("EXEC sp_Inserta_Voto_Emitido '{0}','{1}','{2}','{3}','{4}'", this.Cedula, this.TipoEleccion, this.Codelec, this.codigoPartido, this.CodigoCandidato);
+                string cmd = string.Format("EXEC sp_Inserta_Voto_Emitido_Presidente '{0}','{1}','{2}'", this.Codelec, this.codigoPartido, this.CodigoCandidato);
 
                 Utilidades.Ejecutar(cmd);
                 return true;
@@ -45,6 +45,57 @@ namespace grupo01ProyectoFinal.Clases
             catch (Exception ex)
             {
                 MessageBox.Show("Ha ocurrido un problema a la hora de guardar el voto. Por favor inténtelo nuevamente. [001][" + ex.Message + "]", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+        }
+
+        public bool GuardarBitacoraVotoEmitido_Presidente()
+        {
+            try
+            {
+                string cmd = string.Format("EXEC sp_InsertaBitacoraVotoEmitido_Presidente '{0}'", this.Cedula);
+
+                Utilidades.Ejecutar(cmd);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema a la hora de guardar el voto. Por favor inténtelo nuevamente. [002][" + ex.Message + "]", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+        }
+
+        public bool GuardarVotoDiputado()
+        {
+            try
+            {
+                string cmd = string.Format("EXEC sp_Inserta_Voto_Emitido_Diputado '{0}','{1}'", this.Codelec, this.codigoPartido);
+
+                Utilidades.Ejecutar(cmd);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema a la hora de guardar el voto. Por favor inténtelo nuevamente. [003][" + ex.Message + "]", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+        }
+
+        public bool GuardarBitacoraVotoEmitido_Diputado()
+        {
+            try
+            {
+                string cmd = string.Format("EXEC sp_InsertaBitacoraVotoEmitido_Diputado '{0}'", this.Cedula);
+
+                Utilidades.Ejecutar(cmd);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema a la hora de guardar el voto. Por favor inténtelo nuevamente. [002][" + ex.Message + "]", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
 

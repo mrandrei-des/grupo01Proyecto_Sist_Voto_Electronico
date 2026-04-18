@@ -137,11 +137,12 @@ namespace grupo01ProyectoFinal
         private void frmPresidentes_Load(object sender, EventArgs e)
         {
             frmPrincipal formPrincipal = new frmPrincipal();
+            formPrincipal.cedulaUsuarioLoggeado = cedulaUsuario;
             PuedeEmitirVotos();
 
-            if(!puedeContinuarPresidente && !puedeContinuarDiputados)
+            if (!puedeContinuarPresidente && !puedeContinuarDiputados)
             {
-                MessageBox.Show("Ya ha emitido sus dos sufragio. Gracias por emitir su voto.", "Votos Emitidos", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+                MessageBox.Show("Ya ha emitido sus dos sufragios. Gracias por vivir nuestra democracia.", "Votos Emitidos", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 formPrincipal.Show();
                 Close();
                 return;
@@ -167,6 +168,7 @@ namespace grupo01ProyectoFinal
                 else
                 {
                     frmDiputados formDiputados = new frmDiputados();
+                    formDiputados.cedulaUsuario = cedulaUsuario;
                     formDiputados.Show();
                     Close();
                 }
@@ -266,6 +268,7 @@ namespace grupo01ProyectoFinal
             try
             {
                 frmPrincipal formPrincipal = new frmPrincipal();
+                formPrincipal.cedulaUsuarioLoggeado = cedulaUsuario;
 
                 // Si no hay tiempo, el voto se guarda como nulo, sin importar si el usuario marcó alguna opción o no
                 if (tiempoRestante == 0)
@@ -323,7 +326,7 @@ namespace grupo01ProyectoFinal
                 objVoto.CodigoCandidato = candidatoVoto;
 
                 //Guardar el voto
-                if(objVoto.GuardarVoto())
+                if(objVoto.GuardarVotoPresidente() && objVoto.GuardarBitacoraVotoEmitido_Presidente())
                 {
                     //Actualiza estado de voto para presidente
                     Usuario objUsuario = new Usuario();
@@ -338,6 +341,7 @@ namespace grupo01ProyectoFinal
                         if (puedeContinuarDiputados)
                         {
                             frmDiputados formDiputados = new frmDiputados();
+                            formDiputados.cedulaUsuario = cedulaUsuario;
                             formDiputados.Show();
                             Close();
                             return;
@@ -358,6 +362,7 @@ namespace grupo01ProyectoFinal
             {
                 MessageBox.Show("Ha ocurrido un problema a la hora de guardar el voto. Por favor inténtelo nuevamente. [001][" + ex.Message + "]", "Guardar Voto", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 frmPrincipal formPrincipal = new frmPrincipal();
+                formPrincipal.cedulaUsuarioLoggeado = cedulaUsuario;
                 formPrincipal.Show();
                 Close();
             }
@@ -366,8 +371,9 @@ namespace grupo01ProyectoFinal
         private void btnContinuarVotacion_Click(object sender, EventArgs e)
         {
             frmDiputados formDiputados = new frmDiputados();
+            formDiputados.cedulaUsuario = cedulaUsuario;
             formDiputados.Show();
-            this.Hide();
+            Close();
         }
 
         private void timTiempoVotacion_Tick(object sender, EventArgs e)

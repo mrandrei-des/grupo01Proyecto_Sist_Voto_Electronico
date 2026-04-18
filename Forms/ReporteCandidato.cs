@@ -12,7 +12,9 @@ namespace grupo01ProyectoFinal.Forms
 {
     public partial class frmReporteCandidato : Form
     {
+        public string cedulaUsuario = string.Empty;
         private string partidoCandidatoSeleccionado;
+
         public frmReporteCandidato()
         {
             InitializeComponent();
@@ -21,6 +23,7 @@ namespace grupo01ProyectoFinal.Forms
         private void btnSalir_Click(object sender, EventArgs e)
         {
             frmPrincipal formPrincipal = new frmPrincipal();
+            formPrincipal.cedulaUsuarioLoggeado = cedulaUsuario;
             formPrincipal.Show();
             this.Close();
         }

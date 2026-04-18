@@ -217,7 +217,7 @@
             this.grbDatosAcceso.Controls.Add(this.lblContrasena);
             this.grbDatosAcceso.Location = new System.Drawing.Point(12, 299);
             this.grbDatosAcceso.Name = "grbDatosAcceso";
-            this.grbDatosAcceso.Size = new System.Drawing.Size(983, 156);
+            this.grbDatosAcceso.Size = new System.Drawing.Size(983, 171);
             this.grbDatosAcceso.TabIndex = 15;
             this.grbDatosAcceso.TabStop = false;
             this.grbDatosAcceso.Text = " Datos para acceso: ";
@@ -236,7 +236,7 @@
             this.lblInfoCorreo.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblInfoCorreo.Location = new System.Drawing.Point(38, 119);
             this.lblInfoCorreo.Name = "lblInfoCorreo";
-            this.lblInfoCorreo.Size = new System.Drawing.Size(465, 26);
+            this.lblInfoCorreo.Size = new System.Drawing.Size(920, 38);
             this.lblInfoCorreo.TabIndex = 13;
             this.lblInfoCorreo.Text = "Para la entrega de información y notificaciones sobre las votaciones.";
             // 

@@ -23,9 +23,9 @@ namespace grupo01ProyectoFinal
 
         private void btnSalir_Click(object sender, EventArgs e)
         {
-            frmPrincipal formPrincipal = new frmPrincipal();
-            formPrincipal.Show();
-            this.Close();
+            frmLogin formLogin = new frmLogin();
+            formLogin.Show();
+            Close();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
