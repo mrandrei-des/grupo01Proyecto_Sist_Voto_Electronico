@@ -11,5 +11,5 @@ BEGIN
 	WHERE a.Codelec = b.Codele and b.CodigoProvincia = c.CodigoProvincia and a.PartidoVotado = d.CodigoPartido 
 	and c.CodigoProvincia = @CodProvincia
 	GROUP BY a.PartidoVotado, d.Descripcion
-	ORDER BY d.Descripcion ASC
+	ORDER BY COUNT(*) DESC, d.Descripcion ASC
 END

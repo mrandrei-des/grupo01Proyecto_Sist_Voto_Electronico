@@ -147,8 +147,9 @@ namespace grupo01ProyectoFinal.Forms
                 return;
             }
 
-            // Procede a buscar la información  del candidado para generar el reporte
-            // La idea es que salgan las provincias y los votos que han tenido en cada una
+            frmShowReporteCandidato reportePresidente = new frmShowReporteCandidato();
+            reportePresidente.CodigoPartido = partidoCandidatoSeleccionado;            
+            reportePresidente.ShowDialog();
         }
 
         private void pbCandidatoPLN_Click(object sender, EventArgs e)
