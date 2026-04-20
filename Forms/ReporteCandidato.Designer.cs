@@ -125,7 +125,7 @@
             this.rdoCandidatoPNR.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdoCandidatoPNR.Location = new System.Drawing.Point(29, 502);
             this.rdoCandidatoPNR.Name = "rdoCandidatoPNR";
-            this.rdoCandidatoPNR.Size = new System.Drawing.Size(264, 24);
+            this.rdoCandidatoPNR.Size = new System.Drawing.Size(398, 33);
             this.rdoCandidatoPNR.TabIndex = 295;
             this.rdoCandidatoPNR.Text = "Gerardo Fabricio Alvarado Muñoz";
             this.rdoCandidatoPNR.UseVisualStyleBackColor = true;
@@ -137,7 +137,7 @@
             this.rdoCandidatoPFA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdoCandidatoPFA.Location = new System.Drawing.Point(323, 502);
             this.rdoCandidatoPFA.Name = "rdoCandidatoPFA";
-            this.rdoCandidatoPFA.Size = new System.Drawing.Size(241, 24);
+            this.rdoCandidatoPFA.Size = new System.Drawing.Size(361, 33);
             this.rdoCandidatoPFA.TabIndex = 294;
             this.rdoCandidatoPFA.Text = "Andrés Ariel Robles Barrantes";
             this.rdoCandidatoPFA.UseVisualStyleBackColor = true;
@@ -149,7 +149,7 @@
             this.rdoCandidatoPLP.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdoCandidatoPLP.Location = new System.Drawing.Point(655, 502);
             this.rdoCandidatoPLP.Name = "rdoCandidatoPLP";
-            this.rdoCandidatoPLP.Size = new System.Drawing.Size(181, 24);
+            this.rdoCandidatoPLP.Size = new System.Drawing.Size(274, 33);
             this.rdoCandidatoPLP.TabIndex = 293;
             this.rdoCandidatoPLP.Text = "Eliecer Feinzaig Mintz";
             this.rdoCandidatoPLP.UseVisualStyleBackColor = true;
@@ -161,7 +161,7 @@
             this.rdoCandidatoVotoNulo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdoCandidatoVotoNulo.Location = new System.Drawing.Point(952, 502);
             this.rdoCandidatoVotoNulo.Name = "rdoCandidatoVotoNulo";
-            this.rdoCandidatoVotoNulo.Size = new System.Drawing.Size(97, 24);
+            this.rdoCandidatoVotoNulo.Size = new System.Drawing.Size(144, 33);
             this.rdoCandidatoVotoNulo.TabIndex = 292;
             this.rdoCandidatoVotoNulo.Text = "Voto Nulo";
             this.rdoCandidatoVotoNulo.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@
             this.rdoCandidatoVotoBlanco.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdoCandidatoVotoBlanco.Location = new System.Drawing.Point(953, 237);
             this.rdoCandidatoVotoBlanco.Name = "rdoCandidatoVotoBlanco";
-            this.rdoCandidatoVotoBlanco.Size = new System.Drawing.Size(136, 24);
+            this.rdoCandidatoVotoBlanco.Size = new System.Drawing.Size(200, 33);
             this.rdoCandidatoVotoBlanco.TabIndex = 291;
             this.rdoCandidatoVotoBlanco.Text = "Voto en Blanco";
             this.rdoCandidatoVotoBlanco.UseVisualStyleBackColor = true;
@@ -185,7 +185,7 @@
             this.rdoCandidatoPLN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdoCandidatoPLN.Location = new System.Drawing.Point(327, 237);
             this.rdoCandidatoPLN.Name = "rdoCandidatoPLN";
-            this.rdoCandidatoPLN.Size = new System.Drawing.Size(245, 24);
+            this.rdoCandidatoPLN.Size = new System.Drawing.Size(366, 33);
             this.rdoCandidatoPLN.TabIndex = 290;
             this.rdoCandidatoPLN.Text = "Álvaro Roberto Ramos Chaves";
             this.rdoCandidatoPLN.UseVisualStyleBackColor = true;
@@ -197,7 +197,7 @@
             this.rdoCandidatoPPSO.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdoCandidatoPPSO.Location = new System.Drawing.Point(648, 237);
             this.rdoCandidatoPPSO.Name = "rdoCandidatoPPSO";
-            this.rdoCandidatoPPSO.Size = new System.Drawing.Size(213, 24);
+            this.rdoCandidatoPPSO.Size = new System.Drawing.Size(317, 33);
             this.rdoCandidatoPPSO.TabIndex = 289;
             this.rdoCandidatoPPSO.Text = "Laura Fernández Delgado";
             this.rdoCandidatoPPSO.UseVisualStyleBackColor = true;
@@ -210,7 +210,7 @@
             this.rdoCandidatoPUSC.Cursor = System.Windows.Forms.Cursors.Hand;
             this.rdoCandidatoPUSC.Location = new System.Drawing.Point(30, 237);
             this.rdoCandidatoPUSC.Name = "rdoCandidatoPUSC";
-            this.rdoCandidatoPUSC.Size = new System.Drawing.Size(242, 24);
+            this.rdoCandidatoPUSC.Size = new System.Drawing.Size(363, 33);
             this.rdoCandidatoPUSC.TabIndex = 288;
             this.rdoCandidatoPUSC.TabStop = true;
             this.rdoCandidatoPUSC.Text = "Juan Carlos Hidalgo Bogantes";
@@ -224,7 +224,7 @@
             this.lblNombrePartidoVotoNulo.Location = new System.Drawing.Point(948, 298);
             this.lblNombrePartidoVotoNulo.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoVotoNulo.Name = "lblNombrePartidoVotoNulo";
-            this.lblNombrePartidoVotoNulo.Size = new System.Drawing.Size(88, 20);
+            this.lblNombrePartidoVotoNulo.Size = new System.Drawing.Size(128, 29);
             this.lblNombrePartidoVotoNulo.TabIndex = 287;
             this.lblNombrePartidoVotoNulo.Text = "Voto Nulo";
             // 
@@ -235,7 +235,7 @@
             this.lblNombrePartidoVotoBlanco.Location = new System.Drawing.Point(949, 30);
             this.lblNombrePartidoVotoBlanco.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoVotoBlanco.Name = "lblNombrePartidoVotoBlanco";
-            this.lblNombrePartidoVotoBlanco.Size = new System.Drawing.Size(132, 20);
+            this.lblNombrePartidoVotoBlanco.Size = new System.Drawing.Size(189, 29);
             this.lblNombrePartidoVotoBlanco.TabIndex = 286;
             this.lblNombrePartidoVotoBlanco.Text = "Voto en Blanco";
             // 
@@ -419,7 +419,7 @@
             this.lblNombrePartidoPLP.Location = new System.Drawing.Point(651, 298);
             this.lblNombrePartidoPLP.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPLP.Name = "lblNombrePartidoPLP";
-            this.lblNombrePartidoPLP.Size = new System.Drawing.Size(221, 20);
+            this.lblNombrePartidoPLP.Size = new System.Drawing.Size(326, 29);
             this.lblNombrePartidoPLP.TabIndex = 263;
             this.lblNombrePartidoPLP.Text = "Partido Liberal Progresista";
             // 
@@ -430,7 +430,7 @@
             this.lblNombrePartidoPFA.Location = new System.Drawing.Point(370, 298);
             this.lblNombrePartidoPFA.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPFA.Name = "lblNombrePartidoPFA";
-            this.lblNombrePartidoPFA.Size = new System.Drawing.Size(183, 20);
+            this.lblNombrePartidoPFA.Size = new System.Drawing.Size(268, 29);
             this.lblNombrePartidoPFA.TabIndex = 262;
             this.lblNombrePartidoPFA.Text = "Partido Frente Amplio";
             // 
@@ -441,7 +441,7 @@
             this.lblNombrePartidoPNR.Location = new System.Drawing.Point(56, 298);
             this.lblNombrePartidoPNR.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPNR.Name = "lblNombrePartidoPNR";
-            this.lblNombrePartidoPNR.Size = new System.Drawing.Size(206, 20);
+            this.lblNombrePartidoPNR.Size = new System.Drawing.Size(303, 29);
             this.lblNombrePartidoPNR.TabIndex = 261;
             this.lblNombrePartidoPNR.Text = "Partido Nueva República";
             // 
@@ -452,7 +452,7 @@
             this.lblNombrePartidoPPSO.Location = new System.Drawing.Point(652, 30);
             this.lblNombrePartidoPPSO.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPPSO.Name = "lblNombrePartidoPPSO";
-            this.lblNombrePartidoPPSO.Size = new System.Drawing.Size(209, 20);
+            this.lblNombrePartidoPPSO.Size = new System.Drawing.Size(308, 29);
             this.lblNombrePartidoPPSO.TabIndex = 260;
             this.lblNombrePartidoPPSO.Text = "Partido Pueblo Soberano";
             // 
@@ -463,7 +463,7 @@
             this.lblNombrePartidoPLN.Location = new System.Drawing.Point(344, 30);
             this.lblNombrePartidoPLN.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPLN.Name = "lblNombrePartidoPLN";
-            this.lblNombrePartidoPLN.Size = new System.Drawing.Size(228, 20);
+            this.lblNombrePartidoPLN.Size = new System.Drawing.Size(337, 29);
             this.lblNombrePartidoPLN.TabIndex = 259;
             this.lblNombrePartidoPLN.Text = "Partido Liberación Nacional";
             // 
@@ -474,7 +474,7 @@
             this.lblNombrePartidoPUSC.Location = new System.Drawing.Point(26, 30);
             this.lblNombrePartidoPUSC.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombrePartidoPUSC.Name = "lblNombrePartidoPUSC";
-            this.lblNombrePartidoPUSC.Size = new System.Drawing.Size(258, 20);
+            this.lblNombrePartidoPUSC.Size = new System.Drawing.Size(377, 29);
             this.lblNombrePartidoPUSC.TabIndex = 258;
             this.lblNombrePartidoPUSC.Text = "Partido Unidad Social Cristiana";
             // 
@@ -522,9 +522,9 @@
             // 
             // frmReporteCandidato
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 29F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1157, 748);
+            this.ClientSize = new System.Drawing.Size(1157, 746);
             this.ControlBox = false;
             this.Controls.Add(this.btnGenerarReporte);
             this.Controls.Add(this.btnLimpiar);

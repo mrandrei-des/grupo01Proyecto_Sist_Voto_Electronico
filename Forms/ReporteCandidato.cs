@@ -42,6 +42,8 @@ namespace grupo01ProyectoFinal.Forms
         private void frmReporteCandidato_Load(object sender, EventArgs e)
         {
 
+            this.reportViewer1.RefreshReport();
+            this.reportViewer2.RefreshReport();
         }
 
         private void rdoCandidatoPUSC_CheckedChanged(object sender, EventArgs e)

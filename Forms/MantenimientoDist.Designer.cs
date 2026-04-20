@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMantDist));
             this.lblCodDist = new System.Windows.Forms.Label();
             this.lblNombDist = new System.Windows.Forms.Label();
             this.lblCanton = new System.Windows.Forms.Label();
@@ -41,12 +42,6 @@
             this.NombDist = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.canton = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Prov = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnNuevo = new System.Windows.Forms.Button();
-            this.btnGuardar = new System.Windows.Forms.Button();
-            this.btnEditar = new System.Windows.Forms.Button();
-            this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
-            this.btnBuscarDist = new System.Windows.Forms.Button();
             this.lblBuscaDist = new System.Windows.Forms.Label();
             this.lblDatoDist = new System.Windows.Forms.Label();
             this.lblCodDist1 = new System.Windows.Forms.Label();
@@ -54,6 +49,11 @@
             this.lblNombDist1 = new System.Windows.Forms.Label();
             this.txtNombDist1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnBuscarDist = new System.Windows.Forms.Button();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,11 +130,11 @@
             this.NombDist,
             this.canton,
             this.Prov});
-            this.dataGridView1.Location = new System.Drawing.Point(103, 478);
+            this.dataGridView1.Location = new System.Drawing.Point(155, 439);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(665, 82);
+            this.dataGridView1.Size = new System.Drawing.Size(657, 75);
             this.dataGridView1.TabIndex = 8;
             // 
             // CodDist
@@ -164,61 +164,6 @@
             this.Prov.MinimumWidth = 8;
             this.Prov.Name = "Prov";
             this.Prov.Width = 150;
-            // 
-            // btnNuevo
-            // 
-            this.btnNuevo.Location = new System.Drawing.Point(52, 403);
-            this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(105, 45);
-            this.btnNuevo.TabIndex = 9;
-            this.btnNuevo.Text = "&Nuevo";
-            this.btnNuevo.UseVisualStyleBackColor = true;
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.Location = new System.Drawing.Point(216, 403);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(105, 45);
-            this.btnGuardar.TabIndex = 10;
-            this.btnGuardar.Text = "&Guardar";
-            this.btnGuardar.UseVisualStyleBackColor = true;
-            // 
-            // btnEditar
-            // 
-            this.btnEditar.Location = new System.Drawing.Point(374, 403);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(105, 45);
-            this.btnEditar.TabIndex = 11;
-            this.btnEditar.Text = "&Editar";
-            this.btnEditar.UseVisualStyleBackColor = true;
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.Location = new System.Drawing.Point(542, 403);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(105, 45);
-            this.btnEliminar.TabIndex = 12;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.UseVisualStyleBackColor = true;
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Location = new System.Drawing.Point(694, 403);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(105, 45);
-            this.btnSalir.TabIndex = 13;
-            this.btnSalir.Text = "&Salir";
-            this.btnSalir.UseVisualStyleBackColor = true;
-            // 
-            // btnBuscarDist
-            // 
-            this.btnBuscarDist.Location = new System.Drawing.Point(454, 49);
-            this.btnBuscarDist.Name = "btnBuscarDist";
-            this.btnBuscarDist.Size = new System.Drawing.Size(104, 58);
-            this.btnBuscarDist.TabIndex = 14;
-            this.btnBuscarDist.Text = "&Buscar";
-            this.btnBuscarDist.UseVisualStyleBackColor = true;
-            this.btnBuscarDist.Click += new System.EventHandler(this.button1_Click);
             // 
             // lblBuscaDist
             // 
@@ -285,11 +230,86 @@
             this.label1.TabIndex = 21;
             this.label1.Text = "Doble Click Para Seleccionar";
             // 
+            // btnBuscarDist
+            // 
+            this.btnBuscarDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBuscarDist.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarDist.Image")));
+            this.btnBuscarDist.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnBuscarDist.Location = new System.Drawing.Point(479, 43);
+            this.btnBuscarDist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscarDist.Name = "btnBuscarDist";
+            this.btnBuscarDist.Size = new System.Drawing.Size(133, 88);
+            this.btnBuscarDist.TabIndex = 22;
+            this.btnBuscarDist.Text = "&Buscar";
+            this.btnBuscarDist.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnBuscarDist.UseVisualStyleBackColor = true;
+            // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(717, 323);
+            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(132, 84);
+            this.btnSalir.TabIndex = 23;
+            this.btnSalir.Text = "&Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
+            this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEliminar.Location = new System.Drawing.Point(467, 323);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(117, 84);
+            this.btnEliminar.TabIndex = 24;
+            this.btnEliminar.Text = "&Eliminar";
+            this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
+            this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnEditar.Location = new System.Drawing.Point(717, 194);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(132, 84);
+            this.btnEditar.TabIndex = 25;
+            this.btnEditar.Text = "&Editar";
+            this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEditar.UseVisualStyleBackColor = true;
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
+            this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGuardar.Location = new System.Drawing.Point(467, 194);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(117, 84);
+            this.btnGuardar.TabIndex = 26;
+            this.btnGuardar.Text = "&Guardar";
+            this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            // 
             // frmMantDist
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(945, 622);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnSalir);
+            this.Controls.Add(this.btnBuscarDist);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombDist1);
             this.Controls.Add(this.lblNombDist1);
@@ -297,12 +317,6 @@
             this.Controls.Add(this.lblCodDist1);
             this.Controls.Add(this.lblDatoDist);
             this.Controls.Add(this.lblBuscaDist);
-            this.Controls.Add(this.btnBuscarDist);
-            this.Controls.Add(this.btnSalir);
-            this.Controls.Add(this.btnEliminar);
-            this.Controls.Add(this.btnEditar);
-            this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.btnNuevo);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtProvincia);
             this.Controls.Add(this.txtCanton);
@@ -336,12 +350,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn NombDist;
         private System.Windows.Forms.DataGridViewTextBoxColumn canton;
         private System.Windows.Forms.DataGridViewTextBoxColumn Prov;
-        private System.Windows.Forms.Button btnNuevo;
-        private System.Windows.Forms.Button btnGuardar;
-        private System.Windows.Forms.Button btnEditar;
-        private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.Button btnBuscarDist;
         private System.Windows.Forms.Label lblBuscaDist;
         private System.Windows.Forms.Label lblDatoDist;
         private System.Windows.Forms.Label lblCodDist1;
@@ -349,5 +357,10 @@
         private System.Windows.Forms.Label lblNombDist1;
         private System.Windows.Forms.TextBox txtNombDist1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnBuscarDist;
+        private System.Windows.Forms.Button btnSalir;
+        private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.Button btnEditar;
+        private System.Windows.Forms.Button btnGuardar;
     }
 }
