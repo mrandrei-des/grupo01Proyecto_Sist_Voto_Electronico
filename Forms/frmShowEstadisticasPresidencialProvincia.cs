@@ -14,9 +14,9 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace grupo01ProyectoFinal.Forms
 {
-    public partial class frmShowReportePresidencialProvincia : Form
+    public partial class frmShowEstadisticasPresidencialProvincia : Form
     {
-        public frmShowReportePresidencialProvincia()
+        public frmShowEstadisticasPresidencialProvincia()
         {
             InitializeComponent();
         }

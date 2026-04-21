@@ -117,6 +117,12 @@
     <Compile Include="Forms\Diputados.Designer.cs">
       <DependentUpon>Diputados.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\EstadisticasCandidato.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EstadisticasCandidato.Designer.cs">
+      <DependentUpon>EstadisticasCandidato.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,17 +135,29 @@
     <Compile Include="Forms\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmShowReporteCandidato.cs">
+    <Compile Include="Forms\frmShowEstadisticasPresidencialCandidato.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmShowReporteCandidato.Designer.cs">
-      <DependentUpon>frmShowReporteCandidato.cs</DependentUpon>
+    <Compile Include="Forms\frmShowEstadisticasPresidencialCandidato.Designer.cs">
+      <DependentUpon>frmShowEstadisticasPresidencialCandidato.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmShowReportePresidencialProvincia.cs">
+    <Compile Include="Forms\frmShowReportePresidenteCandidato.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmShowReportePresidencialProvincia.Designer.cs">
-      <DependentUpon>frmShowReportePresidencialProvincia.cs</DependentUpon>
+    <Compile Include="Forms\frmShowReportePresidenteCandidato.Designer.cs">
+      <DependentUpon>frmShowReportePresidenteCandidato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmShowEstadisticasPresidencialProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmShowEstadisticasPresidencialProvincia.Designer.cs">
+      <DependentUpon>frmShowEstadisticasPresidencialProvincia.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmShowReportePresidenteProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmShowReportePresidenteProvincia.Designer.cs">
+      <DependentUpon>frmShowReportePresidenteProvincia.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Informativa.cs">
       <SubType>Form</SubType>
@@ -177,6 +195,12 @@
     <Compile Include="Forms\EstadisticaProvincia.Designer.cs">
       <DependentUpon>EstadisticaProvincia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\ReporteProvincia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ReporteProvincia.Designer.cs">
+      <DependentUpon>ReporteProvincia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\ResultadosDiputados.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -213,17 +237,26 @@
     <EmbeddedResource Include="Forms\Diputados.resx">
       <DependentUpon>Diputados.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EstadisticasCandidato.resx">
+      <DependentUpon>EstadisticasCandidato.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmShowReporteCandidato.resx">
-      <DependentUpon>frmShowReporteCandidato.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmShowEstadisticasPresidencialCandidato.resx">
+      <DependentUpon>frmShowEstadisticasPresidencialCandidato.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmShowReportePresidencialProvincia.resx">
-      <DependentUpon>frmShowReportePresidencialProvincia.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\frmShowReportePresidenteCandidato.resx">
+      <DependentUpon>frmShowReportePresidenteCandidato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmShowEstadisticasPresidencialProvincia.resx">
+      <DependentUpon>frmShowEstadisticasPresidencialProvincia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmShowReportePresidenteProvincia.resx">
+      <DependentUpon>frmShowReportePresidenteProvincia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Informativa.resx">
       <DependentUpon>Informativa.cs</DependentUpon>
@@ -243,6 +276,9 @@
     <EmbeddedResource Include="Forms\EstadisticaProvincia.resx">
       <DependentUpon>EstadisticaProvincia.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\ReporteProvincia.resx">
+      <DependentUpon>ReporteProvincia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultadosDiputados.resx">
       <DependentUpon>ResultadosDiputados.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,8 +293,10 @@
     <EmbeddedResource Include="Forms\RegistroUsuario.resx">
       <DependentUpon>RegistroUsuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reportes\ReporteCandidato.rdlc" />
-    <EmbeddedResource Include="Reportes\ReporteProvinciaPresidente.rdlc" />
+    <EmbeddedResource Include="Reportes\EstadisticasPresidenteCandidato.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePresidenteCandidato.rdlc" />
+    <EmbeddedResource Include="Reportes\ReportePresidenteProvincia.rdlc" />
+    <EmbeddedResource Include="Reportes\EstadisticasPresidenteProvincia.rdlc" />
     <None Include="DataSet_Reportes\DataSetReporteCandidato.xsc">
       <DependentUpon>DataSetReporteCandidato.xsd</DependentUpon>
     </None>

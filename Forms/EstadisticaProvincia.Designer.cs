@@ -39,6 +39,7 @@
             this.btnGenerar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.lblTitulo = new System.Windows.Forms.Label();
             this.grbFiltros.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,7 +49,7 @@
             this.grbFiltros.Controls.Add(this.rdoTipoVotacionPresidente);
             this.grbFiltros.Controls.Add(this.cmbProvincias);
             this.grbFiltros.Controls.Add(this.lblProvincia);
-            this.grbFiltros.Location = new System.Drawing.Point(18, 18);
+            this.grbFiltros.Location = new System.Drawing.Point(32, 101);
             this.grbFiltros.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.grbFiltros.Name = "grbFiltros";
             this.grbFiltros.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -106,7 +107,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(342, 327);
+            this.btnLimpiar.Location = new System.Drawing.Point(339, 265);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(105, 79);
             this.btnLimpiar.TabIndex = 13;
@@ -120,7 +121,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(453, 327);
+            this.btnSalir.Location = new System.Drawing.Point(450, 265);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(105, 79);
             this.btnSalir.TabIndex = 12;
@@ -134,7 +135,7 @@
             this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGenerar.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerar.Image")));
             this.btnGenerar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGenerar.Location = new System.Drawing.Point(231, 327);
+            this.btnGenerar.Location = new System.Drawing.Point(228, 265);
             this.btnGenerar.Name = "btnGenerar";
             this.btnGenerar.Size = new System.Drawing.Size(105, 79);
             this.btnGenerar.TabIndex = 14;
@@ -148,7 +149,7 @@
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button1.Location = new System.Drawing.Point(342, 327);
+            this.button1.Location = new System.Drawing.Point(339, 265);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(105, 79);
             this.button1.TabIndex = 13;
@@ -162,7 +163,7 @@
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.Image = ((System.Drawing.Image)(resources.GetObject("button2.Image")));
             this.button2.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.button2.Location = new System.Drawing.Point(231, 327);
+            this.button2.Location = new System.Drawing.Point(228, 265);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(105, 79);
             this.button2.TabIndex = 14;
@@ -171,12 +172,24 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(128, 38);
+            this.lblTitulo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(557, 20);
+            this.lblTitulo.TabIndex = 15;
+            this.lblTitulo.Text = "Estadísticas de Resultados Votaciones Presidenciales por Provincia ";
+            // 
             // frmEstadisticaProvincia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(785, 455);
+            this.ClientSize = new System.Drawing.Size(785, 377);
             this.ControlBox = false;
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnGenerar);
@@ -192,6 +205,7 @@
             this.grbFiltros.ResumeLayout(false);
             this.grbFiltros.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -207,5 +221,6 @@
         private System.Windows.Forms.Label lblTipoVotacion;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label lblTitulo;
     }
 }

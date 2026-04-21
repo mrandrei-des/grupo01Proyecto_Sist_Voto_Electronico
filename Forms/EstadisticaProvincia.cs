@@ -62,10 +62,12 @@ namespace grupo01ProyectoFinal.Forms
             string nombreProvincia = cmbProvincias.Text.Trim();
             string tipoVotacion = "Diputado";
 
-            if(rdoTipoVotacionPresidente.Checked)
+            if (rdoTipoVotacionPresidente.Checked)
             {
                 tipoVotacion = "Presidente";
             }
+
+            else { }
 
             ReporteProvincia objReporteProvincia = new ReporteProvincia();
             objReporteProvincia.CodProvincia = codigoProvincia;
@@ -86,7 +88,7 @@ namespace grupo01ProyectoFinal.Forms
         {
             if(tipoVotacion == "Presidente")
             {
-                frmShowReportePresidencialProvincia reportePresidente = new frmShowReportePresidencialProvincia();
+                frmShowEstadisticasPresidencialProvincia reportePresidente = new frmShowEstadisticasPresidencialProvincia();
                 reportePresidente.CodigoProvincia = codigoProvincia;
                 reportePresidente.NombreProvincia = nombreProvincia;
                 reportePresidente.ShowDialog();

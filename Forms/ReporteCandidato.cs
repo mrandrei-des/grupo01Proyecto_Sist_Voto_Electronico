@@ -40,7 +40,7 @@ namespace grupo01ProyectoFinal.Forms
         }
 
         private void frmReporteCandidato_Load(object sender, EventArgs e)
-        {            
+        {
         }
 
         private void rdoCandidatoPUSC_CheckedChanged(object sender, EventArgs e)
@@ -146,7 +146,7 @@ namespace grupo01ProyectoFinal.Forms
                 return;
             }
 
-            frmShowReporteCandidato reportePresidente = new frmShowReporteCandidato();
+            frmShowReportePresidenteCandidato reportePresidente = new frmShowReportePresidenteCandidato();
             reportePresidente.CodigoPartido = partidoCandidatoSeleccionado;            
             reportePresidente.ShowDialog();
         }

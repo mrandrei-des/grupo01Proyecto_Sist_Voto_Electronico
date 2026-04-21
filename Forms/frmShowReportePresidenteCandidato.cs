@@ -14,9 +14,9 @@ using System.Windows.Forms;
 
 namespace grupo01ProyectoFinal.Forms
 {
-    public partial class frmShowReporteCandidato : Form
+    public partial class frmShowReportePresidenteCandidato : Form
     {
-        public frmShowReporteCandidato()
+        public frmShowReportePresidenteCandidato()
         {
             InitializeComponent();
         }
