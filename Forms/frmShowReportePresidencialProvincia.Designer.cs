@@ -41,7 +41,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 714);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 843);
             this.reportViewer1.TabIndex = 0;
             // 
             // sp_Reporte_Resultados_Presidente_x_ProvinciaTableAdapter1
@@ -57,7 +57,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 714);
+            this.ClientSize = new System.Drawing.Size(800, 843);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmShowReportePresidencialProvincia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
