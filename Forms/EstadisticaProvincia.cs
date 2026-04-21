@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace grupo01ProyectoFinal.Forms
 {
-    public partial class frmReporteProvincia : Form
+    public partial class frmEstadisticaProvincia : Form
     {
         public string cedulaUsuario = string.Empty;
-        public frmReporteProvincia()
+        public frmEstadisticaProvincia()
         {
             InitializeComponent();
         }

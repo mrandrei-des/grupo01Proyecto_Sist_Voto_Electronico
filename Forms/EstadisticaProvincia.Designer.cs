@@ -1,6 +1,6 @@
 ﻿namespace grupo01ProyectoFinal.Forms
 {
-    partial class frmReporteProvincia
+    partial class frmEstadisticaProvincia
     {
         /// <summary>
         /// Required designer variable.
@@ -28,9 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmReporteProvincia));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmEstadisticaProvincia));
             this.grbFiltros = new System.Windows.Forms.GroupBox();
-            this.rdoTipoVotacionDiputacion = new System.Windows.Forms.RadioButton();
             this.lblTipoVotacion = new System.Windows.Forms.Label();
             this.rdoTipoVotacionPresidente = new System.Windows.Forms.RadioButton();
             this.cmbProvincias = new System.Windows.Forms.ComboBox();
@@ -45,7 +44,6 @@
             // 
             // grbFiltros
             // 
-            this.grbFiltros.Controls.Add(this.rdoTipoVotacionDiputacion);
             this.grbFiltros.Controls.Add(this.lblTipoVotacion);
             this.grbFiltros.Controls.Add(this.rdoTipoVotacionPresidente);
             this.grbFiltros.Controls.Add(this.cmbProvincias);
@@ -58,16 +56,6 @@
             this.grbFiltros.TabIndex = 11;
             this.grbFiltros.TabStop = false;
             this.grbFiltros.Text = " Filtros: ";
-            // 
-            // rdoTipoVotacionDiputacion
-            // 
-            this.rdoTipoVotacionDiputacion.AutoSize = true;
-            this.rdoTipoVotacionDiputacion.Location = new System.Drawing.Point(435, 27);
-            this.rdoTipoVotacionDiputacion.Name = "rdoTipoVotacionDiputacion";
-            this.rdoTipoVotacionDiputacion.Size = new System.Drawing.Size(100, 24);
-            this.rdoTipoVotacionDiputacion.TabIndex = 15;
-            this.rdoTipoVotacionDiputacion.Text = "Diputados";
-            this.rdoTipoVotacionDiputacion.UseVisualStyleBackColor = true;
             // 
             // lblTipoVotacion
             // 
@@ -84,7 +72,7 @@
             // 
             this.rdoTipoVotacionPresidente.AutoSize = true;
             this.rdoTipoVotacionPresidente.Checked = true;
-            this.rdoTipoVotacionPresidente.Location = new System.Drawing.Point(276, 27);
+            this.rdoTipoVotacionPresidente.Location = new System.Drawing.Point(259, 27);
             this.rdoTipoVotacionPresidente.Name = "rdoTipoVotacionPresidente";
             this.rdoTipoVotacionPresidente.Size = new System.Drawing.Size(103, 24);
             this.rdoTipoVotacionPresidente.TabIndex = 13;
@@ -183,7 +171,7 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.btnGenerar_Click);
             // 
-            // frmReporteProvincia
+            // frmEstadisticaProvincia
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -197,9 +185,9 @@
             this.Controls.Add(this.grbFiltros);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "frmReporteProvincia";
+            this.Name = "frmEstadisticaProvincia";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Reporte por Provincia";
+            this.Text = "Estadística por Provincia";
             this.Load += new System.EventHandler(this.frmReporteProvincia_Load);
             this.grbFiltros.ResumeLayout(false);
             this.grbFiltros.PerformLayout();
@@ -216,7 +204,6 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnGenerar;
         private System.Windows.Forms.RadioButton rdoTipoVotacionPresidente;
-        private System.Windows.Forms.RadioButton rdoTipoVotacionDiputacion;
         private System.Windows.Forms.Label lblTipoVotacion;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

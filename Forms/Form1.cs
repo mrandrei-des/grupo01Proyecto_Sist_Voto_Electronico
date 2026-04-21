@@ -46,7 +46,10 @@ namespace grupo01ProyectoFinal
 
         private void bEstadisticasPorProvinciaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmEstadisticaProvincia formEstadisticaProvincia = new frmEstadisticaProvincia();
+            formEstadisticaProvincia.cedulaUsuario = cedulaUsuarioLoggeado;
+            formEstadisticaProvincia.Show();
+            Close();
         }
 
         private void bEstadisticasPorCandidatoToolStripMenuItem_Click(object sender, EventArgs e)
@@ -64,10 +67,7 @@ namespace grupo01ProyectoFinal
 
         private void bReportePorProvinciastoolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmReporteProvincia formReporteProvincia = new frmReporteProvincia();
-            formReporteProvincia.cedulaUsuario = cedulaUsuarioLoggeado;
-            formReporteProvincia.Show();
-            Close();
+
         }
 
         private void bMantPadronNacionalToolStripMenuItem_Click_1(object sender, EventArgs e)

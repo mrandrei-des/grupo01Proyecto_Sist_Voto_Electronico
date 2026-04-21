@@ -171,11 +171,11 @@
     <Compile Include="Forms\ReporteCandidato.Designer.cs">
       <DependentUpon>ReporteCandidato.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\ReporteProvincia.cs">
+    <Compile Include="Forms\EstadisticaProvincia.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\ReporteProvincia.Designer.cs">
-      <DependentUpon>ReporteProvincia.cs</DependentUpon>
+    <Compile Include="Forms\EstadisticaProvincia.Designer.cs">
+      <DependentUpon>EstadisticaProvincia.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\ResultadosDiputados.cs">
       <SubType>Form</SubType>
@@ -240,8 +240,8 @@
     <EmbeddedResource Include="Forms\ReporteCandidato.resx">
       <DependentUpon>ReporteCandidato.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\ReporteProvincia.resx">
-      <DependentUpon>ReporteProvincia.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\EstadisticaProvincia.resx">
+      <DependentUpon>EstadisticaProvincia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultadosDiputados.resx">
       <DependentUpon>ResultadosDiputados.cs</DependentUpon>
