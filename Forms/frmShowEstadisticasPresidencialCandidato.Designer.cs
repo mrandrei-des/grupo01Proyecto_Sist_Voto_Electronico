@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.sp_Estadisticas_Resultados_Presidente_x_CandidatoTableAdapter1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetReporteCandidatoTableAdapters.sp_Estadisticas_Resultados_Presidente_x_CandidatoTableAdapter();
+            this.dataSetReporteCandidato1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetReporteCandidato();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetReporteCandidato1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -41,17 +44,26 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 793);
             this.reportViewer1.TabIndex = 0;
             // 
+            // sp_Estadisticas_Resultados_Presidente_x_CandidatoTableAdapter1
+            // 
+            this.sp_Estadisticas_Resultados_Presidente_x_CandidatoTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dataSetReporteCandidato1
+            // 
+            this.dataSetReporteCandidato1.DataSetName = "DataSetReporteCandidato";
+            this.dataSetReporteCandidato1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // frmShowEstadisticasPresidencialCandidato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 793);
-            this.ControlBox = false;
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmShowEstadisticasPresidencialCandidato";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Estadísticas Presidencial por Candidato";
             this.Load += new System.EventHandler(this.frmShowEstadisticasPresidencialCandidato_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetReporteCandidato1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -59,5 +71,7 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DataSet_Reportes.DataSetReporteCandidatoTableAdapters.sp_Estadisticas_Resultados_Presidente_x_CandidatoTableAdapter sp_Estadisticas_Resultados_Presidente_x_CandidatoTableAdapter1;
+        private DataSet_Reportes.DataSetReporteCandidato dataSetReporteCandidato1;
     }
 }

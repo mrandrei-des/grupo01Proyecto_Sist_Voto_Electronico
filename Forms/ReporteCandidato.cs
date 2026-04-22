@@ -35,12 +35,13 @@ namespace grupo01ProyectoFinal.Forms
 
         private void Limpiar()
         {
-            partidoCandidatoSeleccionado = "";
+            partidoCandidatoSeleccionado = "PUSC";
             rdoCandidatoPUSC.Checked = true;
         }
 
         private void frmReporteCandidato_Load(object sender, EventArgs e)
         {
+            Limpiar();
         }
 
         private void rdoCandidatoPUSC_CheckedChanged(object sender, EventArgs e)

@@ -291,9 +291,8 @@
             </TablixRowHierarchy>
             <DataSetName>DS_REPORTE_CANDIDATO</DataSetName>
             <Top>4.24863cm</Top>
-            <Left>0cm</Left>
             <Height>1.87854cm</Height>
-            <Width>15.84461cm</Width>
+            <Width>15.84462cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -347,7 +346,6 @@
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
             <Top>0.79287cm</Top>
-            <Left>0cm</Left>
             <Height>0.6cm</Height>
             <Width>2.93234cm</Width>
             <ZIndex>2</ZIndex>
