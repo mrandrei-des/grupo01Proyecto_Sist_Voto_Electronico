@@ -146,13 +146,16 @@ namespace grupo01ProyectoFinal
                 {
                     this.aReportesToolStripMenuItem.Visible = false;
                     this.aMantenimientosToolStripMenuItem.Visible = false;
+                    this.aEstadisticasToolStripMenuItem.Visible= false;
                 }
                 else // Cualquier otro perfil se restringe
                 {
                     this.aReportesToolStripMenuItem.Visible = false;
                     this.aMantenimientosToolStripMenuItem.Visible = false;
+                    this.aEstadisticasToolStripMenuItem.Visible = false;
                 }
-            }else
+            }
+            else
             {            
                 MessageBox.Show("No se logró establecer comunicación con el servidor. Por favor inténtelo nuevamente.", "Consulta de usuario", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmLogin formLogin = new frmLogin();

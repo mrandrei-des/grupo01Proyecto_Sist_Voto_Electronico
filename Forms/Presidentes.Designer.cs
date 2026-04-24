@@ -34,7 +34,6 @@
             this.txtTiempoVotacionMinutos = new System.Windows.Forms.TextBox();
             this.txtTiempoVotacionSegundos = new System.Windows.Forms.TextBox();
             this.btnLimpiar = new System.Windows.Forms.Button();
-            this.btnContinuarVotacion = new System.Windows.Forms.Button();
             this.btnGuardarVoto = new System.Windows.Forms.Button();
             this.grbPapeletaPresidentes = new System.Windows.Forms.GroupBox();
             this.lblNombrePartidoVotoNulo = new System.Windows.Forms.Label();
@@ -150,20 +149,6 @@
             this.btnLimpiar.UseVisualStyleBackColor = true;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
             // 
-            // btnContinuarVotacion
-            // 
-            this.btnContinuarVotacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnContinuarVotacion.Image = ((System.Drawing.Image)(resources.GetObject("btnContinuarVotacion.Image")));
-            this.btnContinuarVotacion.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnContinuarVotacion.Location = new System.Drawing.Point(1160, 281);
-            this.btnContinuarVotacion.Name = "btnContinuarVotacion";
-            this.btnContinuarVotacion.Size = new System.Drawing.Size(205, 79);
-            this.btnContinuarVotacion.TabIndex = 119;
-            this.btnContinuarVotacion.Text = "&Continuar con Diputados";
-            this.btnContinuarVotacion.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnContinuarVotacion.UseVisualStyleBackColor = true;
-            this.btnContinuarVotacion.Click += new System.EventHandler(this.btnContinuarVotacion_Click);
-            // 
             // btnGuardarVoto
             // 
             this.btnGuardarVoto.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -276,7 +261,7 @@
             this.pbCandidatoVotoBlanco.Margin = new System.Windows.Forms.Padding(2);
             this.pbCandidatoVotoBlanco.Name = "pbCandidatoVotoBlanco";
             this.pbCandidatoVotoBlanco.Size = new System.Drawing.Size(99, 101);
-            this.pbCandidatoVotoBlanco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pbCandidatoVotoBlanco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pbCandidatoVotoBlanco.TabIndex = 208;
             this.pbCandidatoVotoBlanco.TabStop = false;
             this.pbCandidatoVotoBlanco.Click += new System.EventHandler(this.pbCandidatoVotoBlanco_Click);
@@ -524,7 +509,6 @@
             this.txtVotoPUSC.Size = new System.Drawing.Size(99, 47);
             this.txtVotoPUSC.TabIndex = 185;
             this.txtVotoPUSC.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txtVotoPUSC.TextChanged += new System.EventHandler(this.txtVotoPUSC_TextChanged);
             this.txtVotoPUSC.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtVotoPUSC_KeyPress);
             // 
             // lblNombreCandidatoPUSC
@@ -774,7 +758,6 @@
             this.ControlBox = false;
             this.Controls.Add(this.lblDivisorTiempo);
             this.Controls.Add(this.grbPapeletaPresidentes);
-            this.Controls.Add(this.btnContinuarVotacion);
             this.Controls.Add(this.btnGuardarVoto);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.txtTiempoVotacionSegundos);
@@ -812,7 +795,6 @@
         private System.Windows.Forms.TextBox txtTiempoVotacionMinutos;
         private System.Windows.Forms.TextBox txtTiempoVotacionSegundos;
         private System.Windows.Forms.Button btnLimpiar;
-        private System.Windows.Forms.Button btnContinuarVotacion;
         private System.Windows.Forms.Button btnGuardarVoto;
         private System.Windows.Forms.GroupBox grbPapeletaPresidentes;
         private System.Windows.Forms.Label lblNombrePartidoVotoNulo;

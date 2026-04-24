@@ -160,7 +160,6 @@ namespace grupo01ProyectoFinal
 
                 if (!puedeContinuarDiputados)
                 {
-                    btnContinuarVotacion.Enabled = false;
                     MessageBox.Show("Ya ha emitido su sufragio para las votaciones de Diputaciones.", "Revisión Voto", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     formPrincipal.Show();
                     Close();
@@ -342,6 +341,7 @@ namespace grupo01ProyectoFinal
                         {
                             frmDiputados formDiputados = new frmDiputados();
                             formDiputados.cedulaUsuario = cedulaUsuario;
+                            formDiputados.tiempoRestante = tiempoRestante;
                             formDiputados.Show();
                             Close();
                             return;
@@ -368,14 +368,6 @@ namespace grupo01ProyectoFinal
             }
         }
 
-        private void btnContinuarVotacion_Click(object sender, EventArgs e)
-        {
-            frmDiputados formDiputados = new frmDiputados();
-            formDiputados.cedulaUsuario = cedulaUsuario;
-            formDiputados.Show();
-            Close();
-        }
-
         private void timTiempoVotacion_Tick(object sender, EventArgs e)
         {
             tiempoRestante = tiempoRestante - 1;
@@ -393,7 +385,13 @@ namespace grupo01ProyectoFinal
             if(segundosRestantes > 0)
             {
                 txtTiempoVotacionSegundos.Text = segundosRestantes.ToString("00");
-            }else
+                if (minutosRestantes == 0)
+                {
+                    txtTiempoVotacionMinutos.ForeColor = Color.Red;
+                    txtTiempoVotacionSegundos.ForeColor = Color.Red;
+                }
+            }
+            else
             {
                 txtTiempoVotacionSegundos.Text = "00";
             }
@@ -447,11 +445,6 @@ namespace grupo01ProyectoFinal
         private void pbCandidatoVotoNulo_Click(object sender, EventArgs e)
         {
             txtVotoNulo.Focus();
-        }
-
-        private void txtVotoPUSC_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

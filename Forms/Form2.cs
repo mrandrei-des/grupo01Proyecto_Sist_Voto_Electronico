@@ -70,6 +70,7 @@ namespace grupo01ProyectoFinal
                                 //voy a negar partes del menu dependiendo del perfil
                                 menu1.aReportesToolStripMenuItem.Visible = false;
                                 menu1.aMantenimientosToolStripMenuItem.Visible = false;
+                                menu1.aEstadisticasToolStripMenuItem.Visible = false;
 
                                 // Deshabilita opciones, pero no muestra la pantalla
                                 menu1.Show();
