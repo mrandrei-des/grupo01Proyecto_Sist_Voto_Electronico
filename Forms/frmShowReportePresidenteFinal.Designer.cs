@@ -1,0 +1,77 @@
+﻿namespace grupo01ProyectoFinal.Forms
+{
+    partial class frmShowReportePresidenteFinal
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            this.dataSetReportePresidenteFinales1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetReportePresidenteFinales();
+            this.sp_ReporteResultados_Presidente_FinalesTableAdapter1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetReportePresidenteFinalesTableAdapters.sp_ReporteResultados_Presidente_FinalesTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetReportePresidenteFinales1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // reportViewer1
+            // 
+            this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.reportViewer1.LocalReport.ReportEmbeddedResource = "grupo01ProyectoFinal.Reportes.ReporteResultadosPresidente.rdlc";
+            this.reportViewer1.Location = new System.Drawing.Point(0, 0);
+            this.reportViewer1.Name = "reportViewer1";
+            this.reportViewer1.ServerReport.BearerToken = null;
+            this.reportViewer1.Size = new System.Drawing.Size(818, 890);
+            this.reportViewer1.TabIndex = 0;
+            // 
+            // dataSetReportePresidenteFinales1
+            // 
+            this.dataSetReportePresidenteFinales1.DataSetName = "DataSetReportePresidenteFinales";
+            this.dataSetReportePresidenteFinales1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // sp_ReporteResultados_Presidente_FinalesTableAdapter1
+            // 
+            this.sp_ReporteResultados_Presidente_FinalesTableAdapter1.ClearBeforeFill = true;
+            // 
+            // frmShowReportePresidenteFinal
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(818, 890);
+            this.Controls.Add(this.reportViewer1);
+            this.Name = "frmShowReportePresidenteFinal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Resultados Preliminares Presidencia";
+            this.Load += new System.EventHandler(this.frmShowReportePresidenteFinal_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataSetReportePresidenteFinales1)).EndInit();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
+        private DataSet_Reportes.DataSetReportePresidenteFinales dataSetReportePresidenteFinales1;
+        private DataSet_Reportes.DataSetReportePresidenteFinalesTableAdapters.sp_ReporteResultados_Presidente_FinalesTableAdapter sp_ReporteResultados_Presidente_FinalesTableAdapter1;
+    }
+}

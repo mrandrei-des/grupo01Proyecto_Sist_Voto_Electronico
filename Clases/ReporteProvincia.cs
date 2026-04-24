@@ -41,9 +41,36 @@ namespace grupo01ProyectoFinal.Clases
 
                 return new DataTable();
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un problema a la hora de extraer información para el reporte. Por favor revisar.", "Problema al consultar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un problema a la hora de extraer información para el reporte. Por favor revisar. [001]["+ ex.Message +"]", "Problema al consultar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return new DataTable();
+        }
+
+        public DataTable ResultadosDiputados()
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string cmd = string.Format("EXEC sp_Consulta_Resultados_Diputados_x_Provincia '{0}'", this.codProvincia);
+
+                ds = Utilidades.Ejecutar(cmd);
+
+                if (ds.Tables.Count > 0)
+                {
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        return ds.Tables[0];
+                    }
+                }
+
+                return new DataTable();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema a la hora de extraer información para el informe. Por favor revisar. [002][" + ex.Message + "]", "Problema al consultar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
             return new DataTable();

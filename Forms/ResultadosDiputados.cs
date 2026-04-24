@@ -38,10 +38,12 @@ namespace grupo01ProyectoFinal.Forms
 
         private DataTable ConsultaVotosValidos_x_Provincia(string codProvincia)
         {
-            DataSet dsTablas = new DataSet();
-            string cmd = string.Format("EXEC sp_Consulta_Resultados_CantidadVotosEmitidos '{0}'", codProvincia);
-            dsTablas = Utilidades.Ejecutar(cmd);
-            return dsTablas.Tables[0];
+            ReporteProvincia reporte = new ReporteProvincia();
+            reporte.CodProvincia = codProvincia;
+
+            DataTable dtConsulta = new DataTable();
+            dtConsulta = reporte.ResultadosDiputados();
+            return dtConsulta;
         }
 
         private double CalculoCociente(double dividendo, int diputados_x_provincia, int cantDecimales) 
@@ -61,10 +63,6 @@ namespace grupo01ProyectoFinal.Forms
                 DiputadosxProvincia = ConsultarCantidadDiputados_x_Provincia(codProvincia);
 
                 // 2. Consulta de votos emitidos por partido excluyendo votos NULOS y en BLANCO
-                //DataSet ds = new DataSet();
-                //string cmd = string.Format("EXEC sp_Consulta_Resultados_CantidadVotosEmitidos '{0}'", codProvincia);
-                //ds = Utilidades.Ejecutar(cmd);
-                //DataTable dt = ds.Tables[0];
                 DataTable dt = ConsultaVotosValidos_x_Provincia(codProvincia);
 
                 dgvVotosValidos.Rows.Clear();

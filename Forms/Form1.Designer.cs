@@ -43,6 +43,7 @@ namespace grupo01ProyectoFinal
             this.aEstadisticasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bEstadisticasPorProvinciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bEstadisticasPorCandidatoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.resultadosFinalesPresidenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aReportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.bReportePorProvinciastoolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.bReportePorCandidatoToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -137,7 +138,8 @@ namespace grupo01ProyectoFinal
             // 
             this.aEstadisticasToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bEstadisticasPorProvinciaToolStripMenuItem,
-            this.bEstadisticasPorCandidatoToolStripMenuItem});
+            this.bEstadisticasPorCandidatoToolStripMenuItem,
+            this.resultadosFinalesPresidenteToolStripMenuItem});
             this.aEstadisticasToolStripMenuItem.Name = "aEstadisticasToolStripMenuItem";
             this.aEstadisticasToolStripMenuItem.Size = new System.Drawing.Size(79, 20);
             this.aEstadisticasToolStripMenuItem.Text = "Estadísticas";
@@ -145,16 +147,23 @@ namespace grupo01ProyectoFinal
             // bEstadisticasPorProvinciaToolStripMenuItem
             // 
             this.bEstadisticasPorProvinciaToolStripMenuItem.Name = "bEstadisticasPorProvinciaToolStripMenuItem";
-            this.bEstadisticasPorProvinciaToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.bEstadisticasPorProvinciaToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.bEstadisticasPorProvinciaToolStripMenuItem.Text = "Por Provincia";
             this.bEstadisticasPorProvinciaToolStripMenuItem.Click += new System.EventHandler(this.bEstadisticasPorProvinciaToolStripMenuItem_Click);
             // 
             // bEstadisticasPorCandidatoToolStripMenuItem
             // 
             this.bEstadisticasPorCandidatoToolStripMenuItem.Name = "bEstadisticasPorCandidatoToolStripMenuItem";
-            this.bEstadisticasPorCandidatoToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
+            this.bEstadisticasPorCandidatoToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
             this.bEstadisticasPorCandidatoToolStripMenuItem.Text = "Por Candidato";
             this.bEstadisticasPorCandidatoToolStripMenuItem.Click += new System.EventHandler(this.bEstadisticasPorCandidatoToolStripMenuItem_Click);
+            // 
+            // resultadosFinalesPresidenteToolStripMenuItem
+            // 
+            this.resultadosFinalesPresidenteToolStripMenuItem.Name = "resultadosFinalesPresidenteToolStripMenuItem";
+            this.resultadosFinalesPresidenteToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.resultadosFinalesPresidenteToolStripMenuItem.Text = "Resultados Preliminares Presidente";
+            this.resultadosFinalesPresidenteToolStripMenuItem.Click += new System.EventHandler(this.resultadosFinalesPresidenteToolStripMenuItem_Click);
             // 
             // aReportesToolStripMenuItem
             // 
@@ -260,6 +269,7 @@ namespace grupo01ProyectoFinal
         public System.Windows.Forms.ToolStripMenuItem aReportesToolStripMenuItem;
         public System.Windows.Forms.MenuStrip menuStrip1;
         public System.Windows.Forms.ToolStripMenuItem aMantenimientosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem resultadosFinalesPresidenteToolStripMenuItem;
     }
 }
 

@@ -160,5 +160,13 @@ namespace grupo01ProyectoFinal
                 Close();
             }
         }
+
+        private void resultadosFinalesPresidenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmReporteFinalesPresidente formReporte = new frmReporteFinalesPresidente();
+            formReporte.cedulaUsuario = cedulaUsuarioLoggeado;
+            formReporte.Show();
+            this.Close();
+        }
     }
 }
