@@ -41,5 +41,23 @@ namespace grupo01ProyectoFinal.Clases
 
             return new DataTable();
         }
+
+        public DataTable Listar_SinConsulado()
+        {
+            DataSet ds = new DataSet();
+            string cmd = "SELECT CodigoProvincia as Valor, Descripcion as Texto FROM Provincias WHERE CodigoProvincia <> 8 ORDER BY CodigoProvincia ASC";
+
+            ds = Utilidades.Ejecutar(cmd);
+
+            if (ds.Tables.Count > 0)
+            {
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    return ds.Tables[0];
+                }
+            }
+
+            return new DataTable();
+        }
     }
 }

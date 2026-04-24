@@ -98,6 +98,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetReporteProvincia.xsd</DependentUpon>
     </Compile>
+    <Compile Include="DataSet_Reportes\DataSetResultadosDiputados.cs">
+      <DependentUpon>DataSetResultadosDiputados.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataSet_Reportes\DataSetResultadosDiputados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataSetResultadosDiputados.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Estadisticas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -139,6 +147,12 @@
     </Compile>
     <Compile Include="Forms\Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmShowReporteDiputadosResultados.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmShowReporteDiputadosResultados.Designer.cs">
+      <DependentUpon>frmShowReporteDiputadosResultados.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmShowReportePresidenteFinal.cs">
       <SubType>Form</SubType>
@@ -263,6 +277,9 @@
     <EmbeddedResource Include="Forms\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmShowReporteDiputadosResultados.resx">
+      <DependentUpon>frmShowReporteDiputadosResultados.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmShowReportePresidenteFinal.resx">
       <DependentUpon>frmShowReportePresidenteFinal.cs</DependentUpon>
     </EmbeddedResource>
@@ -320,6 +337,7 @@
     <EmbeddedResource Include="Reportes\ReportePresidenteCandidato.rdlc" />
     <EmbeddedResource Include="Reportes\ReportePresidenteProvincia.rdlc" />
     <EmbeddedResource Include="Reportes\EstadisticasPresidenteProvincia.rdlc" />
+    <EmbeddedResource Include="Reportes\ReporteResultadosDiputados.rdlc" />
     <EmbeddedResource Include="Reportes\ReporteResultadosPresidente.rdlc" />
     <None Include="DataSet_Reportes\DataSetReporteCandidato.xsc">
       <DependentUpon>DataSetReporteCandidato.xsd</DependentUpon>
@@ -353,6 +371,17 @@
     </None>
     <None Include="DataSet_Reportes\DataSetReporteProvincia.xss">
       <DependentUpon>DataSetReporteProvincia.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Reportes\DataSetResultadosDiputados.xsc">
+      <DependentUpon>DataSetResultadosDiputados.xsd</DependentUpon>
+    </None>
+    <None Include="DataSet_Reportes\DataSetResultadosDiputados.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSetResultadosDiputados.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DataSet_Reportes\DataSetResultadosDiputados.xss">
+      <DependentUpon>DataSetResultadosDiputados.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

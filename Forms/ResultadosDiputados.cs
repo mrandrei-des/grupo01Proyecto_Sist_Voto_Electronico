@@ -16,6 +16,14 @@ namespace grupo01ProyectoFinal.Forms
     public partial class frmResultadosDiputados : Form
     {
         public string cedulaUsuario = string.Empty;
+
+        private DataTable dt;
+        private DataTable dtResultadosSubcociente;
+        private DataTable dtAsignacionCociente;
+        private DataTable dtCalculoResiduo;
+        private DataTable dtAsignacionResiduo;
+        private DataTable dtResultadosFinales;        
+
         public frmResultadosDiputados()
         {
             InitializeComponent();
@@ -51,10 +59,13 @@ namespace grupo01ProyectoFinal.Forms
             return Math.Round(dividendo / diputados_x_provincia, cantDecimales);
         }
 
+
         private void btnRefrescar_Click(object sender, EventArgs e)
         {
             try
             {
+                btnGenerarReporte.Enabled = false;
+
                 double Cociente = 0, Subcociente = 0, Dividendo = 0;
                 int DiputadosxProvincia = 0, DiputadosxResidual = 0, DiputadosAsignadosCociente = 0, DiputadosAsignadosCocienteTotal = 0;
                 string codProvincia = cmbProvincias.SelectedValue.ToString();
@@ -63,10 +74,10 @@ namespace grupo01ProyectoFinal.Forms
                 DiputadosxProvincia = ConsultarCantidadDiputados_x_Provincia(codProvincia);
 
                 // 2. Consulta de votos emitidos por partido excluyendo votos NULOS y en BLANCO
-                DataTable dt = ConsultaVotosValidos_x_Provincia(codProvincia);
+                dt = ConsultaVotosValidos_x_Provincia(codProvincia);
 
-                dgvVotosValidos.Rows.Clear();
-                dgvVotosValidos.Columns.Clear();
+                //dgvVotosValidos.Rows.Clear();
+                //dgvVotosValidos.Columns.Clear();
                 dgvVotosValidos.DataSource = dt;
 
                 // 3. Cálculo del dividendo, sumatoria de votos válidos
@@ -87,7 +98,7 @@ namespace grupo01ProyectoFinal.Forms
                 txtSubcociente.Text = Subcociente.ToString();
 
                 // 6. Eliminación de partidos con votos emitidos menores al subcociente
-                DataTable dtResultadosSubcociente = dt.Clone();
+                dtResultadosSubcociente = dt.Clone();
 
                 for (int i = 0;i < dt.Rows.Count;i++)
                 {
@@ -104,13 +115,14 @@ namespace grupo01ProyectoFinal.Forms
 
                 // 7. Asignación de curules por cociente
                 DiputadosxResidual = 0;
-                DataTable dtAsignacionCociente = new DataTable();
+
+                dtAsignacionCociente = new DataTable();
                 dtAsignacionCociente.Columns.Add("CodigoPartido");
                 dtAsignacionCociente.Columns.Add("Descripcion");
                 dtAsignacionCociente.Columns.Add("CantidadVotosEmitidos");
                 dtAsignacionCociente.Columns.Add("CifraCociente");
                 dtAsignacionCociente.Columns.Add("CalculoCociente");
-                dtAsignacionCociente.Columns.Add("DiputadosxCalculo");
+                dtAsignacionCociente.Columns.Add("DiputadosxCalculo");                
 
                 for (int i = 0; i < dtResultadosSubcociente.Rows.Count; i++) {
                     DataRow filaSubcociente = dtResultadosSubcociente.NewRow();
@@ -123,7 +135,7 @@ namespace grupo01ProyectoFinal.Forms
                     filaCalculo["CifraCociente"] = Cociente;
                     filaCalculo["CalculoCociente"] = Math.Round(Convert.ToInt32(filaSubcociente[2].ToString()) / Cociente, 3);
 
-                    DiputadosAsignadosCociente = Convert.ToInt32(Math.Round(Convert.ToInt32(filaSubcociente[2].ToString()) / Cociente, 0));
+                    DiputadosAsignadosCociente = Convert.ToInt32(Math.Floor(Convert.ToInt32(filaSubcociente[2].ToString()) / Cociente));
                     DiputadosAsignadosCocienteTotal = DiputadosAsignadosCocienteTotal + DiputadosAsignadosCociente;
 
                     filaCalculo["DiputadosxCalculo"] = DiputadosAsignadosCociente;
@@ -136,14 +148,14 @@ namespace grupo01ProyectoFinal.Forms
                 DiputadosxResidual = DiputadosxProvincia - DiputadosAsignadosCocienteTotal;
                 txtDiputadosxAsignar.Text = DiputadosxResidual.ToString();
 
-                DataTable dtCalculoResiduo = new DataTable();
+                dtCalculoResiduo = new DataTable();
                 dtCalculoResiduo.Columns.Add("PartidoPolitico");
                 dtCalculoResiduo.Columns.Add("CantidadVotosEmitidos");
                 dtCalculoResiduo.Columns.Add("CifraCociente");
                 dtCalculoResiduo.Columns.Add("CifraResidual");
-                dtCalculoResiduo.Columns.Add("EscanosCociente");
+                dtCalculoResiduo.Columns.Add("EscanosCociente");                
 
-                DataTable dtAsignacionResiduo = new DataTable();
+                dtAsignacionResiduo = new DataTable();
                 dtAsignacionResiduo.Columns.Add("PartidoPolitico");
                 dtAsignacionResiduo.Columns.Add("CantidadVotosEmitidos");
                 dtAsignacionResiduo.Columns.Add("CifraCociente");
@@ -217,9 +229,13 @@ namespace grupo01ProyectoFinal.Forms
                     }
 
                     dgvAsignacionResiduo.DataSource = dtAsignacionResiduo;
+                }else
+                {
+                    dgvCalculoResiduo.DataSource = dtCalculoResiduo;
+                    dgvAsignacionResiduo.DataSource = dtAsignacionResiduo;
                 }
 
-                DataTable dtResultadosFinales = new DataTable();
+                dtResultadosFinales = new DataTable();                
                 dtResultadosFinales.Columns.Add("PartidoPolitico");
                 dtResultadosFinales.Columns.Add("CantidadVotosEmitidos");
                 dtResultadosFinales.Columns.Add("EscanosCociente");
@@ -265,6 +281,7 @@ namespace grupo01ProyectoFinal.Forms
                 }
 
                 dgvResultadosMomentaneos.DataSource = dtResultadosFinales;
+                btnGenerarReporte.Enabled = true;
             }
             catch (Exception ex) {
                 MessageBox.Show("Ha ocurrido un error durante el cálculo de los curules por partido político. [" + ex.Message + "]", "Cálculo Curules", MessageBoxButtons.OK, MessageBoxIcon.Hand);
@@ -274,7 +291,7 @@ namespace grupo01ProyectoFinal.Forms
         private void CargarCmbProvincias()
         {
             Provincia objProvincia = new Provincia();
-            DataTable dtProvincias = objProvincia.Listar();
+            DataTable dtProvincias = objProvincia.Listar_SinConsulado();
             if (dtProvincias.Rows.Count > 0)
             {
                 cmbProvincias.DataSource = dtProvincias;
@@ -286,6 +303,40 @@ namespace grupo01ProyectoFinal.Forms
         private void frmResultadosDiputados_Load(object sender, EventArgs e)
         {
             CargarCmbProvincias();
+        }
+
+        private void btnGenerarReporte_Click(object sender, EventArgs e)
+        {
+            if(dtResultadosFinales.Rows.Count > 0)
+            {
+                GenerarReporte();
+            }else
+            {
+                MessageBox.Show("No se ha cargado la información para generar el reporte. Por favor inténtelo nuevamente.", "Generación Reporte", MessageBoxButtons.OK, MessageBoxIcon.Hand);
+            }
+        }
+
+        private void GenerarReporte()
+        {
+            try
+            {
+                string codigoProvincia = cmbProvincias.SelectedValue.ToString();
+                string nombreProvincia = cmbProvincias.Text.Trim();
+
+                frmShowReporteDiputadosResultados formReporte = new frmShowReporteDiputadosResultados();
+                formReporte.CodigoProvincia = codigoProvincia;
+                formReporte.NombreProvincia = nombreProvincia;
+                formReporte.DtSubcociente = dtResultadosSubcociente;
+                formReporte.DtCociente = dtAsignacionCociente;
+                formReporte.DtCalculoResiduo = dtCalculoResiduo;
+                formReporte.DtAsignacionResiduo = dtAsignacionResiduo;
+                formReporte.DtResultados = dtResultadosFinales;
+                formReporte.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema a la hora de intentar generar el reporte. [" + ex.Message + "]", "Problema con el reporte", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

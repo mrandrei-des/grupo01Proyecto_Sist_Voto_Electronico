@@ -34,7 +34,7 @@ namespace grupo01ProyectoFinal.Forms
 
             reportViewer1.LocalReport.SetParameters(new ReportParameter[]
             {
-                    new ReportParameter("ProvinciaSeleccionada", NombreProvincia)
+                new ReportParameter("ProvinciaSeleccionada", NombreProvincia)
             });
            
             this.reportViewer1.RefreshReport();

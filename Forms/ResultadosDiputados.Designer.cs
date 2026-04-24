@@ -30,8 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmResultadosDiputados));
             this.dgvVotosValidos = new System.Windows.Forms.DataGridView();
-            this.btnRefrescar = new System.Windows.Forms.Button();
-            this.btnSalir = new System.Windows.Forms.Button();
             this.lblDividendo = new System.Windows.Forms.Label();
             this.txtDividendo = new System.Windows.Forms.TextBox();
             this.txtCociente = new System.Windows.Forms.TextBox();
@@ -57,6 +55,9 @@
             this.dgvAsignacionResiduo = new System.Windows.Forms.DataGridView();
             this.lblDeclaracionEleccion = new System.Windows.Forms.Label();
             this.dgvResultadosMomentaneos = new System.Windows.Forms.DataGridView();
+            this.btnSalir = new System.Windows.Forms.Button();
+            this.btnRefrescar = new System.Windows.Forms.Button();
+            this.btnGenerarReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvVotosValidos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSubcociente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAsignacionCociente)).BeginInit();
@@ -84,34 +85,6 @@
             this.dgvVotosValidos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvVotosValidos.Size = new System.Drawing.Size(410, 158);
             this.dgvVotosValidos.TabIndex = 28;
-            // 
-            // btnRefrescar
-            // 
-            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
-            this.btnRefrescar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRefrescar.Location = new System.Drawing.Point(885, 39);
-            this.btnRefrescar.Name = "btnRefrescar";
-            this.btnRefrescar.Size = new System.Drawing.Size(105, 79);
-            this.btnRefrescar.TabIndex = 27;
-            this.btnRefrescar.Text = "&Refrescar";
-            this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnRefrescar.UseVisualStyleBackColor = true;
-            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
-            // 
-            // btnSalir
-            // 
-            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(996, 39);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(105, 79);
-            this.btnSalir.TabIndex = 29;
-            this.btnSalir.Text = "&Salir";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btnSalir.UseVisualStyleBackColor = true;
-            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // lblDividendo
             // 
@@ -413,12 +386,56 @@
             this.dgvResultadosMomentaneos.Size = new System.Drawing.Size(1080, 122);
             this.dgvResultadosMomentaneos.TabIndex = 191;
             // 
+            // btnSalir
+            // 
+            this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
+            this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnSalir.Location = new System.Drawing.Point(1081, 47);
+            this.btnSalir.Name = "btnSalir";
+            this.btnSalir.Size = new System.Drawing.Size(105, 79);
+            this.btnSalir.TabIndex = 29;
+            this.btnSalir.Text = "&Salir";
+            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
+            // 
+            // btnRefrescar
+            // 
+            this.btnRefrescar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("btnRefrescar.Image")));
+            this.btnRefrescar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnRefrescar.Location = new System.Drawing.Point(859, 47);
+            this.btnRefrescar.Name = "btnRefrescar";
+            this.btnRefrescar.Size = new System.Drawing.Size(105, 79);
+            this.btnRefrescar.TabIndex = 27;
+            this.btnRefrescar.Text = "&Refrescar";
+            this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnRefrescar.UseVisualStyleBackColor = true;
+            this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
+            // 
+            // btnGenerarReporte
+            // 
+            this.btnGenerarReporte.Enabled = false;
+            this.btnGenerarReporte.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerarReporte.Image = ((System.Drawing.Image)(resources.GetObject("btnGenerarReporte.Image")));
+            this.btnGenerarReporte.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btnGenerarReporte.Location = new System.Drawing.Point(970, 47);
+            this.btnGenerarReporte.Name = "btnGenerarReporte";
+            this.btnGenerarReporte.Size = new System.Drawing.Size(105, 79);
+            this.btnGenerarReporte.TabIndex = 265;
+            this.btnGenerarReporte.Text = "&Generar";
+            this.btnGenerarReporte.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnGenerarReporte.UseVisualStyleBackColor = true;
+            this.btnGenerarReporte.Click += new System.EventHandler(this.btnGenerarReporte_Click);
+            // 
             // frmResultadosDiputados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1521, 734);
             this.ControlBox = false;
+            this.Controls.Add(this.btnGenerarReporte);
             this.Controls.Add(this.lblDeclaracionEleccion);
             this.Controls.Add(this.dgvResultadosMomentaneos);
             this.Controls.Add(this.lblAsignacionResiduo);
@@ -492,5 +509,6 @@
         private System.Windows.Forms.DataGridView dgvAsignacionResiduo;
         private System.Windows.Forms.Label lblDeclaracionEleccion;
         private System.Windows.Forms.DataGridView dgvResultadosMomentaneos;
+        private System.Windows.Forms.Button btnGenerarReporte;
     }
 }
