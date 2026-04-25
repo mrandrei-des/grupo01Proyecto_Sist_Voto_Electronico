@@ -60,9 +60,10 @@
             // lblCodDist
             // 
             this.lblCodDist.AutoSize = true;
-            this.lblCodDist.Location = new System.Drawing.Point(34, 69);
+            this.lblCodDist.Location = new System.Drawing.Point(23, 45);
+            this.lblCodDist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodDist.Name = "lblCodDist";
-            this.lblCodDist.Size = new System.Drawing.Size(117, 20);
+            this.lblCodDist.Size = new System.Drawing.Size(78, 13);
             this.lblCodDist.TabIndex = 0;
             this.lblCodDist.Text = "Código Distrito:";
             this.lblCodDist.Click += new System.EventHandler(this.label1_Click);
@@ -70,56 +71,63 @@
             // lblNombDist
             // 
             this.lblNombDist.AutoSize = true;
-            this.lblNombDist.Location = new System.Drawing.Point(34, 111);
+            this.lblNombDist.Location = new System.Drawing.Point(23, 72);
+            this.lblNombDist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombDist.Name = "lblNombDist";
-            this.lblNombDist.Size = new System.Drawing.Size(123, 20);
+            this.lblNombDist.Size = new System.Drawing.Size(82, 13);
             this.lblNombDist.TabIndex = 1;
             this.lblNombDist.Text = "Nombre Distrito:";
             // 
             // lblCanton
             // 
             this.lblCanton.AutoSize = true;
-            this.lblCanton.Location = new System.Drawing.Point(50, 305);
+            this.lblCanton.Location = new System.Drawing.Point(33, 198);
+            this.lblCanton.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCanton.Name = "lblCanton";
-            this.lblCanton.Size = new System.Drawing.Size(61, 20);
+            this.lblCanton.Size = new System.Drawing.Size(41, 13);
             this.lblCanton.TabIndex = 2;
             this.lblCanton.Text = "Cantón";
             // 
             // lblProvincia
             // 
             this.lblProvincia.AutoSize = true;
-            this.lblProvincia.Location = new System.Drawing.Point(50, 358);
+            this.lblProvincia.Location = new System.Drawing.Point(33, 233);
+            this.lblProvincia.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblProvincia.Name = "lblProvincia";
-            this.lblProvincia.Size = new System.Drawing.Size(76, 20);
+            this.lblProvincia.Size = new System.Drawing.Size(54, 13);
             this.lblProvincia.TabIndex = 3;
             this.lblProvincia.Text = "Provincia:";
             // 
             // txtCodDist
             // 
-            this.txtCodDist.Location = new System.Drawing.Point(188, 66);
+            this.txtCodDist.Location = new System.Drawing.Point(125, 43);
+            this.txtCodDist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodDist.Name = "txtCodDist";
-            this.txtCodDist.Size = new System.Drawing.Size(170, 26);
+            this.txtCodDist.Size = new System.Drawing.Size(115, 20);
             this.txtCodDist.TabIndex = 4;
             // 
             // txtNombDist
             // 
-            this.txtNombDist.Location = new System.Drawing.Point(188, 108);
+            this.txtNombDist.Location = new System.Drawing.Point(125, 70);
+            this.txtNombDist.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombDist.Name = "txtNombDist";
-            this.txtNombDist.Size = new System.Drawing.Size(170, 26);
+            this.txtNombDist.Size = new System.Drawing.Size(115, 20);
             this.txtNombDist.TabIndex = 5;
             // 
             // txtCanton
             // 
-            this.txtCanton.Location = new System.Drawing.Point(188, 298);
+            this.txtCanton.Location = new System.Drawing.Point(125, 194);
+            this.txtCanton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCanton.Name = "txtCanton";
-            this.txtCanton.Size = new System.Drawing.Size(170, 26);
+            this.txtCanton.Size = new System.Drawing.Size(115, 20);
             this.txtCanton.TabIndex = 6;
             // 
             // txtProvincia
             // 
-            this.txtProvincia.Location = new System.Drawing.Point(188, 352);
+            this.txtProvincia.Location = new System.Drawing.Point(125, 229);
+            this.txtProvincia.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtProvincia.Name = "txtProvincia";
-            this.txtProvincia.Size = new System.Drawing.Size(170, 26);
+            this.txtProvincia.Size = new System.Drawing.Size(115, 20);
             this.txtProvincia.TabIndex = 7;
             // 
             // dataGridView1
@@ -130,11 +138,12 @@
             this.NombDist,
             this.canton,
             this.Prov});
-            this.dataGridView1.Location = new System.Drawing.Point(155, 439);
+            this.dataGridView1.Location = new System.Drawing.Point(103, 285);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(657, 75);
+            this.dataGridView1.Size = new System.Drawing.Size(438, 49);
             this.dataGridView1.TabIndex = 8;
             // 
             // CodDist
@@ -169,9 +178,10 @@
             // 
             this.lblBuscaDist.AutoSize = true;
             this.lblBuscaDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBuscaDist.Location = new System.Drawing.Point(34, 20);
+            this.lblBuscaDist.Location = new System.Drawing.Point(23, 13);
+            this.lblBuscaDist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblBuscaDist.Name = "lblBuscaDist";
-            this.lblBuscaDist.Size = new System.Drawing.Size(152, 25);
+            this.lblBuscaDist.Size = new System.Drawing.Size(115, 17);
             this.lblBuscaDist.TabIndex = 15;
             this.lblBuscaDist.Text = "Buscar Distrito";
             this.lblBuscaDist.Click += new System.EventHandler(this.label5_Click);
@@ -180,9 +190,10 @@
             // 
             this.lblDatoDist.AutoSize = true;
             this.lblDatoDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDatoDist.Location = new System.Drawing.Point(34, 158);
+            this.lblDatoDist.Location = new System.Drawing.Point(23, 103);
+            this.lblDatoDist.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblDatoDist.Name = "lblDatoDist";
-            this.lblDatoDist.Size = new System.Drawing.Size(176, 25);
+            this.lblDatoDist.Size = new System.Drawing.Size(134, 17);
             this.lblDatoDist.TabIndex = 16;
             this.lblDatoDist.Text = "Datos del Distrito";
             this.lblDatoDist.Click += new System.EventHandler(this.label6_Click);
@@ -190,43 +201,48 @@
             // lblCodDist1
             // 
             this.lblCodDist1.AutoSize = true;
-            this.lblCodDist1.Location = new System.Drawing.Point(50, 208);
+            this.lblCodDist1.Location = new System.Drawing.Point(33, 135);
+            this.lblCodDist1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCodDist1.Name = "lblCodDist1";
-            this.lblCodDist1.Size = new System.Drawing.Size(117, 20);
+            this.lblCodDist1.Size = new System.Drawing.Size(78, 13);
             this.lblCodDist1.TabIndex = 17;
             this.lblCodDist1.Text = "Código Distrito:";
             // 
             // txtCodDist1
             // 
-            this.txtCodDist1.Location = new System.Drawing.Point(188, 202);
+            this.txtCodDist1.Location = new System.Drawing.Point(125, 131);
+            this.txtCodDist1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtCodDist1.Name = "txtCodDist1";
-            this.txtCodDist1.Size = new System.Drawing.Size(170, 26);
+            this.txtCodDist1.Size = new System.Drawing.Size(115, 20);
             this.txtCodDist1.TabIndex = 18;
             // 
             // lblNombDist1
             // 
             this.lblNombDist1.AutoSize = true;
-            this.lblNombDist1.Location = new System.Drawing.Point(50, 255);
+            this.lblNombDist1.Location = new System.Drawing.Point(33, 166);
+            this.lblNombDist1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblNombDist1.Name = "lblNombDist1";
-            this.lblNombDist1.Size = new System.Drawing.Size(123, 20);
+            this.lblNombDist1.Size = new System.Drawing.Size(82, 13);
             this.lblNombDist1.TabIndex = 19;
             this.lblNombDist1.Text = "Nombre Distrito:";
             this.lblNombDist1.Click += new System.EventHandler(this.lblNombDist1_Click);
             // 
             // txtNombDist1
             // 
-            this.txtNombDist1.Location = new System.Drawing.Point(188, 249);
+            this.txtNombDist1.Location = new System.Drawing.Point(125, 162);
+            this.txtNombDist1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombDist1.Name = "txtNombDist1";
-            this.txtNombDist1.Size = new System.Drawing.Size(170, 26);
+            this.txtNombDist1.Size = new System.Drawing.Size(115, 20);
             this.txtNombDist1.TabIndex = 20;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(118, 582);
+            this.label1.Location = new System.Drawing.Point(79, 378);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(271, 22);
+            this.label1.Size = new System.Drawing.Size(194, 15);
             this.label1.TabIndex = 21;
             this.label1.Text = "Doble Click Para Seleccionar";
             // 
@@ -235,10 +251,9 @@
             this.btnBuscarDist.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBuscarDist.Image = ((System.Drawing.Image)(resources.GetObject("btnBuscarDist.Image")));
             this.btnBuscarDist.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnBuscarDist.Location = new System.Drawing.Point(479, 43);
-            this.btnBuscarDist.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscarDist.Location = new System.Drawing.Point(319, 28);
             this.btnBuscarDist.Name = "btnBuscarDist";
-            this.btnBuscarDist.Size = new System.Drawing.Size(133, 88);
+            this.btnBuscarDist.Size = new System.Drawing.Size(89, 57);
             this.btnBuscarDist.TabIndex = 22;
             this.btnBuscarDist.Text = "&Buscar";
             this.btnBuscarDist.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -249,24 +264,23 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(717, 323);
-            this.btnSalir.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSalir.Location = new System.Drawing.Point(478, 210);
             this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Size = new System.Drawing.Size(132, 84);
+            this.btnSalir.Size = new System.Drawing.Size(88, 55);
             this.btnSalir.TabIndex = 23;
             this.btnSalir.Text = "&Salir";
             this.btnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnSalir.UseVisualStyleBackColor = true;
+            this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
             // btnEliminar
             // 
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("btnEliminar.Image")));
             this.btnEliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEliminar.Location = new System.Drawing.Point(467, 323);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(311, 210);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(117, 84);
+            this.btnEliminar.Size = new System.Drawing.Size(78, 55);
             this.btnEliminar.TabIndex = 24;
             this.btnEliminar.Text = "&Eliminar";
             this.btnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -277,10 +291,9 @@
             this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.Image = ((System.Drawing.Image)(resources.GetObject("btnEditar.Image")));
             this.btnEditar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnEditar.Location = new System.Drawing.Point(717, 194);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Location = new System.Drawing.Point(478, 126);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(132, 84);
+            this.btnEditar.Size = new System.Drawing.Size(88, 55);
             this.btnEditar.TabIndex = 25;
             this.btnEditar.Text = "&Editar";
             this.btnEditar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -291,10 +304,9 @@
             this.btnGuardar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.Image = ((System.Drawing.Image)(resources.GetObject("btnGuardar.Image")));
             this.btnGuardar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnGuardar.Location = new System.Drawing.Point(467, 194);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Location = new System.Drawing.Point(311, 126);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(117, 84);
+            this.btnGuardar.Size = new System.Drawing.Size(78, 55);
             this.btnGuardar.TabIndex = 26;
             this.btnGuardar.Text = "&Guardar";
             this.btnGuardar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -302,9 +314,10 @@
             // 
             // frmMantDist
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(945, 622);
+            this.ClientSize = new System.Drawing.Size(630, 404);
+            this.ControlBox = false;
             this.Controls.Add(this.btnGuardar);
             this.Controls.Add(this.btnEditar);
             this.Controls.Add(this.btnEliminar);
@@ -326,7 +339,9 @@
             this.Controls.Add(this.lblCanton);
             this.Controls.Add(this.lblNombDist);
             this.Controls.Add(this.lblCodDist);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmMantDist";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Mantenimiento Distrito";
             this.Load += new System.EventHandler(this.frmMantDist_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();

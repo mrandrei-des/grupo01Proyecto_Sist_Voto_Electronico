@@ -834,7 +834,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public TablaSubcocienteRow AddTablaSubcocienteRow(string CodigoPartido, string Descripcion, string CantidadVotosEmitidos) {
+            public TablaSubcocienteRow AddTablaSubcocienteRow(string CodigoPartido, string Descripcion, int CantidadVotosEmitidos) {
                 TablaSubcocienteRow rowTablaSubcocienteRow = ((TablaSubcocienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CodigoPartido,
@@ -874,7 +874,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
                 base.Columns.Add(this.columnCodigoPartido);
                 this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcion);
-                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidadVotosEmitidos);
             }
             
@@ -1139,7 +1139,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public TablaCocienteRow AddTablaCocienteRow(string CodigoPartido, string Descripcion, string CantidadVotosEmitidos, string CifraCociente, string CalculoCociente, string DiputadosxCalculo) {
+            public TablaCocienteRow AddTablaCocienteRow(string CodigoPartido, string Descripcion, int CantidadVotosEmitidos, double CifraCociente, double CalculoCociente, int DiputadosxCalculo) {
                 TablaCocienteRow rowTablaCocienteRow = ((TablaCocienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         CodigoPartido,
@@ -1185,13 +1185,13 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
                 base.Columns.Add(this.columnCodigoPartido);
                 this.columnDescripcion = new global::System.Data.DataColumn("Descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDescripcion);
-                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidadVotosEmitidos);
-                this.columnCifraCociente = new global::System.Data.DataColumn("CifraCociente", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCifraCociente = new global::System.Data.DataColumn("CifraCociente", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCifraCociente);
-                this.columnCalculoCociente = new global::System.Data.DataColumn("CalculoCociente", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCalculoCociente = new global::System.Data.DataColumn("CalculoCociente", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCalculoCociente);
-                this.columnDiputadosxCalculo = new global::System.Data.DataColumn("DiputadosxCalculo", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnDiputadosxCalculo = new global::System.Data.DataColumn("DiputadosxCalculo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnDiputadosxCalculo);
             }
             
@@ -1446,7 +1446,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public TablaCalculoResiduoRow AddTablaCalculoResiduoRow(string PartidoPolitico, string CantidadVotosEmitidos, string CifraCociente, string CifraResidual, string EscanosCociente) {
+            public TablaCalculoResiduoRow AddTablaCalculoResiduoRow(string PartidoPolitico, int CantidadVotosEmitidos, double CifraCociente, double CifraResidual, int EscanosCociente) {
                 TablaCalculoResiduoRow rowTablaCalculoResiduoRow = ((TablaCalculoResiduoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PartidoPolitico,
@@ -1488,13 +1488,13 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             private void InitClass() {
                 this.columnPartidoPolitico = new global::System.Data.DataColumn("PartidoPolitico", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPartidoPolitico);
-                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidadVotosEmitidos);
-                this.columnCifraCociente = new global::System.Data.DataColumn("CifraCociente", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCifraCociente = new global::System.Data.DataColumn("CifraCociente", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCifraCociente);
-                this.columnCifraResidual = new global::System.Data.DataColumn("CifraResidual", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCifraResidual = new global::System.Data.DataColumn("CifraResidual", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCifraResidual);
-                this.columnEscanosCociente = new global::System.Data.DataColumn("EscanosCociente", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnEscanosCociente = new global::System.Data.DataColumn("EscanosCociente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEscanosCociente);
             }
             
@@ -1749,7 +1749,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public TablaAsignacionResiduoRow AddTablaAsignacionResiduoRow(string PartidoPolitico, string CantidadVotosEmitidos, string CifraCociente, string CifraResidual, string EscanosResidual) {
+            public TablaAsignacionResiduoRow AddTablaAsignacionResiduoRow(string PartidoPolitico, int CantidadVotosEmitidos, double CifraCociente, double CifraResidual, int EscanosResidual) {
                 TablaAsignacionResiduoRow rowTablaAsignacionResiduoRow = ((TablaAsignacionResiduoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PartidoPolitico,
@@ -1791,13 +1791,13 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             private void InitClass() {
                 this.columnPartidoPolitico = new global::System.Data.DataColumn("PartidoPolitico", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPartidoPolitico);
-                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidadVotosEmitidos);
-                this.columnCifraCociente = new global::System.Data.DataColumn("CifraCociente", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCifraCociente = new global::System.Data.DataColumn("CifraCociente", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCifraCociente);
-                this.columnCifraResidual = new global::System.Data.DataColumn("CifraResidual", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCifraResidual = new global::System.Data.DataColumn("CifraResidual", typeof(double), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCifraResidual);
-                this.columnEscanosResidual = new global::System.Data.DataColumn("EscanosResidual", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnEscanosResidual = new global::System.Data.DataColumn("EscanosResidual", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEscanosResidual);
             }
             
@@ -2052,7 +2052,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public TablaResultadosRow AddTablaResultadosRow(string PartidoPolitico, string CantidadVotosEmitidos, string EscanosCociente, string EscanosResiduo, string TotalEscanos) {
+            public TablaResultadosRow AddTablaResultadosRow(string PartidoPolitico, int CantidadVotosEmitidos, int EscanosCociente, int EscanosResiduo, int TotalEscanos) {
                 TablaResultadosRow rowTablaResultadosRow = ((TablaResultadosRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PartidoPolitico,
@@ -2094,13 +2094,13 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             private void InitClass() {
                 this.columnPartidoPolitico = new global::System.Data.DataColumn("PartidoPolitico", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnPartidoPolitico);
-                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnCantidadVotosEmitidos = new global::System.Data.DataColumn("CantidadVotosEmitidos", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantidadVotosEmitidos);
-                this.columnEscanosCociente = new global::System.Data.DataColumn("EscanosCociente", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnEscanosCociente = new global::System.Data.DataColumn("EscanosCociente", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEscanosCociente);
-                this.columnEscanosResiduo = new global::System.Data.DataColumn("EscanosResiduo", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnEscanosResiduo = new global::System.Data.DataColumn("EscanosResiduo", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnEscanosResiduo);
-                this.columnTotalEscanos = new global::System.Data.DataColumn("TotalEscanos", typeof(string), null, global::System.Data.MappingType.Element);
+                this.columnTotalEscanos = new global::System.Data.DataColumn("TotalEscanos", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnTotalEscanos);
             }
             
@@ -2342,10 +2342,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CantidadVotosEmitidos {
+            public int CantidadVotosEmitidos {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaSubcociente.CantidadVotosEmitidosColumn]));
+                        return ((int)(this[this.tableTablaSubcociente.CantidadVotosEmitidosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadVotosEmitidos\' de la tabla \'TablaSubcociente\' es " +
@@ -2442,10 +2442,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CantidadVotosEmitidos {
+            public int CantidadVotosEmitidos {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaCociente.CantidadVotosEmitidosColumn]));
+                        return ((int)(this[this.tableTablaCociente.CantidadVotosEmitidosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadVotosEmitidos\' de la tabla \'TablaCociente\' es DBN" +
@@ -2459,10 +2459,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CifraCociente {
+            public double CifraCociente {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaCociente.CifraCocienteColumn]));
+                        return ((double)(this[this.tableTablaCociente.CifraCocienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CifraCociente\' de la tabla \'TablaCociente\' es DBNull.", e);
@@ -2475,10 +2475,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CalculoCociente {
+            public double CalculoCociente {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaCociente.CalculoCocienteColumn]));
+                        return ((double)(this[this.tableTablaCociente.CalculoCocienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CalculoCociente\' de la tabla \'TablaCociente\' es DBNull.", e);
@@ -2491,10 +2491,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string DiputadosxCalculo {
+            public int DiputadosxCalculo {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaCociente.DiputadosxCalculoColumn]));
+                        return ((int)(this[this.tableTablaCociente.DiputadosxCalculoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'DiputadosxCalculo\' de la tabla \'TablaCociente\' es DBNull." +
@@ -2612,10 +2612,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CantidadVotosEmitidos {
+            public int CantidadVotosEmitidos {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaCalculoResiduo.CantidadVotosEmitidosColumn]));
+                        return ((int)(this[this.tableTablaCalculoResiduo.CantidadVotosEmitidosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadVotosEmitidos\' de la tabla \'TablaCalculoResiduo\' " +
@@ -2629,10 +2629,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CifraCociente {
+            public double CifraCociente {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaCalculoResiduo.CifraCocienteColumn]));
+                        return ((double)(this[this.tableTablaCalculoResiduo.CifraCocienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CifraCociente\' de la tabla \'TablaCalculoResiduo\' es DBNul" +
@@ -2646,10 +2646,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CifraResidual {
+            public double CifraResidual {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaCalculoResiduo.CifraResidualColumn]));
+                        return ((double)(this[this.tableTablaCalculoResiduo.CifraResidualColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CifraResidual\' de la tabla \'TablaCalculoResiduo\' es DBNul" +
@@ -2663,10 +2663,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string EscanosCociente {
+            public int EscanosCociente {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaCalculoResiduo.EscanosCocienteColumn]));
+                        return ((int)(this[this.tableTablaCalculoResiduo.EscanosCocienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'EscanosCociente\' de la tabla \'TablaCalculoResiduo\' es DBN" +
@@ -2772,10 +2772,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CantidadVotosEmitidos {
+            public int CantidadVotosEmitidos {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaAsignacionResiduo.CantidadVotosEmitidosColumn]));
+                        return ((int)(this[this.tableTablaAsignacionResiduo.CantidadVotosEmitidosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadVotosEmitidos\' de la tabla \'TablaAsignacionResidu" +
@@ -2789,10 +2789,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CifraCociente {
+            public double CifraCociente {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaAsignacionResiduo.CifraCocienteColumn]));
+                        return ((double)(this[this.tableTablaAsignacionResiduo.CifraCocienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CifraCociente\' de la tabla \'TablaAsignacionResiduo\' es DB" +
@@ -2806,10 +2806,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CifraResidual {
+            public double CifraResidual {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaAsignacionResiduo.CifraResidualColumn]));
+                        return ((double)(this[this.tableTablaAsignacionResiduo.CifraResidualColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CifraResidual\' de la tabla \'TablaAsignacionResiduo\' es DB" +
@@ -2823,10 +2823,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string EscanosResidual {
+            public int EscanosResidual {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaAsignacionResiduo.EscanosResidualColumn]));
+                        return ((int)(this[this.tableTablaAsignacionResiduo.EscanosResidualColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'EscanosResidual\' de la tabla \'TablaAsignacionResiduo\' es " +
@@ -2932,10 +2932,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string CantidadVotosEmitidos {
+            public int CantidadVotosEmitidos {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaResultados.CantidadVotosEmitidosColumn]));
+                        return ((int)(this[this.tableTablaResultados.CantidadVotosEmitidosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'CantidadVotosEmitidos\' de la tabla \'TablaResultados\' es D" +
@@ -2949,10 +2949,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string EscanosCociente {
+            public int EscanosCociente {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaResultados.EscanosCocienteColumn]));
+                        return ((int)(this[this.tableTablaResultados.EscanosCocienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'EscanosCociente\' de la tabla \'TablaResultados\' es DBNull." +
@@ -2966,10 +2966,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string EscanosResiduo {
+            public int EscanosResiduo {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaResultados.EscanosResiduoColumn]));
+                        return ((int)(this[this.tableTablaResultados.EscanosResiduoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'EscanosResiduo\' de la tabla \'TablaResultados\' es DBNull.", e);
@@ -2982,10 +2982,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public string TotalEscanos {
+            public int TotalEscanos {
                 get {
                     try {
-                        return ((string)(this[this.tableTablaResultados.TotalEscanosColumn]));
+                        return ((int)(this[this.tableTablaResultados.TotalEscanosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
                         throw new global::System.Data.StrongTypingException("El valor de la columna \'TotalEscanos\' de la tabla \'TablaResultados\' es DBNull.", e);

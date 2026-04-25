@@ -409,7 +409,7 @@
             this.btnRefrescar.Name = "btnRefrescar";
             this.btnRefrescar.Size = new System.Drawing.Size(105, 79);
             this.btnRefrescar.TabIndex = 27;
-            this.btnRefrescar.Text = "&Refrescar";
+            this.btnRefrescar.Text = "&Calcular";
             this.btnRefrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);

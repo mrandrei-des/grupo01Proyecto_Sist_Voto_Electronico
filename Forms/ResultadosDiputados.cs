@@ -22,7 +22,8 @@ namespace grupo01ProyectoFinal.Forms
         private DataTable dtAsignacionCociente;
         private DataTable dtCalculoResiduo;
         private DataTable dtAsignacionResiduo;
-        private DataTable dtResultadosFinales;        
+        private DataTable dtResultadosFinales;
+        private int CantidadDiputadosAsignar = 0;
 
         public frmResultadosDiputados()
         {
@@ -72,6 +73,7 @@ namespace grupo01ProyectoFinal.Forms
 
                 // 1. Consulta de cantidad de diputados por provincia
                 DiputadosxProvincia = ConsultarCantidadDiputados_x_Provincia(codProvincia);
+                CantidadDiputadosAsignar = DiputadosxProvincia;
 
                 // 2. Consulta de votos emitidos por partido excluyendo votos NULOS y en BLANCO
                 dt = ConsultaVotosValidos_x_Provincia(codProvincia);
@@ -326,6 +328,7 @@ namespace grupo01ProyectoFinal.Forms
                 frmShowReporteDiputadosResultados formReporte = new frmShowReporteDiputadosResultados();
                 formReporte.CodigoProvincia = codigoProvincia;
                 formReporte.NombreProvincia = nombreProvincia;
+                formReporte.CantidadDiputadosAsignar = CantidadDiputadosAsignar;
                 formReporte.DtSubcociente = dtResultadosSubcociente;
                 formReporte.DtCociente = dtAsignacionCociente;
                 formReporte.DtCalculoResiduo = dtCalculoResiduo;

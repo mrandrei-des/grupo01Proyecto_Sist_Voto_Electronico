@@ -26,9 +26,32 @@ namespace grupo01ProyectoFinal
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        public void limpiar()
         {
+            txtCedulaingresa.Clear();
+            txtpassword.Clear();
+            txtCedulaingresa.Focus();
+        }
 
+        private void frmLogin_Load(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void btnRegistro_Click(object sender, EventArgs e)
+        {
+            frmRegistroUsuario formRegistroUsuario = new frmRegistroUsuario();
+            formRegistroUsuario.Show();
+            this.Hide();
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btnIngresa_Click(object sender, EventArgs e)
+        {
             try
             {
                 //vamos a trabajar con el login datos contra db y los perfiles de usuario
@@ -99,10 +122,12 @@ namespace grupo01ProyectoFinal
                         MessageBox.Show("No se encontró ningún usuario registrado.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                         txtCedulaingresa.Focus();
                     }
-                } else {
+                }
+                else
+                {
                     MessageBox.Show("No se logró establecer comunicación con el servidor. Por favor inténtelo nuevamente.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtCedulaingresa.Focus();
-                }             
+                }
             }
 
             catch (Exception ex)
@@ -112,40 +137,18 @@ namespace grupo01ProyectoFinal
                 limpiar();
 
             }
-
         }
 
-        public void limpiar()
+        private void txtCedulaingresa_KeyPress(object sender, KeyPressEventArgs e)
         {
-            txtCedulaingresa.Clear();
-            txtpassword.Clear();
-            txtCedulaingresa.Focus();
-        }
-        private void btnConsultar_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void frmLogin_Load(object sender, EventArgs e)
-        {
-           
-        }
-
-        private void btnRegistro_Click(object sender, EventArgs e)
-        {
-            frmRegistroUsuario formRegistroUsuario = new frmRegistroUsuario();
-            formRegistroUsuario.Show();
-            this.Hide();
+            // Validar que solo ingrese números o letras
+            if (!char.IsLetter(e.KeyChar) && !char.IsDigit(e.KeyChar) && !(e.KeyChar == (char)Keys.Back))
+            {
+                e.Handled = true;
+            }else
+            {
+                e.Handled = false;
+            }
         }
     }
 }

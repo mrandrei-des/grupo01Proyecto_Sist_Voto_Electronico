@@ -22,6 +22,7 @@ namespace grupo01ProyectoFinal.Forms
 
         public string CodigoProvincia { get; set; }
         public string NombreProvincia { get; set; }
+        public int CantidadDiputadosAsignar { get; set; }
         public DataTable DtSubcociente { get; set; }
         public DataTable DtCociente { get; set; }
         public DataTable DtCalculoResiduo { get; set; }
@@ -69,7 +70,8 @@ namespace grupo01ProyectoFinal.Forms
 
                 reportViewer1.LocalReport.SetParameters(new ReportParameter[]
                 {
-                    new ReportParameter("NombreProvincia", NombreProvincia)
+                    new ReportParameter("NombreProvincia", NombreProvincia),
+                    new ReportParameter("CantidadDiputadosAsignar", CantidadDiputadosAsignar.ToString())
                 });
 
                 this.reportViewer1.RefreshReport();

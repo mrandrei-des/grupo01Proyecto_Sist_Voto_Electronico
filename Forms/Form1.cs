@@ -112,7 +112,10 @@ namespace grupo01ProyectoFinal
 
         private void bMantDistritoElectoralToolStripMenuItem_Click_1(object sender, EventArgs e)
         {
-
+            frmMantDist formMantenimiento = new frmMantDist();
+            formMantenimiento.CedulaUsuario = cedulaUsuarioLoggeado; 
+            formMantenimiento.Show();
+            Close();
         }
 
         private void aIngresar_Click(object sender, EventArgs e)

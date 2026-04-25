@@ -41,7 +41,7 @@
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
-            this.reportViewer1.Size = new System.Drawing.Size(800, 739);
+            this.reportViewer1.Size = new System.Drawing.Size(800, 981);
             this.reportViewer1.TabIndex = 0;
             // 
             // dataSetResultadosDiputados1
@@ -57,7 +57,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 739);
+            this.ClientSize = new System.Drawing.Size(800, 981);
             this.Controls.Add(this.reportViewer1);
             this.Name = "frmShowReporteDiputadosResultados";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

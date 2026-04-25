@@ -403,6 +403,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Insumos\Iconos\calc.ico" />
     <Content Include="Insumos\Iconos\calculate_math_currency.ico" />
     <Content Include="Insumos\Iconos\check-icon.ico" />
     <Content Include="Insumos\Iconos\cleaner_clean_icon.ico" />
@@ -412,6 +413,7 @@
     <Content Include="Insumos\Iconos\fire_exit_emergency_door_icon.ico" />
     <Content Include="Insumos\Iconos\folders_icon.ico" />
     <Content Include="Insumos\Iconos\garbage_trash_bin_delete_icon.ico" />
+    <Content Include="Insumos\Iconos\login.ico" />
     <Content Include="Insumos\Iconos\next_arrow.ico" />
     <Content Include="Insumos\Iconos\pen_notebook_write_icon.ico" />
     <Content Include="Insumos\Iconos\plus_green.ico" />

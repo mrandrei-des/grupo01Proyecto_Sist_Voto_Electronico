@@ -12,6 +12,8 @@ namespace grupo01ProyectoFinal
 {
     public partial class frmMantDist : Form
     {
+        public string CedulaUsuario = string.Empty;
+
         public frmMantDist()
         {
             InitializeComponent();
@@ -45,6 +47,14 @@ namespace grupo01ProyectoFinal
         private void lblNombDist1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            frmPrincipal formPrincipal = new frmPrincipal();
+            formPrincipal.cedulaUsuarioLoggeado = CedulaUsuario;
+            formPrincipal.Show();
+            this.Close();
         }
     }
 }
