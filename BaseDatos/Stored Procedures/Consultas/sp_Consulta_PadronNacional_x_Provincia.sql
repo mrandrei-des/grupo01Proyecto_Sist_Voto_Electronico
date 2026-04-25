@@ -1,12 +1,12 @@
 -- PROCEDIMIENTO ALMACENADO QUE CONSULTA VOTANTES POR PROVINCIA EN EL PADRÓN NACIONAL
 -- EXEC sp_Consulta_PadronNacional_x_Provincia ''
-CREATE PROC sp_Consulta_PadronNacional_x_Provincia
+CREATE OR ALTER PROC sp_Consulta_PadronNacional_x_Provincia
 (
 @CodProvincia varchar(1)
 )
 AS
 BEGIN
-	SELECT TOP 50 Cedula as 'CÉDULA', PrimerApellido AS 'PRIMER APELLIDO', SegundoApellido AS 'SEGUNDO APELLIDO', 
+	SELECT TOP 1000 Cedula as 'CÉDULA', PrimerApellido AS 'PRIMER APELLIDO', SegundoApellido AS 'SEGUNDO APELLIDO', 
 	Nombre as NOMBRE, FORMAT(FechaVencimientoCedula, 'dd-MM-yyyy') AS 'FECHA VENCIMIENTO CÉDULA' 
 	FROM PadronNacional 
 	WHERE LEFT(CODELE, 1) = @CodProvincia
