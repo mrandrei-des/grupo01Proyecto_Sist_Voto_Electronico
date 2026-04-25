@@ -396,7 +396,7 @@
             </ChartNoDataMessage>
             <DataSetName>DS_ResultadosFinales_Presidente</DataSetName>
             <Top>0.65373cm</Top>
-            <Left>0.94932cm</Left>
+            <Left>0.63501cm</Left>
             <Height>8.88938cm</Height>
             <Width>14.485cm</Width>
             <Style>
@@ -766,7 +766,7 @@
             </ChartNoDataMessage>
             <DataSetName>DS_ResultadosFinales_Presidente</DataSetName>
             <Top>10.49589cm</Top>
-            <Left>0.94932cm</Left>
+            <Left>0.63501cm</Left>
             <Height>7.93688cm</Height>
             <Width>14.485cm</Width>
             <ZIndex>1</ZIndex>
@@ -787,17 +787,21 @@
                 <TextRuns>
                   <TextRun>
                     <Value>Total de Votos:</Value>
-                    <Style />
+                    <Style>
+                      <FontSize>11pt</FontSize>
+                    </Style>
                   </TextRun>
                 </TextRuns>
-                <Style />
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>9.7195cm</Top>
-            <Left>9.62293cm</Left>
+            <Left>8.0739cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.5cm</Width>
+            <Width>4.03458cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -818,18 +822,19 @@
                   <TextRun>
                     <Value>=Sum(Fields!CantVotos.Value, "DS_ResultadosFinales_Presidente")</Value>
                     <Style>
+                      <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
                     </Style>
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Right</TextAlign>
+                  <TextAlign>Left</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox2</rd:DefaultName>
             <Top>9.7195cm</Top>
-            <Left>12.29932cm</Left>
+            <Left>12.24959cm</Left>
             <Height>0.6cm</Height>
             <Width>2.5cm</Width>
             <ZIndex>3</ZIndex>
@@ -844,10 +849,10 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>29.7cm</Height>
+        <Height>18.43277cm</Height>
         <Style />
       </Body>
-      <Width>21cm</Width>
+      <Width>15.99939cm</Width>
       <Page>
         <PageHeader>
           <Height>2.75622cm</Height>
@@ -858,8 +863,8 @@
               <Source>Embedded</Source>
               <Value>LogoTribunal</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.21622cm</Top>
-              <Left>0.94932cm</Left>
+              <Top>0.03983cm</Top>
+              <Left>0.63501cm</Left>
               <Height>2.36361cm</Height>
               <Width>4.10104cm</Width>
               <Style>
@@ -888,8 +893,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.7582cm</Top>
-              <Left>5.90113cm</Left>
+              <Top>0.58554cm</Top>
+              <Left>4.73605cm</Left>
               <Height>1.00542cm</Height>
               <Width>11.26334cm</Width>
               <ZIndex>1</ZIndex>
@@ -920,8 +925,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox62</rd:DefaultName>
-              <Top>1.76361cm</Top>
-              <Left>5.90113cm</Left>
+              <Top>1.59096cm</Top>
+              <Left>4.73605cm</Left>
               <Height>0.6cm</Height>
               <Width>11.26334cm</Width>
               <ZIndex>2</ZIndex>

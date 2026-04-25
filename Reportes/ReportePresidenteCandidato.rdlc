@@ -51,7 +51,7 @@
                   <Width>2.93234cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>8.78877cm</Width>
+                  <Width>7.38648cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>4.12351cm</Width>
@@ -290,9 +290,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DS_REPORTE_CANDIDATO</DataSetName>
-            <Top>4.24863cm</Top>
+            <Top>3.28597cm</Top>
+            <Left>0.63501cm</Left>
             <Height>1.87854cm</Height>
-            <Width>15.84462cm</Width>
+            <Width>14.44233cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -314,9 +315,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
-            <Top>3.47224cm</Top>
+            <Top>2.34565cm</Top>
+            <Left>0.63501cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.77542cm</Width>
+            <Width>10.31882cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -346,6 +348,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
             <Top>0.79287cm</Top>
+            <Left>0.63501cm</Left>
             <Height>0.6cm</Height>
             <Width>2.93234cm</Width>
             <ZIndex>2</ZIndex>
@@ -376,7 +379,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
-            <Top>2.19489cm</Top>
+            <Top>1.56926cm</Top>
+            <Left>0.63501cm</Left>
             <Height>0.6cm</Height>
             <Width>3.52633cm</Width>
             <ZIndex>3</ZIndex>
@@ -407,9 +411,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
             <Top>0.79287cm</Top>
-            <Left>3.10873cm</Left>
+            <Left>3.74374cm</Left>
             <Height>0.6cm</Height>
-            <Width>5.58908cm</Width>
+            <Width>7.21009cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -438,10 +442,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
-            <Top>2.19489cm</Top>
-            <Left>3.70272cm</Left>
+            <Top>1.56926cm</Top>
+            <Left>4.33773cm</Left>
             <Height>0.6cm</Height>
-            <Width>5.58908cm</Width>
+            <Width>6.6161cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -458,8 +462,8 @@
             <Source>Embedded</Source>
             <Value>PLN1</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.79287cm</Top>
-            <Left>13.34588cm</Left>
+            <Top>0.79288cm</Top>
+            <Left>12.571cm</Left>
             <Height>1.2747cm</Height>
             <Width>2.50634cm</Width>
             <ZIndex>6</ZIndex>
@@ -476,8 +480,8 @@
             <Source>Embedded</Source>
             <Value>PFA</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.79287cm</Top>
-            <Left>13.34588cm</Left>
+            <Top>0.79288cm</Top>
+            <Left>12.571cm</Left>
             <Height>1.2747cm</Height>
             <Width>2.50634cm</Width>
             <ZIndex>7</ZIndex>
@@ -494,8 +498,8 @@
             <Source>Embedded</Source>
             <Value>PLP1</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.79287cm</Top>
-            <Left>13.34588cm</Left>
+            <Top>0.79288cm</Top>
+            <Left>12.571cm</Left>
             <Height>1.2747cm</Height>
             <Width>2.50634cm</Width>
             <ZIndex>8</ZIndex>
@@ -512,8 +516,8 @@
             <Source>Embedded</Source>
             <Value>PNR</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.79287cm</Top>
-            <Left>13.34588cm</Left>
+            <Top>0.79288cm</Top>
+            <Left>12.571cm</Left>
             <Height>1.2747cm</Height>
             <Width>2.50634cm</Width>
             <ZIndex>9</ZIndex>
@@ -530,8 +534,8 @@
             <Source>Embedded</Source>
             <Value>PPSO1</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.79287cm</Top>
-            <Left>13.34588cm</Left>
+            <Top>0.79288cm</Top>
+            <Left>12.571cm</Left>
             <Height>1.2747cm</Height>
             <Width>2.50634cm</Width>
             <ZIndex>10</ZIndex>
@@ -548,8 +552,8 @@
             <Source>Embedded</Source>
             <Value>PUSC2</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.79287cm</Top>
-            <Left>13.34588cm</Left>
+            <Top>0.79288cm</Top>
+            <Left>12.571cm</Left>
             <Height>1.2747cm</Height>
             <Width>2.50634cm</Width>
             <ZIndex>11</ZIndex>
@@ -566,8 +570,8 @@
             <Source>Embedded</Source>
             <Value>votonulo1</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.79287cm</Top>
-            <Left>12.99889cm</Left>
+            <Top>0.79288cm</Top>
+            <Left>12.22401cm</Left>
             <Height>2.00201cm</Height>
             <Width>2.85333cm</Width>
             <ZIndex>12</ZIndex>
@@ -584,8 +588,8 @@
             <Source>Embedded</Source>
             <Value>Votoenblanco1</Value>
             <Sizing>FitProportional</Sizing>
-            <Top>0.79287cm</Top>
-            <Left>13.62625cm</Left>
+            <Top>0.79288cm</Top>
+            <Left>12.85137cm</Left>
             <Height>2.3167cm</Height>
             <Width>2.22597cm</Width>
             <ZIndex>13</ZIndex>
@@ -605,7 +609,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>= "Total de votos " &amp; Sum(Fields!CantVotos.Value, "DS_REPORTE_CANDIDATO")</Value>
+                    <Value>= Sum(Fields!CantVotos.Value, "DS_REPORTE_CANDIDATO")</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -617,10 +621,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
-            <Top>6.50339cm</Top>
-            <Left>10.08724cm</Left>
+            <Top>5.27034cm</Top>
+            <Left>10.95383cm</Left>
             <Height>0.6cm</Height>
-            <Width>5.40278cm</Width>
+            <Width>4.12351cm</Width>
             <ZIndex>14</ZIndex>
             <Style>
               <Border>
@@ -632,15 +636,47 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
+          <Textbox Name="Textbox58">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Total de votos:</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Right</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox52</rd:DefaultName>
+            <Top>5.27034cm</Top>
+            <Left>6.53982cm</Left>
+            <Height>0.6cm</Height>
+            <Width>4.41401cm</Width>
+            <ZIndex>15</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
         </ReportItems>
-        <Height>29.7cm</Height>
+        <Height>5.87034cm</Height>
         <Style>
           <Border>
             <Style>None</Style>
           </Border>
         </Style>
       </Body>
-      <Width>21.70596cm</Width>
+      <Width>15.99939cm</Width>
       <Page>
         <PageHeader>
           <Height>2.90559cm</Height>
@@ -651,6 +687,8 @@
               <Source>Embedded</Source>
               <Value>LogoTribunal</Value>
               <Sizing>FitProportional</Sizing>
+              <Top>0.03983cm</Top>
+              <Left>0.63501cm</Left>
               <Height>2.36361cm</Height>
               <Width>4.10104cm</Width>
               <Style>
@@ -679,8 +717,8 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.54198cm</Top>
-              <Left>4.95181cm</Left>
+              <Top>0.58554cm</Top>
+              <Left>4.73605cm</Left>
               <Height>1.00542cm</Height>
               <Width>11.26334cm</Width>
               <ZIndex>1</ZIndex>
@@ -712,7 +750,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox62</rd:DefaultName>
               <Top>1.54739cm</Top>
-              <Left>4.95181cm</Left>
+              <Left>4.73605cm</Left>
               <Height>0.6cm</Height>
               <Width>11.26334cm</Width>
               <ZIndex>2</ZIndex>

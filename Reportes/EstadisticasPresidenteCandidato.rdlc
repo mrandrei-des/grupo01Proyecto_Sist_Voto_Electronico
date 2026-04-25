@@ -286,7 +286,7 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DS_EST_CANDIDATO</DataSetName>
-            <Top>10.00234cm</Top>
+            <Top>8.47624cm</Top>
             <Left>0.63501cm</Left>
             <Height>1.41167cm</Height>
             <Width>15.78146cm</Width>
@@ -767,7 +767,7 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DS_EST_CANDIDATO</DataSetName>
-            <Top>2.83213cm</Top>
+            <Top>2.16214cm</Top>
             <Left>0.63501cm</Left>
             <Height>6.13771cm</Height>
             <Width>15.78146cm</Width>
@@ -798,7 +798,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>11.5904cm</Top>
+            <Top>10.0643cm</Top>
             <Left>6.7598cm</Left>
             <Height>0.6cm</Height>
             <Width>5.19875cm</Width>
@@ -832,7 +832,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox12</rd:DefaultName>
-            <Top>11.5904cm</Top>
+            <Top>10.0643cm</Top>
             <Left>11.95855cm</Left>
             <Height>0.6cm</Height>
             <Width>4.42264cm</Width>
@@ -848,13 +848,13 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>29.7cm</Height>
+        <Height>10.6643cm</Height>
         <Style />
       </Body>
-      <Width>21.70596cm</Width>
+      <Width>16.41647cm</Width>
       <Page>
         <PageHeader>
-          <Height>2.57983cm</Height>
+          <Height>2.5079cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -881,7 +881,7 @@
                     <TextRun>
                       <Value>Estadísticas Votación Presidencial por Candidato</Value>
                       <Style>
-                        <FontSize>14pt</FontSize>
+                        <FontSize>16pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -892,10 +892,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.54198cm</Top>
-              <Left>4.95181cm</Left>
-              <Height>1.00542cm</Height>
-              <Width>12.26876cm</Width>
+              <Top>0.54971cm</Top>
+              <Left>4.73605cm</Left>
+              <Height>1.32291cm</Height>
+              <Width>11.68042cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -924,10 +924,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox62</rd:DefaultName>
-              <Top>1.54739cm</Top>
-              <Left>4.95181cm</Left>
+              <Top>1.9079cm</Top>
+              <Left>4.77133cm</Left>
               <Height>0.6cm</Height>
-              <Width>12.26876cm</Width>
+              <Width>11.64514cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>

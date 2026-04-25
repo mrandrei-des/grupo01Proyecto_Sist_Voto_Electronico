@@ -48,7 +48,7 @@
             <TablixBody>
               <TablixColumns>
                 <TablixColumn>
-                  <Width>12.75292cm</Width>
+                  <Width>9.81286cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>6.37646cm</Width>
@@ -226,10 +226,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <DataSetName>DS_ReporteVotacionesProvincia</DataSetName>
-            <Top>8.76018cm</Top>
-            <Left>0.86995cm</Left>
+            <Top>7.66594cm</Top>
+            <Left>0.60856cm</Left>
             <Height>1.64042cm</Height>
-            <Width>19.12938cm</Width>
+            <Width>16.18932cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -586,10 +586,10 @@
               </Style>
             </ChartNoDataMessage>
             <DataSetName>DS_ReporteVotacionesProvincia</DataSetName>
-            <Top>2.11914cm</Top>
-            <Left>0.84349cm</Left>
+            <Top>1.61643cm</Top>
+            <Left>0.60856cm</Left>
             <Height>5.87312cm</Height>
-            <Width>19.12938cm</Width>
+            <Width>16.18932cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -616,7 +616,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
             <Top>0.84004cm</Top>
-            <Left>0.84349cm</Left>
+            <Left>0.63501cm</Left>
             <Height>0.6cm</Height>
             <Width>4.77542cm</Width>
             <ZIndex>2</ZIndex>
@@ -648,7 +648,7 @@
             </Paragraphs>
             <rd:DefaultName>Textbox59</rd:DefaultName>
             <Top>0.84004cm</Top>
-            <Left>5.61891cm</Left>
+            <Left>5.41043cm</Left>
             <Height>0.6cm</Height>
             <Width>4.69604cm</Width>
             <ZIndex>3</ZIndex>
@@ -682,8 +682,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox60</rd:DefaultName>
-            <Top>11.03559cm</Top>
-            <Left>16.82432cm</Left>
+            <Top>9.44747cm</Top>
+            <Left>13.59642cm</Left>
             <Height>0.6cm</Height>
             <Width>3.14854cm</Width>
             <ZIndex>4</ZIndex>
@@ -714,8 +714,8 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox61</rd:DefaultName>
-            <Top>11.03559cm</Top>
-            <Left>13.62287cm</Left>
+            <Top>9.44747cm</Top>
+            <Left>10.39497cm</Left>
             <Height>0.6cm</Height>
             <Width>3.20146cm</Width>
             <ZIndex>5</ZIndex>
@@ -730,13 +730,13 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>29.7cm</Height>
+        <Height>10.04747cm</Height>
         <Style />
       </Body>
-      <Width>21cm</Width>
+      <Width>16.79788cm</Width>
       <Page>
         <PageHeader>
-          <Height>2.98415cm</Height>
+          <Height>2.5079cm</Height>
           <PrintOnFirstPage>true</PrintOnFirstPage>
           <PrintOnLastPage>true</PrintOnLastPage>
           <ReportItems>
@@ -744,8 +744,8 @@
               <Source>Embedded</Source>
               <Value>LogoTribunal</Value>
               <Sizing>FitProportional</Sizing>
-              <Top>0.62054cm</Top>
-              <Left>0.84349cm</Left>
+              <Top>0.03983cm</Top>
+              <Left>0.63501cm</Left>
               <Height>2.36361cm</Height>
               <Width>4.10104cm</Width>
               <Style>
@@ -763,7 +763,7 @@
                     <TextRun>
                       <Value>Estadísticas Votación Presidencial por Provincia</Value>
                       <Style>
-                        <FontSize>18pt</FontSize>
+                        <FontSize>16pt</FontSize>
                         <FontWeight>Bold</FontWeight>
                       </Style>
                     </TextRun>
@@ -774,10 +774,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
-              <Top>0.62054cm</Top>
-              <Left>4.94453cm</Left>
-              <Height>1.00542cm</Height>
-              <Width>15.05479cm</Width>
+              <Top>0.58554cm</Top>
+              <Left>4.73605cm</Left>
+              <Height>1.32236cm</Height>
+              <Width>12.06183cm</Width>
               <ZIndex>1</ZIndex>
               <Style>
                 <Border>
@@ -806,10 +806,10 @@
                 </Paragraph>
               </Paragraphs>
               <rd:DefaultName>Textbox62</rd:DefaultName>
-              <Top>1.62595cm</Top>
-              <Left>4.94453cm</Left>
+              <Top>1.9079cm</Top>
+              <Left>4.77133cm</Left>
               <Height>0.6cm</Height>
-              <Width>15.05479cm</Width>
+              <Width>11.97363cm</Width>
               <ZIndex>2</ZIndex>
               <Style>
                 <Border>
