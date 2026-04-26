@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmRegistroUsuario));
             this.grbInfoUsuario = new System.Windows.Forms.GroupBox();
+            this.lblFechaVencimiento = new System.Windows.Forms.Label();
             this.txtApellidos = new System.Windows.Forms.TextBox();
             this.lblApellidos = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
@@ -55,8 +56,7 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
-            this.lblFechaVencimiento = new System.Windows.Forms.Label();
-            this.txtFechaVencimiento = new System.Windows.Forms.TextBox();
+            this.dtpFechaVencimiento = new System.Windows.Forms.DateTimePicker();
             this.grbInfoUsuario.SuspendLayout();
             this.grbLugarVotacion.SuspendLayout();
             this.grbDatosAcceso.SuspendLayout();
@@ -64,7 +64,7 @@
             // 
             // grbInfoUsuario
             // 
-            this.grbInfoUsuario.Controls.Add(this.txtFechaVencimiento);
+            this.grbInfoUsuario.Controls.Add(this.dtpFechaVencimiento);
             this.grbInfoUsuario.Controls.Add(this.lblFechaVencimiento);
             this.grbInfoUsuario.Controls.Add(this.txtApellidos);
             this.grbInfoUsuario.Controls.Add(this.lblApellidos);
@@ -76,6 +76,16 @@
             this.grbInfoUsuario.TabIndex = 2;
             this.grbInfoUsuario.TabStop = false;
             this.grbInfoUsuario.Text = " Información del Usuario: ";
+            // 
+            // lblFechaVencimiento
+            // 
+            this.lblFechaVencimiento.AutoSize = true;
+            this.lblFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaVencimiento.Location = new System.Drawing.Point(37, 81);
+            this.lblFechaVencimiento.Name = "lblFechaVencimiento";
+            this.lblFechaVencimiento.Size = new System.Drawing.Size(234, 20);
+            this.lblFechaVencimiento.TabIndex = 10;
+            this.lblFechaVencimiento.Text = "Fecha Vencimiento Cédula: ";
             // 
             // txtApellidos
             // 
@@ -347,24 +357,13 @@
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
-            // lblFechaVencimiento
+            // dtpFechaVencimiento
             // 
-            this.lblFechaVencimiento.AutoSize = true;
-            this.lblFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFechaVencimiento.Location = new System.Drawing.Point(37, 81);
-            this.lblFechaVencimiento.Name = "lblFechaVencimiento";
-            this.lblFechaVencimiento.Size = new System.Drawing.Size(234, 20);
-            this.lblFechaVencimiento.TabIndex = 10;
-            this.lblFechaVencimiento.Text = "Fecha Vencimiento Cédula: ";
-            // 
-            // txtFechaVencimiento
-            // 
-            this.txtFechaVencimiento.Enabled = false;
-            this.txtFechaVencimiento.Location = new System.Drawing.Point(277, 78);
-            this.txtFechaVencimiento.Name = "txtFechaVencimiento";
-            this.txtFechaVencimiento.ReadOnly = true;
-            this.txtFechaVencimiento.Size = new System.Drawing.Size(216, 26);
-            this.txtFechaVencimiento.TabIndex = 11;
+            this.dtpFechaVencimiento.Enabled = false;
+            this.dtpFechaVencimiento.Location = new System.Drawing.Point(277, 76);
+            this.dtpFechaVencimiento.Name = "dtpFechaVencimiento";
+            this.dtpFechaVencimiento.Size = new System.Drawing.Size(299, 26);
+            this.dtpFechaVencimiento.TabIndex = 12;
             // 
             // frmRegistroUsuario
             // 
@@ -426,7 +425,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnRefrescar;
-        private System.Windows.Forms.TextBox txtFechaVencimiento;
         private System.Windows.Forms.Label lblFechaVencimiento;
+        private System.Windows.Forms.DateTimePicker dtpFechaVencimiento;
     }
 }

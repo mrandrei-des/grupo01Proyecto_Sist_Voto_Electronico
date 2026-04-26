@@ -38,7 +38,7 @@ namespace grupo01ProyectoFinal
             txtIdentificacion.Clear();
             txtNombre.Clear();
             txtApellidos.Clear();
-            txtFechaVencimiento.Clear();
+            dtpFechaVencimiento.Value = DateTime.Now;
             txtContrasenna.Clear();
             txtCorreo.Clear();
             MoverCmbProvincias("1");
@@ -151,7 +151,9 @@ namespace grupo01ProyectoFinal
                             // Carga en pantalla la información
                             txtNombre.Text = dtDatosPersona.Rows[0]["Nombre"].ToString();
                             txtApellidos.Text = dtDatosPersona.Rows[0]["Apellidos"].ToString();
-                            txtFechaVencimiento.Text = dtDatosPersona.Rows[0]["FechaVencimientoCedula"].ToString();
+                            DateTime fechaActual = DateTime.Now;
+                            DateTime fechaVencimientoCedula = Convert.ToDateTime(dtDatosPersona.Rows[0]["FechaVencimientoCedula"].ToString());
+                            dtpFechaVencimiento.Value = fechaVencimientoCedula;
                             string codProvincia = dtDatosPersona.Rows[0]["CodProvincia"].ToString();
                             string codCanton = dtDatosPersona.Rows[0]["CodCanton"].ToString();
                             string codDistrito = dtDatosPersona.Rows[0]["CodDistrito"].ToString();
@@ -159,8 +161,7 @@ namespace grupo01ProyectoFinal
                             MoverCmbProvincias(codProvincia);
                             MoverCmbCantones(codCanton);
                             MoverCmbDistritos(codDistrito);
-                            DateTime fechaActual = DateTime.Now;
-                            DateTime fechaVencimientoCedula = Convert.ToDateTime(dtDatosPersona.Rows[0]["FechaVencimientoCedula"].ToString());
+
 
                             //Revisar si la fecha de vencimiento ya se cumplió con respecto a la fecha de hoy
                             if(fechaVencimientoCedula < fechaActual)
