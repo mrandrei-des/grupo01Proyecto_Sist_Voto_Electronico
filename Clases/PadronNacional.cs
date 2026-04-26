@@ -75,7 +75,7 @@ namespace grupo01ProyectoFinal.Clases
         public DataTable ListarInformacionVotacion_x_Cedula()
         {
             DataSet ds = new DataSet();
-            string cmd = string.Format("SELECT p.Nombre as Nombre, p.PrimerApellido + ' ' + p.SegundoApellido as Apellidos, d.CodigoProvincia as CodProvincia, d.CodigoCanton as CodCanton, d.CodigoDistrito as CodDistrito FROM PadronNacional p, DistritosElectorales d WHERE p.Codele = d.Codele and p.Cedula = '{0}'", this.cedula);
+            string cmd = string.Format("SELECT p.Nombre as Nombre, p.PrimerApellido + ' ' + p.SegundoApellido as Apellidos, d.CodigoProvincia as CodProvincia, d.CodigoCanton as CodCanton, d.CodigoDistrito as CodDistrito, p.FechaVencimientoCedula FROM PadronNacional p, DistritosElectorales d WHERE p.Codele = d.Codele and p.Cedula = '{0}'", this.cedula);
 
             ds = Utilidades.Ejecutar(cmd);
 

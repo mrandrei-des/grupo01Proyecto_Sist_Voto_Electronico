@@ -60,7 +60,7 @@ namespace grupo01ProyectoFinal.Clases
             try
             {
                 DataSet ds = new DataSet();
-                string cmd = string.Format("SELECT Cedula, Contrasenna, CorreoElectronico as Correo, VotoPresidenteEmitido AS estadoVotoPresidente, VotoDiputadoEmitido AS estadoVotoDiputado, IdEstado AS numEstado, IdPerfil as numPerfil FROM Usuarios WHERE Cedula = '{0}'", this.Cedula);
+                string cmd = string.Format("EXEC sp_Consulta_InformacionUsuario '{0}'", this.Cedula);
 
                 ds = Utilidades.Ejecutar(cmd);
 
@@ -104,9 +104,34 @@ namespace grupo01ProyectoFinal.Clases
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un problema a la hora actualizar el estado del usuario. [002][" + ex.Message + "]", "Actualización de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un problema a la hora actualizar el estado del usuario. [003][" + ex.Message + "]", "Actualización de datos", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             return false;
+        }
+
+        public DataTable Consultar_UsuarioRegistrado()
+        {
+            try
+            {
+                DataSet ds = new DataSet();
+                string cmd = string.Format("EXEC sp_Consulta_Informacion_UsuarioRegistrado '{0}', '{1}'", this.Cedula, this.Contrasenna);
+
+                ds = Utilidades.Ejecutar(cmd);
+
+                if (ds.Tables.Count > 0)
+                {
+                    if (ds.Tables[0].Rows.Count > 0)
+                    {
+                        return ds.Tables[0];
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema al momento de consultar la información del usuario. [004][" + ex.Message + "]", "Consulta de información", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return new DataTable();
         }
     }
 }

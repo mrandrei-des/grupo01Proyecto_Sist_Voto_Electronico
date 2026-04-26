@@ -54,24 +54,32 @@ namespace grupo01ProyectoFinal
         {
             try
             {
-                //vamos a trabajar con el login datos contra db y los perfiles de usuario
                 string contrasena;
                 contrasena = Utilidades.Codificar(txtpassword.Text.Trim());
-                //string cmd = string.Format("select * from Usuarios where Cedula=@Cedula AND Contrasena=@Contrasenna", txtCedulaingresa.Text.Trim(), contrasena); //revisar .Trim
-                string cmd = string.Format("select * from Usuarios where Cedula= '{0}' AND Contrasenna= '{1}'", txtCedulaingresa.Text.Trim(), contrasena); //revisar .Trim
-                DataSet ds = Utilidades.Ejecutar(cmd);
 
-                if (ds.Tables.Count > 0) // Devuelve 0 tables si ocurrió un problema en la consulta
+                DataTable dtConsulta = new DataTable();
+                Usuario objUsuario = new Usuario();
+
+                objUsuario.Cedula = txtCedulaingresa.Text.Trim();
+                objUsuario.Contrasenna = contrasena;
+                dtConsulta = objUsuario.Consultar_UsuarioRegistrado();
+
+                if (dtConsulta.Rows.Count > 0) // Se valida que reamente haya traído al menos 1 registro
                 {
-                    if (ds.Tables[0].Rows.Count > 0) // Se valida que reamente haya traído al menos 1 registro
+                    string usuario = dtConsulta.Rows[0]["Cedula"].ToString();
+                    string clave = dtConsulta.Rows[0]["contrasenna"].ToString();
+                    string perfil = dtConsulta.Rows[0]["IdPerfil"].ToString();
+                    DateTime fechaActual = DateTime.Now;
+                    DateTime fechaVencimientoCedula = Convert.ToDateTime(dtConsulta.Rows[0]["FechaVencimientoCedula"].ToString());
+
+                    //Revisar si la fecha de vencimiento ya se cumplió con respecto a la fecha de hoy
+                    if (fechaVencimientoCedula < fechaActual)
                     {
-                        string usuario = ds.Tables[0].Rows[0]["Cedula"].ToString();
-                        string clave = ds.Tables[0].Rows[0]["contrasenna"].ToString();
-                        //string perfil = ds.Tables[0].Rows[0]["NOPERFIL"].ToString();
-                        string perfil = ds.Tables[0].Rows[0]["IdPerfil"].ToString();
-
-                        //vamos a relacionar el perfil con el Menu
-
+                        MessageBox.Show("Su documento de identidad ya ha vencido. No podrá emitir su voto hasta que no cuente con un documento vigente.", "Documento de identidad vencido", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        return;
+                    }
+                    else
+                    {
                         if (usuario == txtCedulaingresa.Text && clave == Utilidades.Codificar(txtpassword.Text.Trim()))
                         {
                             //perfil de administador
@@ -98,7 +106,6 @@ namespace grupo01ProyectoFinal
                                 // Deshabilita opciones, pero no muestra la pantalla
                                 menu1.Show();
                             }
-
                             else
                             {
                                 this.Hide();
@@ -117,17 +124,12 @@ namespace grupo01ProyectoFinal
                             txtCedulaingresa.Focus();
                         }
                     }
-                    else
-                    {
-                        MessageBox.Show("No se encontró ningún usuario registrado.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Hand);
-                        txtCedulaingresa.Focus();
-                    }
                 }
                 else
                 {
-                    MessageBox.Show("No se logró establecer comunicación con el servidor. Por favor inténtelo nuevamente.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("No se encontró ningún usuario registrado.", "Inicio de Sesión", MessageBoxButtons.OK, MessageBoxIcon.Hand);
                     txtCedulaingresa.Focus();
-                }
+                }                
             }
 
             catch (Exception ex)

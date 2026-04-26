@@ -55,6 +55,8 @@
             this.btnSalir = new System.Windows.Forms.Button();
             this.btnRegistro = new System.Windows.Forms.Button();
             this.btnRefrescar = new System.Windows.Forms.Button();
+            this.lblFechaVencimiento = new System.Windows.Forms.Label();
+            this.txtFechaVencimiento = new System.Windows.Forms.TextBox();
             this.grbInfoUsuario.SuspendLayout();
             this.grbLugarVotacion.SuspendLayout();
             this.grbDatosAcceso.SuspendLayout();
@@ -62,13 +64,15 @@
             // 
             // grbInfoUsuario
             // 
+            this.grbInfoUsuario.Controls.Add(this.txtFechaVencimiento);
+            this.grbInfoUsuario.Controls.Add(this.lblFechaVencimiento);
             this.grbInfoUsuario.Controls.Add(this.txtApellidos);
             this.grbInfoUsuario.Controls.Add(this.lblApellidos);
             this.grbInfoUsuario.Controls.Add(this.txtNombre);
             this.grbInfoUsuario.Controls.Add(this.lblNombre);
             this.grbInfoUsuario.Location = new System.Drawing.Point(12, 102);
             this.grbInfoUsuario.Name = "grbInfoUsuario";
-            this.grbInfoUsuario.Size = new System.Drawing.Size(983, 80);
+            this.grbInfoUsuario.Size = new System.Drawing.Size(983, 119);
             this.grbInfoUsuario.TabIndex = 2;
             this.grbInfoUsuario.TabStop = false;
             this.grbInfoUsuario.Text = " Información del Usuario: ";
@@ -137,7 +141,7 @@
             this.grbLugarVotacion.Controls.Add(this.lblDistrito);
             this.grbLugarVotacion.Controls.Add(this.lblCanton);
             this.grbLugarVotacion.Controls.Add(this.lblProvincia);
-            this.grbLugarVotacion.Location = new System.Drawing.Point(12, 200);
+            this.grbLugarVotacion.Location = new System.Drawing.Point(12, 227);
             this.grbLugarVotacion.Name = "grbLugarVotacion";
             this.grbLugarVotacion.Size = new System.Drawing.Size(983, 84);
             this.grbLugarVotacion.TabIndex = 10;
@@ -215,7 +219,7 @@
             this.grbDatosAcceso.Controls.Add(this.txtContrasenna);
             this.grbDatosAcceso.Controls.Add(this.lblCorreo);
             this.grbDatosAcceso.Controls.Add(this.lblContrasena);
-            this.grbDatosAcceso.Location = new System.Drawing.Point(12, 299);
+            this.grbDatosAcceso.Location = new System.Drawing.Point(12, 326);
             this.grbDatosAcceso.Name = "grbDatosAcceso";
             this.grbDatosAcceso.Size = new System.Drawing.Size(983, 171);
             this.grbDatosAcceso.TabIndex = 15;
@@ -292,7 +296,7 @@
             this.btnLimpiar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.Image = ((System.Drawing.Image)(resources.GetObject("btnLimpiar.Image")));
             this.btnLimpiar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnLimpiar.Location = new System.Drawing.Point(476, 493);
+            this.btnLimpiar.Location = new System.Drawing.Point(476, 520);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(105, 79);
             this.btnLimpiar.TabIndex = 17;
@@ -306,7 +310,7 @@
             this.btnSalir.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
             this.btnSalir.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnSalir.Location = new System.Drawing.Point(629, 493);
+            this.btnSalir.Location = new System.Drawing.Point(629, 520);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(105, 79);
             this.btnSalir.TabIndex = 16;
@@ -320,7 +324,7 @@
             this.btnRegistro.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistro.Image = ((System.Drawing.Image)(resources.GetObject("btnRegistro.Image")));
             this.btnRegistro.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btnRegistro.Location = new System.Drawing.Point(330, 493);
+            this.btnRegistro.Location = new System.Drawing.Point(330, 520);
             this.btnRegistro.Name = "btnRegistro";
             this.btnRegistro.Size = new System.Drawing.Size(105, 79);
             this.btnRegistro.TabIndex = 18;
@@ -343,11 +347,30 @@
             this.btnRefrescar.UseVisualStyleBackColor = true;
             this.btnRefrescar.Click += new System.EventHandler(this.btnRefrescar_Click);
             // 
+            // lblFechaVencimiento
+            // 
+            this.lblFechaVencimiento.AutoSize = true;
+            this.lblFechaVencimiento.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFechaVencimiento.Location = new System.Drawing.Point(37, 81);
+            this.lblFechaVencimiento.Name = "lblFechaVencimiento";
+            this.lblFechaVencimiento.Size = new System.Drawing.Size(234, 20);
+            this.lblFechaVencimiento.TabIndex = 10;
+            this.lblFechaVencimiento.Text = "Fecha Vencimiento Cédula: ";
+            // 
+            // txtFechaVencimiento
+            // 
+            this.txtFechaVencimiento.Enabled = false;
+            this.txtFechaVencimiento.Location = new System.Drawing.Point(277, 78);
+            this.txtFechaVencimiento.Name = "txtFechaVencimiento";
+            this.txtFechaVencimiento.ReadOnly = true;
+            this.txtFechaVencimiento.Size = new System.Drawing.Size(216, 26);
+            this.txtFechaVencimiento.TabIndex = 11;
+            // 
             // frmRegistroUsuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1023, 600);
+            this.ClientSize = new System.Drawing.Size(1023, 654);
             this.ControlBox = false;
             this.Controls.Add(this.btnRefrescar);
             this.Controls.Add(this.btnRegistro);
@@ -403,5 +426,7 @@
         private System.Windows.Forms.Button btnSalir;
         private System.Windows.Forms.Button btnRegistro;
         private System.Windows.Forms.Button btnRefrescar;
+        private System.Windows.Forms.TextBox txtFechaVencimiento;
+        private System.Windows.Forms.Label lblFechaVencimiento;
     }
 }
