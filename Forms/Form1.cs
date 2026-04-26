@@ -33,7 +33,8 @@ namespace grupo01ProyectoFinal
 
         private void aAcercaDeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           Form formAcercaDe = new frmAcercade();
+            frmAcercade formAcercaDe = new frmAcercade();
+            formAcercaDe.cedulaUsuario = cedulaUsuarioLoggeado;
             formAcercaDe.Show();
         }
 
