@@ -76,6 +76,8 @@ namespace grupo01ProyectoFinal
                     if (fechaVencimientoCedula < fechaActual)
                     {
                         MessageBox.Show("Su documento de identidad ya ha vencido. No podrá emitir su voto hasta que no cuente con un documento vigente.", "Documento de identidad vencido", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                        txtCedulaingresa.Clear();
+                        txtpassword.Clear();
                         return;
                     }
                     else

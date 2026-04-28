@@ -318,7 +318,7 @@
             <Top>2.34565cm</Top>
             <Left>0.63501cm</Left>
             <Height>0.6cm</Height>
-            <Width>10.31882cm</Width>
+            <Width>11.41261cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -369,7 +369,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Candidato Político:</Value>
+                    <Value>Candidato:</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -382,7 +382,7 @@
             <Top>1.56926cm</Top>
             <Left>0.63501cm</Left>
             <Height>0.6cm</Height>
-            <Width>3.52633cm</Width>
+            <Width>2.04468cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -413,7 +413,7 @@
             <Top>0.79287cm</Top>
             <Left>3.74374cm</Left>
             <Height>0.6cm</Height>
-            <Width>7.21009cm</Width>
+            <Width>8.30388cm</Width>
             <ZIndex>4</ZIndex>
             <Style>
               <Border>
@@ -443,9 +443,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
             <Top>1.56926cm</Top>
-            <Left>4.33773cm</Left>
+            <Left>3.74374cm</Left>
             <Height>0.6cm</Height>
-            <Width>6.6161cm</Width>
+            <Width>6.74856cm</Width>
             <ZIndex>5</ZIndex>
             <Style>
               <Border>
@@ -616,7 +616,7 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Right</TextAlign>
+                  <TextAlign>Center</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>
@@ -654,9 +654,9 @@
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
             <Top>5.27034cm</Top>
-            <Left>6.53982cm</Left>
+            <Left>8.47128cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.41401cm</Width>
+            <Width>2.48255cm</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
