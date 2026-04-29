@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.sp_Reporte_Resultados_Presidente_x_PartidoTableAdapter1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetReporteCandidatoTableAdapters.sp_Reporte_Resultados_Presidente_x_PartidoTableAdapter();
-            this.dataSetReporteCandidato1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetReporteCandidato();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetReporteCandidato1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -44,15 +41,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 763);
             this.reportViewer1.TabIndex = 0;
             // 
-            // sp_Reporte_Resultados_Presidente_x_PartidoTableAdapter1
-            // 
-            this.sp_Reporte_Resultados_Presidente_x_PartidoTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dataSetReporteCandidato1
-            // 
-            this.dataSetReporteCandidato1.DataSetName = "DataSetReporteCandidato";
-            this.dataSetReporteCandidato1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // frmShowReportePresidenteCandidato
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -63,7 +51,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Resultados por Candidato";
             this.Load += new System.EventHandler(this.frmShowReporteCandidato_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetReporteCandidato1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -71,7 +58,5 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private DataSet_Reportes.DataSetReporteCandidatoTableAdapters.sp_Reporte_Resultados_Presidente_x_PartidoTableAdapter sp_Reporte_Resultados_Presidente_x_PartidoTableAdapter1;
-        private DataSet_Reportes.DataSetReporteCandidato dataSetReporteCandidato1;
     }
 }

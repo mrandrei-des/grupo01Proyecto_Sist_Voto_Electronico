@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetResultadosDiputados1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetResultadosDiputados();
-            this.sp_Consulta_Resultados_Diputados_x_ProvinciaTableAdapter1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetResultadosDiputadosTableAdapters.sp_Consulta_Resultados_Diputados_x_ProvinciaTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetResultadosDiputados1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -44,15 +41,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(800, 981);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataSetResultadosDiputados1
-            // 
-            this.dataSetResultadosDiputados1.DataSetName = "DataSetResultadosDiputados";
-            this.dataSetResultadosDiputados1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sp_Consulta_Resultados_Diputados_x_ProvinciaTableAdapter1
-            // 
-            this.sp_Consulta_Resultados_Diputados_x_ProvinciaTableAdapter1.ClearBeforeFill = true;
-            // 
             // frmShowReporteDiputadosResultados
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -63,7 +51,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Reporte Diputados Resultados";
             this.Load += new System.EventHandler(this.frmShowReporteDiputadosResultados_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetResultadosDiputados1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -71,7 +58,5 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private DataSet_Reportes.DataSetResultadosDiputados dataSetResultadosDiputados1;
-        private DataSet_Reportes.DataSetResultadosDiputadosTableAdapters.sp_Consulta_Resultados_Diputados_x_ProvinciaTableAdapter sp_Consulta_Resultados_Diputados_x_ProvinciaTableAdapter1;
     }
 }

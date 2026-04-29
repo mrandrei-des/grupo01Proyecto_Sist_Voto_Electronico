@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
-            this.dataSetReportePresidenteFinales1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetReportePresidenteFinales();
-            this.sp_ReporteResultados_Presidente_FinalesTableAdapter1 = new grupo01ProyectoFinal.DataSet_Reportes.DataSetReportePresidenteFinalesTableAdapters.sp_ReporteResultados_Presidente_FinalesTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetReportePresidenteFinales1)).BeginInit();
             this.SuspendLayout();
             // 
             // reportViewer1
@@ -44,15 +41,6 @@
             this.reportViewer1.Size = new System.Drawing.Size(818, 890);
             this.reportViewer1.TabIndex = 0;
             // 
-            // dataSetReportePresidenteFinales1
-            // 
-            this.dataSetReportePresidenteFinales1.DataSetName = "DataSetReportePresidenteFinales";
-            this.dataSetReportePresidenteFinales1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // sp_ReporteResultados_Presidente_FinalesTableAdapter1
-            // 
-            this.sp_ReporteResultados_Presidente_FinalesTableAdapter1.ClearBeforeFill = true;
-            // 
             // frmShowReportePresidenteFinal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -63,7 +51,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Resultados Preliminares Presidencia";
             this.Load += new System.EventHandler(this.frmShowReportePresidenteFinal_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataSetReportePresidenteFinales1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -71,7 +58,5 @@
         #endregion
 
         private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;
-        private DataSet_Reportes.DataSetReportePresidenteFinales dataSetReportePresidenteFinales1;
-        private DataSet_Reportes.DataSetReportePresidenteFinalesTableAdapters.sp_ReporteResultados_Presidente_FinalesTableAdapter sp_ReporteResultados_Presidente_FinalesTableAdapter1;
     }
 }

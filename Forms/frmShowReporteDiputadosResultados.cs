@@ -1,5 +1,4 @@
-﻿using grupo01ProyectoFinal.DataSet_Reportes;
-using grupo01ProyectoFinal.DataSet_Reportes.DataSetReporteProvinciaTableAdapters;
+﻿using grupo01ProyectoFinal.Clases;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -38,14 +37,13 @@ namespace grupo01ProyectoFinal.Forms
         {
             try
             {
-                reportViewer1.LocalReport.DataSources.Clear();
-
-                sp_Consulta_Resultados_Diputados_x_ProvinciaTableAdapter1.Fill(dataSetResultadosDiputados1.sp_Consulta_Resultados_Diputados_x_Provincia, CodigoProvincia);
+                DataTable dtDiputadosProvincia = new DataTable();
+                dtDiputadosProvincia = ConsultarDiputadosProvincia(CodigoProvincia);
 
                 reportViewer1.LocalReport.DataSources.Clear();
 
                 reportViewer1.LocalReport.DataSources.Add(
-                    new ReportDataSource("DS_VotosRegistrados", (DataTable)dataSetResultadosDiputados1.sp_Consulta_Resultados_Diputados_x_Provincia)
+                    new ReportDataSource("DS_DiputadosProvincia", dtDiputadosProvincia)
                 );
 
                 reportViewer1.LocalReport.DataSources.Add(
@@ -80,6 +78,26 @@ namespace grupo01ProyectoFinal.Forms
             {
                 MessageBox.Show("Ha ocurrido un problema a la hora de generar el reporte. [001][" + ex.Message + "]", "Problema con el reporte", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private DataTable ConsultarDiputadosProvincia(string codigoProvincia)
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                ReporteProvincia reporte = new ReporteProvincia();
+                reporte.CodProvincia = codigoProvincia;
+
+                dtConsulta = reporte.ResultadosDiputados();
+
+                return dtConsulta;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocurrió un problema al momento de consultar los resultados de los diputados. [002]["+ex.Message+"]", "Problema al consultar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return new DataTable();
         }
     }
 }

@@ -9,25 +9,26 @@ using System.Windows.Forms;
 
 namespace grupo01ProyectoFinal.Clases
 {
-    internal class ReporteProvincia
+    internal class ReportePartidoPolitico
     {
-        private string codProvincia;
+        private string codigoPartido;
+        private string codigoCandidato;
 
-        public ReporteProvincia() { }
+        public ReportePartidoPolitico(){ }
 
-        public ReporteProvincia(string codProvincia)
+        public ReportePartidoPolitico(string codigoPartido)
         {
-            CodProvincia = codProvincia;
+            CodigoPartido = codigoPartido;
         }
 
-        public string CodProvincia { get => codProvincia; set => codProvincia = value; }
+        public string CodigoPartido { get => codigoPartido; set => codigoPartido = value; }
 
-        public DataTable ResultadosPresidente()
+        public DataTable ConsultaResultadosPresidente_x_Candidato()
         {
             try
             {
                 DataSet ds = new DataSet();
-                string cmd = string.Format("EXEC sp_Reporte_Resultados_Presidente_x_Provincia '{0}'", this.codProvincia);
+                string cmd = string.Format("EXEC sp_Estadisticas_Resultados_Presidente_x_Candidato '{0}'", this.CodigoPartido);
 
                 ds = Utilidades.Ejecutar(cmd);
 
@@ -43,18 +44,17 @@ namespace grupo01ProyectoFinal.Clases
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Ha ocurrido un problema a la hora de extraer información para el reporte. Por favor revisar. [001]["+ ex.Message +"]", "Problema al consultar", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Ha ocurrido un problema a la hora de extraer información para el informe. Por favor revisar. [001][" + ex.Message + "]", "Problema al consultar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             return new DataTable();
         }
 
-        public DataTable ResultadosDiputados()
+        public DataTable ConsultaResultadosPresidente_x_Partido()
         {
             try
             {
                 DataSet ds = new DataSet();
-                string cmd = string.Format("EXEC sp_Consulta_Resultados_Diputados_x_Provincia '{0}'", this.codProvincia);
+                string cmd = string.Format("EXEC sp_Reporte_Resultados_Presidente_x_Partido '{0}'", this.CodigoPartido);
 
                 ds = Utilidades.Ejecutar(cmd);
 
@@ -72,10 +72,7 @@ namespace grupo01ProyectoFinal.Clases
             {
                 MessageBox.Show("Ha ocurrido un problema a la hora de extraer información para el informe. Por favor revisar. [002][" + ex.Message + "]", "Problema al consultar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
             return new DataTable();
         }
-
-
     }
 }

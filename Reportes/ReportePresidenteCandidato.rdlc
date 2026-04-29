@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DS_REPORTE_CANDIDATO">
+    <DataSet Name="DS_PresidentePartido">
       <Query>
         <DataSourceName>DataSetReporteCandidato</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -33,10 +33,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetReporteCandidato</rd:DataSetName>
         <rd:SchemaPath>C:\C#2026\Proyecto\grupo01ProyectoFinal\DataSet_Reportes\DataSetReporteCandidato.xsd</rd:SchemaPath>
-        <rd:TableName>sp_Reporte_Resultados_Presidente_x_Partido</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>sp_Reporte_Resultados_Presidente_x_PartidoTableAdapter</rd:TableAdapterName>
+        <rd:TableName>TablaReporteResultadosPresidentePartido</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -172,7 +172,7 @@
                   </TablixCells>
                 </TablixRow>
                 <TablixRow>
-                  <Height>0.93927cm</Height>
+                  <Height>0.62177cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
@@ -289,10 +289,10 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DS_REPORTE_CANDIDATO</DataSetName>
+            <DataSetName>DS_PresidentePartido</DataSetName>
             <Top>3.28597cm</Top>
             <Left>0.63501cm</Left>
-            <Height>1.87854cm</Height>
+            <Height>1.56104cm</Height>
             <Width>14.44233cm</Width>
             <Style>
               <Border>
@@ -609,7 +609,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>= Sum(Fields!CantVotos.Value, "DS_REPORTE_CANDIDATO")</Value>
+                    <Value>= Sum(Fields!CantVotos.Value, "DS_PresidentePartido")</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>
@@ -621,7 +621,7 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
-            <Top>5.27034cm</Top>
+            <Top>4.98812cm</Top>
             <Left>10.95383cm</Left>
             <Height>0.6cm</Height>
             <Width>4.12351cm</Width>
@@ -653,10 +653,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox52</rd:DefaultName>
-            <Top>5.27034cm</Top>
-            <Left>8.47128cm</Left>
+            <Top>4.95284cm</Top>
+            <Left>0.63501cm</Left>
             <Height>0.6cm</Height>
-            <Width>2.48255cm</Width>
+            <Width>10.31882cm</Width>
             <ZIndex>15</ZIndex>
             <Style>
               <Border>
@@ -669,7 +669,7 @@
             </Style>
           </Textbox>
         </ReportItems>
-        <Height>5.87034cm</Height>
+        <Height>5.58812cm</Height>
         <Style>
           <Border>
             <Style>None</Style>

@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DS_ReporteProvincia">
+    <DataSet Name="DS_PresidenteProvincia">
       <Query>
         <DataSourceName>DataSetReporteProvincia</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -33,10 +33,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetReporteProvincia</rd:DataSetName>
         <rd:SchemaPath>C:\C#2026\Proyecto\grupo01ProyectoFinal\DataSet_Reportes\DataSetReporteProvincia.xsd</rd:SchemaPath>
-        <rd:TableName>sp_Reporte_Resultados_Presidente_x_Provincia</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>sp_Reporte_Resultados_Presidente_x_ProvinciaTableAdapter</rd:TableAdapterName>
+        <rd:TableName>TablaReportesPresidenteProvincia</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -264,7 +264,6 @@
                             <PaddingBottom>2pt</PaddingBottom>
                           </Style>
                         </Textbox>
-                        <rd:Selected>true</rd:Selected>
                       </CellContents>
                     </TablixCell>
                   </TablixCells>
@@ -288,7 +287,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DS_ReporteProvincia</DataSetName>
+            <DataSetName>DS_PresidenteProvincia</DataSetName>
             <Top>2.29897cm</Top>
             <Left>0.63501cm</Left>
             <Height>1.2cm</Height>
@@ -430,7 +429,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Sum(Fields!CantVotos.Value, "DS_ReporteProvincia")</Value>
+                    <Value>=Sum(Fields!CantVotos.Value, "DS_PresidenteProvincia")</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>

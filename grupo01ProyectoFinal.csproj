@@ -78,9 +78,14 @@
     <Compile Include="Clases\PadronNacional.cs" />
     <Compile Include="Clases\PartidoPolitico.cs" />
     <Compile Include="Clases\Provincia.cs" />
+    <Compile Include="Clases\ReporteCandidato.cs" />
+    <Compile Include="Clases\ReportePartidoPolitico.cs" />
     <Compile Include="Clases\ReporteProvincia.cs" />
     <Compile Include="Clases\Usuario.cs" />
     <Compile Include="Clases\Voto.cs" />
+    <Compile Include="DataSet_Reportes\DataSetReporteCandidato.cs">
+      <DependentUpon>DataSetReporteCandidato.xsd</DependentUpon>
+    </Compile>
     <Compile Include="DataSet_Reportes\DataSetReporteCandidato.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

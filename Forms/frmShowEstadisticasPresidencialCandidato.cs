@@ -1,5 +1,4 @@
 ﻿using grupo01ProyectoFinal.Clases;
-using grupo01ProyectoFinal.DataSet_Reportes.DataSetReporteCandidatoTableAdapters;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -7,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -24,22 +24,22 @@ namespace grupo01ProyectoFinal.Forms
 
         private void frmShowEstadisticasPresidencialCandidato_Load(object sender, EventArgs e)
         {
+            DataTable dtConsulta = new DataTable();
             string nombrePartido = DevuelveNombrePartidoPolitico(CodigoPartido);
             string nombreCandidato = DevuelveNombreCandidatoPolitico(CodigoPartido);
+            dtConsulta = DevuelveInfoEstadisticasPresidente_x_Candidato(CodigoPartido);
 
-            sp_Estadisticas_Resultados_Presidente_x_CandidatoTableAdapter1.Fill(dataSetReporteCandidato1.sp_Estadisticas_Resultados_Presidente_x_Candidato, CodigoPartido);
             reportViewer1.LocalReport.DataSources.Clear();
+
             reportViewer1.LocalReport.DataSources.Add(
-                new ReportDataSource("DS_EST_CANDIDATO", (DataTable)dataSetReporteCandidato1.sp_Estadisticas_Resultados_Presidente_x_Candidato)
+                new ReportDataSource("DS_PresidenteCandidato", dtConsulta)
             );
 
             reportViewer1.LocalReport.SetParameters(new ReportParameter[]
             {
-                    new ReportParameter("NombrePartido", nombrePartido),
-                    new ReportParameter("NombreCandidato", nombreCandidato)
+                new ReportParameter("NombrePartido", nombrePartido),
+                new ReportParameter("NombreCandidato", nombreCandidato)
             });
-
-
             this.reportViewer1.RefreshReport();
         }
 
@@ -92,6 +92,24 @@ namespace grupo01ProyectoFinal.Forms
             }
 
             return "";
+        }
+
+        private DataTable DevuelveInfoEstadisticasPresidente_x_Candidato(string codigoPartido)
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                ReportePartidoPolitico reporte = new ReportePartidoPolitico();
+                reporte.CodigoPartido = codigoPartido;
+                dtConsulta = reporte.ConsultaResultadosPresidente_x_Candidato();
+                return dtConsulta;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema al consultar la información para el reporte. [003][" + ex.Message + "]", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return new DataTable();
         }
     }
 }

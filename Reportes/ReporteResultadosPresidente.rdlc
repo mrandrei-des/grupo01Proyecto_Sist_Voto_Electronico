@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DS_ResultadosFinales_Presidente">
+    <DataSet Name="DS_Resultados_Finales_Presidente">
       <Query>
         <DataSourceName>DataSetReportePresidenteFinales</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -29,10 +29,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetReportePresidenteFinales</rd:DataSetName>
         <rd:SchemaPath>C:\C#2026\Proyecto\grupo01ProyectoFinal\DataSet_Reportes\DataSetReportePresidenteFinales.xsd</rd:SchemaPath>
-        <rd:TableName>sp_ReporteResultados_Presidente_Finales</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>sp_ReporteResultados_Presidente_FinalesTableAdapter</rd:TableAdapterName>
+        <rd:TableName>TablaReporteResultadosPresidenteFinales</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -394,7 +394,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DS_ResultadosFinales_Presidente</DataSetName>
+            <DataSetName>DS_Resultados_Finales_Presidente</DataSetName>
             <Top>0.65373cm</Top>
             <Left>0.63501cm</Left>
             <Height>8.88938cm</Height>
@@ -439,11 +439,11 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=(Fields!CantVotos.Value / Sum(Fields!CantVotos.Value, "DS_ResultadosFinales_Presidente"))</Y>
+                        <Y>=(Fields!CantVotos.Value / Sum(Fields!CantVotos.Value, "DS_Resultados_Finales_Presidente"))</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
-                        <Label>=FormatPercent(Fields!CantVotos.Value / Sum(Fields!CantVotos.Value, "DS_ResultadosFinales_Presidente"), 2)</Label>
+                        <Label>=FormatPercent(Fields!CantVotos.Value / Sum(Fields!CantVotos.Value, "DS_Resultados_Finales_Presidente"), 2)</Label>
                         <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style>
@@ -764,7 +764,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DS_ResultadosFinales_Presidente</DataSetName>
+            <DataSetName>DS_Resultados_Finales_Presidente</DataSetName>
             <Top>10.49589cm</Top>
             <Left>0.63501cm</Left>
             <Height>7.93688cm</Height>
@@ -820,7 +820,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Sum(Fields!CantVotos.Value, "DS_ResultadosFinales_Presidente")</Value>
+                    <Value>=Sum(Fields!CantVotos.Value, "DS_Resultados_Finales_Presidente")</Value>
                     <Style>
                       <FontSize>11pt</FontSize>
                       <FontWeight>Bold</FontWeight>
@@ -828,7 +828,7 @@
                   </TextRun>
                 </TextRuns>
                 <Style>
-                  <TextAlign>Left</TextAlign>
+                  <TextAlign>Center</TextAlign>
                 </Style>
               </Paragraph>
             </Paragraphs>

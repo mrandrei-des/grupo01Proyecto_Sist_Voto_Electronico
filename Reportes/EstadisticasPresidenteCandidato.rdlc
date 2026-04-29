@@ -11,7 +11,7 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DS_EST_CANDIDATO">
+    <DataSet Name="DS_PresidenteCandidato">
       <Query>
         <DataSourceName>DataSetReporteCandidato</DataSourceName>
         <CommandText>/* Local Query */</CommandText>
@@ -33,10 +33,10 @@
       <rd:DataSetInfo>
         <rd:DataSetName>DataSetReporteCandidato</rd:DataSetName>
         <rd:SchemaPath>C:\C#2026\Proyecto\grupo01ProyectoFinal\DataSet_Reportes\DataSetReporteCandidato.xsd</rd:SchemaPath>
-        <rd:TableName>sp_Estadisticas_Resultados_Presidente_x_Candidato</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>sp_Estadisticas_Resultados_Presidente_x_CandidatoTableAdapter</rd:TableAdapterName>
+        <rd:TableName>TablaReporteResultadosPresidenteCandidato</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
       </rd:DataSetInfo>
     </DataSet>
   </DataSets>
@@ -287,7 +287,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DS_EST_CANDIDATO</DataSetName>
+            <DataSetName>DS_PresidenteCandidato</DataSetName>
             <Top>8.47624cm</Top>
             <Left>0.63501cm</Left>
             <Height>1.41167cm</Height>
@@ -449,11 +449,11 @@
                   <ChartDataPoints>
                     <ChartDataPoint>
                       <ChartDataPointValues>
-                        <Y>=(Fields!CantVotosPartido.Value / Sum(Fields!CantVotosPartido.Value, "DS_EST_CANDIDATO"))</Y>
+                        <Y>=(Fields!CantVotosPartido.Value / Sum(Fields!CantVotosPartido.Value, "DS_PresidenteCandidato"))</Y>
                       </ChartDataPointValues>
                       <ChartDataLabel>
                         <Style />
-                        <Label>=FormatPercent(Fields!CantVotosPartido.Value / Sum(Fields!CantVotosPartido.Value, "DS_EST_CANDIDATO"), 2)</Label>
+                        <Label>=FormatPercent(Fields!CantVotosPartido.Value / Sum(Fields!CantVotosPartido.Value, "DS_PresidenteCandidato"), 2)</Label>
                         <Visible>true</Visible>
                       </ChartDataLabel>
                       <Style />
@@ -768,7 +768,7 @@
                 <VerticalAlign>Top</VerticalAlign>
               </Style>
             </ChartNoDataMessage>
-            <DataSetName>DS_EST_CANDIDATO</DataSetName>
+            <DataSetName>DS_PresidenteCandidato</DataSetName>
             <Top>2.16214cm</Top>
             <Left>0.63501cm</Left>
             <Height>6.13771cm</Height>
@@ -822,7 +822,7 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>=Sum(Fields!CantVotosPartido.Value, "DS_EST_CANDIDATO")</Value>
+                    <Value>=Sum(Fields!CantVotosPartido.Value, "DS_PresidenteCandidato")</Value>
                     <Style>
                       <FontWeight>Bold</FontWeight>
                     </Style>

@@ -1,5 +1,4 @@
-﻿using grupo01ProyectoFinal.DataSet_Reportes;
-using grupo01ProyectoFinal.DataSet_Reportes.DataSetReporteCandidatoTableAdapters;
+﻿using grupo01ProyectoFinal.Clases;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -21,21 +20,34 @@ namespace grupo01ProyectoFinal.Forms
         }
 
         private void frmShowReportePresidenteFinal_Load(object sender, EventArgs e)
-        {
-            sp_ReporteResultados_Presidente_FinalesTableAdapter1.Fill(dataSetReportePresidenteFinales1.sp_ReporteResultados_Presidente_Finales);
-            reportViewer1.LocalReport.DataSources.Clear();
-            reportViewer1.LocalReport.DataSources.Add(
-                new ReportDataSource("DS_ResultadosFinales_Presidente", (DataTable)dataSetReportePresidenteFinales1.sp_ReporteResultados_Presidente_Finales)
-            );
+        {            
+            DataTable dtConsulta = new DataTable();
+            dtConsulta = ConsultaInfoResultadosFinales_Presidente();
 
-            //reportViewer1.LocalReport.SetParameters(new ReportParameter[]
-            //{
-            //        new ReportParameter("CodPartido", CodigoPartido),
-            //        new ReportParameter("NombrePartido", nombrePartido),
-            //        new ReportParameter("NombreCandidato", nombreCandidato)
-            //});
+            reportViewer1.LocalReport.DataSources.Clear();
+
+            reportViewer1.LocalReport.DataSources.Add(
+                new ReportDataSource("DS_Resultados_Finales_Presidente", dtConsulta)
+            );
 
             this.reportViewer1.RefreshReport();
         }
+
+        private DataTable ConsultaInfoResultadosFinales_Presidente() 
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                ReporteCandidato reporte = new ReporteCandidato();
+                dtConsulta = reporte.DevuelveResultadosFinales_Presidente();
+                return dtConsulta;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema al consultar la información para el reporte. [001][" + ex.Message + "]", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            return new DataTable();
+        }
+
     }
 }

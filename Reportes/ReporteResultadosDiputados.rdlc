@@ -11,34 +11,6 @@
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="DS_VotosRegistrados">
-      <Query>
-        <DataSourceName>DataSetResultadosDiputados</DataSourceName>
-        <CommandText>/* Local Query */</CommandText>
-      </Query>
-      <Fields>
-        <Field Name="CodigoPartido">
-          <DataField>CodigoPartido</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="Descripcion">
-          <DataField>Descripcion</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
-        <Field Name="CantidadVotosEmitidos">
-          <DataField>CantidadVotosEmitidos</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
-        </Field>
-      </Fields>
-      <rd:DataSetInfo>
-        <rd:DataSetName>DataSetResultadosDiputados</rd:DataSetName>
-        <rd:SchemaPath>C:\C#2026\Proyecto\grupo01ProyectoFinal\DataSet_Reportes\DataSetResultadosDiputados.xsd</rd:SchemaPath>
-        <rd:TableName>sp_Consulta_Resultados_Diputados_x_Provincia</rd:TableName>
-        <rd:TableAdapterFillMethod>Fill</rd:TableAdapterFillMethod>
-        <rd:TableAdapterGetDataMethod>GetData</rd:TableAdapterGetDataMethod>
-        <rd:TableAdapterName>sp_Consulta_Resultados_Diputados_x_ProvinciaTableAdapter</rd:TableAdapterName>
-      </rd:DataSetInfo>
-    </DataSet>
     <DataSet Name="DS_Subcociente">
       <Query>
         <DataSourceName>DataSetResultadosDiputados</DataSourceName>
@@ -210,6 +182,34 @@
         <rd:DataSetName>DataSetResultadosDiputados</rd:DataSetName>
         <rd:SchemaPath>C:\C#2026\Proyecto\grupo01ProyectoFinal\DataSet_Reportes\DataSetResultadosDiputados.xsd</rd:SchemaPath>
         <rd:TableName>TablaResultados</rd:TableName>
+        <rd:TableAdapterFillMethod />
+        <rd:TableAdapterGetDataMethod />
+        <rd:TableAdapterName />
+      </rd:DataSetInfo>
+    </DataSet>
+    <DataSet Name="DS_DiputadosProvincia">
+      <Query>
+        <DataSourceName>DataSetResultadosDiputados</DataSourceName>
+        <CommandText>/* Local Query */</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="CodigoPartido">
+          <DataField>CodigoPartido</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Descripcion">
+          <DataField>Descripcion</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CantidadVotosEmitidos">
+          <DataField>CantidadVotosEmitidos</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+      </Fields>
+      <rd:DataSetInfo>
+        <rd:DataSetName>DataSetResultadosDiputados</rd:DataSetName>
+        <rd:SchemaPath>C:\C#2026\Proyecto\grupo01ProyectoFinal\DataSet_Reportes\DataSetResultadosDiputados.xsd</rd:SchemaPath>
+        <rd:TableName>TablaResultadosDiputadosProvincia</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
         <rd:TableAdapterName />
@@ -556,7 +556,7 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
-            <DataSetName>DS_VotosRegistrados</DataSetName>
+            <DataSetName>DS_DiputadosProvincia</DataSetName>
             <Top>2.9169cm</Top>
             <Left>0.63501cm</Left>
             <Height>1.35875cm</Height>

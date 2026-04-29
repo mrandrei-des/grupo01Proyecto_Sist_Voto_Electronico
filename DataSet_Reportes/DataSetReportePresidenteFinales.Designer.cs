@@ -24,7 +24,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DataSetReportePresidenteFinales : global::System.Data.DataSet {
         
-        private sp_ReporteResultados_Presidente_FinalesDataTable tablesp_ReporteResultados_Presidente_Finales;
+        private TablaReporteResultadosPresidenteFinalesDataTable tableTablaReporteResultadosPresidenteFinales;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -54,8 +54,8 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             if ((this.DetermineSchemaSerializationMode(info, context) == global::System.Data.SchemaSerializationMode.IncludeSchema)) {
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXmlSchema(new global::System.Xml.XmlTextReader(new global::System.IO.StringReader(strSchema)));
-                if ((ds.Tables["sp_ReporteResultados_Presidente_Finales"] != null)) {
-                    base.Tables.Add(new sp_ReporteResultados_Presidente_FinalesDataTable(ds.Tables["sp_ReporteResultados_Presidente_Finales"]));
+                if ((ds.Tables["TablaReporteResultadosPresidenteFinales"] != null)) {
+                    base.Tables.Add(new TablaReporteResultadosPresidenteFinalesDataTable(ds.Tables["TablaReporteResultadosPresidenteFinales"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -79,9 +79,9 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public sp_ReporteResultados_Presidente_FinalesDataTable sp_ReporteResultados_Presidente_Finales {
+        public TablaReporteResultadosPresidenteFinalesDataTable TablaReporteResultadosPresidenteFinales {
             get {
-                return this.tablesp_ReporteResultados_Presidente_Finales;
+                return this.tableTablaReporteResultadosPresidenteFinales;
             }
         }
         
@@ -152,8 +152,8 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
                 this.Reset();
                 global::System.Data.DataSet ds = new global::System.Data.DataSet();
                 ds.ReadXml(reader);
-                if ((ds.Tables["sp_ReporteResultados_Presidente_Finales"] != null)) {
-                    base.Tables.Add(new sp_ReporteResultados_Presidente_FinalesDataTable(ds.Tables["sp_ReporteResultados_Presidente_Finales"]));
+                if ((ds.Tables["TablaReporteResultadosPresidenteFinales"] != null)) {
+                    base.Tables.Add(new TablaReporteResultadosPresidenteFinalesDataTable(ds.Tables["TablaReporteResultadosPresidenteFinales"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -188,10 +188,10 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
         internal void InitVars(bool initTable) {
-            this.tablesp_ReporteResultados_Presidente_Finales = ((sp_ReporteResultados_Presidente_FinalesDataTable)(base.Tables["sp_ReporteResultados_Presidente_Finales"]));
+            this.tableTablaReporteResultadosPresidenteFinales = ((TablaReporteResultadosPresidenteFinalesDataTable)(base.Tables["TablaReporteResultadosPresidenteFinales"]));
             if ((initTable == true)) {
-                if ((this.tablesp_ReporteResultados_Presidente_Finales != null)) {
-                    this.tablesp_ReporteResultados_Presidente_Finales.InitVars();
+                if ((this.tableTablaReporteResultadosPresidenteFinales != null)) {
+                    this.tableTablaReporteResultadosPresidenteFinales.InitVars();
                 }
             }
         }
@@ -204,13 +204,13 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             this.Namespace = "http://tempuri.org/DataSetReportePresidenteFinales.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
-            this.tablesp_ReporteResultados_Presidente_Finales = new sp_ReporteResultados_Presidente_FinalesDataTable();
-            base.Tables.Add(this.tablesp_ReporteResultados_Presidente_Finales);
+            this.tableTablaReporteResultadosPresidenteFinales = new TablaReporteResultadosPresidenteFinalesDataTable();
+            base.Tables.Add(this.tableTablaReporteResultadosPresidenteFinales);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private bool ShouldSerializesp_ReporteResultados_Presidente_Finales() {
+        private bool ShouldSerializeTablaReporteResultadosPresidenteFinales() {
             return false;
         }
         
@@ -270,14 +270,14 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public delegate void sp_ReporteResultados_Presidente_FinalesRowChangeEventHandler(object sender, sp_ReporteResultados_Presidente_FinalesRowChangeEvent e);
+        public delegate void TablaReporteResultadosPresidenteFinalesRowChangeEventHandler(object sender, TablaReporteResultadosPresidenteFinalesRowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class sp_ReporteResultados_Presidente_FinalesDataTable : global::System.Data.TypedTableBase<sp_ReporteResultados_Presidente_FinalesRow> {
+        public partial class TablaReporteResultadosPresidenteFinalesDataTable : global::System.Data.TypedTableBase<TablaReporteResultadosPresidenteFinalesRow> {
             
             private global::System.Data.DataColumn columnPartidoVotado;
             
@@ -285,8 +285,8 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public sp_ReporteResultados_Presidente_FinalesDataTable() {
-                this.TableName = "sp_ReporteResultados_Presidente_Finales";
+            public TablaReporteResultadosPresidenteFinalesDataTable() {
+                this.TableName = "TablaReporteResultadosPresidenteFinales";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -294,7 +294,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            internal sp_ReporteResultados_Presidente_FinalesDataTable(global::System.Data.DataTable table) {
+            internal TablaReporteResultadosPresidenteFinalesDataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -311,7 +311,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            protected sp_ReporteResultados_Presidente_FinalesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected TablaReporteResultadosPresidenteFinalesDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -343,46 +343,46 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public sp_ReporteResultados_Presidente_FinalesRow this[int index] {
+            public TablaReporteResultadosPresidenteFinalesRow this[int index] {
                 get {
-                    return ((sp_ReporteResultados_Presidente_FinalesRow)(this.Rows[index]));
+                    return ((TablaReporteResultadosPresidenteFinalesRow)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public event sp_ReporteResultados_Presidente_FinalesRowChangeEventHandler sp_ReporteResultados_Presidente_FinalesRowChanging;
+            public event TablaReporteResultadosPresidenteFinalesRowChangeEventHandler TablaReporteResultadosPresidenteFinalesRowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public event sp_ReporteResultados_Presidente_FinalesRowChangeEventHandler sp_ReporteResultados_Presidente_FinalesRowChanged;
+            public event TablaReporteResultadosPresidenteFinalesRowChangeEventHandler TablaReporteResultadosPresidenteFinalesRowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public event sp_ReporteResultados_Presidente_FinalesRowChangeEventHandler sp_ReporteResultados_Presidente_FinalesRowDeleting;
+            public event TablaReporteResultadosPresidenteFinalesRowChangeEventHandler TablaReporteResultadosPresidenteFinalesRowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public event sp_ReporteResultados_Presidente_FinalesRowChangeEventHandler sp_ReporteResultados_Presidente_FinalesRowDeleted;
+            public event TablaReporteResultadosPresidenteFinalesRowChangeEventHandler TablaReporteResultadosPresidenteFinalesRowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public void Addsp_ReporteResultados_Presidente_FinalesRow(sp_ReporteResultados_Presidente_FinalesRow row) {
+            public void AddTablaReporteResultadosPresidenteFinalesRow(TablaReporteResultadosPresidenteFinalesRow row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public sp_ReporteResultados_Presidente_FinalesRow Addsp_ReporteResultados_Presidente_FinalesRow(string PartidoVotado, int CantVotos) {
-                sp_ReporteResultados_Presidente_FinalesRow rowsp_ReporteResultados_Presidente_FinalesRow = ((sp_ReporteResultados_Presidente_FinalesRow)(this.NewRow()));
+            public TablaReporteResultadosPresidenteFinalesRow AddTablaReporteResultadosPresidenteFinalesRow(string PartidoVotado, int CantVotos) {
+                TablaReporteResultadosPresidenteFinalesRow rowTablaReporteResultadosPresidenteFinalesRow = ((TablaReporteResultadosPresidenteFinalesRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         PartidoVotado,
                         CantVotos};
-                rowsp_ReporteResultados_Presidente_FinalesRow.ItemArray = columnValuesArray;
-                this.Rows.Add(rowsp_ReporteResultados_Presidente_FinalesRow);
-                return rowsp_ReporteResultados_Presidente_FinalesRow;
+                rowTablaReporteResultadosPresidenteFinalesRow.ItemArray = columnValuesArray;
+                this.Rows.Add(rowTablaReporteResultadosPresidenteFinalesRow);
+                return rowTablaReporteResultadosPresidenteFinalesRow;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                sp_ReporteResultados_Presidente_FinalesDataTable cln = ((sp_ReporteResultados_Presidente_FinalesDataTable)(base.Clone()));
+                TablaReporteResultadosPresidenteFinalesDataTable cln = ((TablaReporteResultadosPresidenteFinalesDataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -390,7 +390,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new sp_ReporteResultados_Presidente_FinalesDataTable();
+                return new TablaReporteResultadosPresidenteFinalesDataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -407,35 +407,32 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
                 base.Columns.Add(this.columnPartidoVotado);
                 this.columnCantVotos = new global::System.Data.DataColumn("CantVotos", typeof(int), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnCantVotos);
-                this.columnPartidoVotado.AllowDBNull = false;
-                this.columnPartidoVotado.MaxLength = 6;
-                this.columnCantVotos.ReadOnly = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public sp_ReporteResultados_Presidente_FinalesRow Newsp_ReporteResultados_Presidente_FinalesRow() {
-                return ((sp_ReporteResultados_Presidente_FinalesRow)(this.NewRow()));
+            public TablaReporteResultadosPresidenteFinalesRow NewTablaReporteResultadosPresidenteFinalesRow() {
+                return ((TablaReporteResultadosPresidenteFinalesRow)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new sp_ReporteResultados_Presidente_FinalesRow(builder);
+                return new TablaReporteResultadosPresidenteFinalesRow(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(sp_ReporteResultados_Presidente_FinalesRow);
+                return typeof(TablaReporteResultadosPresidenteFinalesRow);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.sp_ReporteResultados_Presidente_FinalesRowChanged != null)) {
-                    this.sp_ReporteResultados_Presidente_FinalesRowChanged(this, new sp_ReporteResultados_Presidente_FinalesRowChangeEvent(((sp_ReporteResultados_Presidente_FinalesRow)(e.Row)), e.Action));
+                if ((this.TablaReporteResultadosPresidenteFinalesRowChanged != null)) {
+                    this.TablaReporteResultadosPresidenteFinalesRowChanged(this, new TablaReporteResultadosPresidenteFinalesRowChangeEvent(((TablaReporteResultadosPresidenteFinalesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -443,8 +440,8 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.sp_ReporteResultados_Presidente_FinalesRowChanging != null)) {
-                    this.sp_ReporteResultados_Presidente_FinalesRowChanging(this, new sp_ReporteResultados_Presidente_FinalesRowChangeEvent(((sp_ReporteResultados_Presidente_FinalesRow)(e.Row)), e.Action));
+                if ((this.TablaReporteResultadosPresidenteFinalesRowChanging != null)) {
+                    this.TablaReporteResultadosPresidenteFinalesRowChanging(this, new TablaReporteResultadosPresidenteFinalesRowChangeEvent(((TablaReporteResultadosPresidenteFinalesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -452,8 +449,8 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.sp_ReporteResultados_Presidente_FinalesRowDeleted != null)) {
-                    this.sp_ReporteResultados_Presidente_FinalesRowDeleted(this, new sp_ReporteResultados_Presidente_FinalesRowChangeEvent(((sp_ReporteResultados_Presidente_FinalesRow)(e.Row)), e.Action));
+                if ((this.TablaReporteResultadosPresidenteFinalesRowDeleted != null)) {
+                    this.TablaReporteResultadosPresidenteFinalesRowDeleted(this, new TablaReporteResultadosPresidenteFinalesRowChangeEvent(((TablaReporteResultadosPresidenteFinalesRow)(e.Row)), e.Action));
                 }
             }
             
@@ -461,14 +458,14 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.sp_ReporteResultados_Presidente_FinalesRowDeleting != null)) {
-                    this.sp_ReporteResultados_Presidente_FinalesRowDeleting(this, new sp_ReporteResultados_Presidente_FinalesRowChangeEvent(((sp_ReporteResultados_Presidente_FinalesRow)(e.Row)), e.Action));
+                if ((this.TablaReporteResultadosPresidenteFinalesRowDeleting != null)) {
+                    this.TablaReporteResultadosPresidenteFinalesRowDeleting(this, new TablaReporteResultadosPresidenteFinalesRowChangeEvent(((TablaReporteResultadosPresidenteFinalesRow)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public void Removesp_ReporteResultados_Presidente_FinalesRow(sp_ReporteResultados_Presidente_FinalesRow row) {
+            public void RemoveTablaReporteResultadosPresidenteFinalesRow(TablaReporteResultadosPresidenteFinalesRow row) {
                 this.Rows.Remove(row);
             }
             
@@ -495,7 +492,7 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "sp_ReporteResultados_Presidente_FinalesDataTable";
+                attribute2.FixedValue = "TablaReporteResultadosPresidenteFinalesDataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -539,25 +536,31 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class sp_ReporteResultados_Presidente_FinalesRow : global::System.Data.DataRow {
+        public partial class TablaReporteResultadosPresidenteFinalesRow : global::System.Data.DataRow {
             
-            private sp_ReporteResultados_Presidente_FinalesDataTable tablesp_ReporteResultados_Presidente_Finales;
+            private TablaReporteResultadosPresidenteFinalesDataTable tableTablaReporteResultadosPresidenteFinales;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            internal sp_ReporteResultados_Presidente_FinalesRow(global::System.Data.DataRowBuilder rb) : 
+            internal TablaReporteResultadosPresidenteFinalesRow(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tablesp_ReporteResultados_Presidente_Finales = ((sp_ReporteResultados_Presidente_FinalesDataTable)(this.Table));
+                this.tableTablaReporteResultadosPresidenteFinales = ((TablaReporteResultadosPresidenteFinalesDataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public string PartidoVotado {
                 get {
-                    return ((string)(this[this.tablesp_ReporteResultados_Presidente_Finales.PartidoVotadoColumn]));
+                    try {
+                        return ((string)(this[this.tableTablaReporteResultadosPresidenteFinales.PartidoVotadoColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'PartidoVotado\' de la tabla \'TablaReporteResultadosPreside" +
+                                "nteFinales\' es DBNull.", e);
+                    }
                 }
                 set {
-                    this[this.tablesp_ReporteResultados_Presidente_Finales.PartidoVotadoColumn] = value;
+                    this[this.tableTablaReporteResultadosPresidenteFinales.PartidoVotadoColumn] = value;
                 }
             }
             
@@ -566,28 +569,40 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             public int CantVotos {
                 get {
                     try {
-                        return ((int)(this[this.tablesp_ReporteResultados_Presidente_Finales.CantVotosColumn]));
+                        return ((int)(this[this.tableTablaReporteResultadosPresidenteFinales.CantVotosColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CantVotos\' de la tabla \'sp_ReporteResultados_Presidente_F" +
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'CantVotos\' de la tabla \'TablaReporteResultadosPresidenteF" +
                                 "inales\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tablesp_ReporteResultados_Presidente_Finales.CantVotosColumn] = value;
+                    this[this.tableTablaReporteResultadosPresidenteFinales.CantVotosColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public bool IsPartidoVotadoNull() {
+                return this.IsNull(this.tableTablaReporteResultadosPresidenteFinales.PartidoVotadoColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
+            public void SetPartidoVotadoNull() {
+                this[this.tableTablaReporteResultadosPresidenteFinales.PartidoVotadoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public bool IsCantVotosNull() {
-                return this.IsNull(this.tablesp_ReporteResultados_Presidente_Finales.CantVotosColumn);
+                return this.IsNull(this.tableTablaReporteResultadosPresidenteFinales.CantVotosColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
             public void SetCantVotosNull() {
-                this[this.tablesp_ReporteResultados_Presidente_Finales.CantVotosColumn] = global::System.Convert.DBNull;
+                this[this.tableTablaReporteResultadosPresidenteFinales.CantVotosColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -595,22 +610,22 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public class sp_ReporteResultados_Presidente_FinalesRowChangeEvent : global::System.EventArgs {
+        public class TablaReporteResultadosPresidenteFinalesRowChangeEvent : global::System.EventArgs {
             
-            private sp_ReporteResultados_Presidente_FinalesRow eventRow;
+            private TablaReporteResultadosPresidenteFinalesRow eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public sp_ReporteResultados_Presidente_FinalesRowChangeEvent(sp_ReporteResultados_Presidente_FinalesRow row, global::System.Data.DataRowAction action) {
+            public TablaReporteResultadosPresidenteFinalesRowChangeEvent(TablaReporteResultadosPresidenteFinalesRow row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public sp_ReporteResultados_Presidente_FinalesRow Row {
+            public TablaReporteResultadosPresidenteFinalesRow Row {
                 get {
                     return this.eventRow;
                 }
@@ -621,539 +636,6 @@ namespace grupo01ProyectoFinal.DataSet_Reportes {
             public global::System.Data.DataRowAction Action {
                 get {
                     return this.eventAction;
-                }
-            }
-        }
-    }
-}
-namespace grupo01ProyectoFinal.DataSet_Reportes.DataSetReportePresidenteFinalesTableAdapters {
-    
-    
-    /// <summary>
-    ///Represents the connection and commands used to retrieve and save data.
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DataObjectAttribute(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
-        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class sp_ReporteResultados_Presidente_FinalesTableAdapter : global::System.ComponentModel.Component {
-        
-        private global::System.Data.SqlClient.SqlDataAdapter _adapter;
-        
-        private global::System.Data.SqlClient.SqlConnection _connection;
-        
-        private global::System.Data.SqlClient.SqlTransaction _transaction;
-        
-        private global::System.Data.SqlClient.SqlCommand[] _commandCollection;
-        
-        private bool _clearBeforeFill;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public sp_ReporteResultados_Presidente_FinalesTableAdapter() {
-            this.ClearBeforeFill = true;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        protected internal global::System.Data.SqlClient.SqlDataAdapter Adapter {
-            get {
-                if ((this._adapter == null)) {
-                    this.InitAdapter();
-                }
-                return this._adapter;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        internal global::System.Data.SqlClient.SqlConnection Connection {
-            get {
-                if ((this._connection == null)) {
-                    this.InitConnection();
-                }
-                return this._connection;
-            }
-            set {
-                this._connection = value;
-                if ((this.Adapter.InsertCommand != null)) {
-                    this.Adapter.InsertCommand.Connection = value;
-                }
-                if ((this.Adapter.DeleteCommand != null)) {
-                    this.Adapter.DeleteCommand.Connection = value;
-                }
-                if ((this.Adapter.UpdateCommand != null)) {
-                    this.Adapter.UpdateCommand.Connection = value;
-                }
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    if ((this.CommandCollection[i] != null)) {
-                        ((global::System.Data.SqlClient.SqlCommand)(this.CommandCollection[i])).Connection = value;
-                    }
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        internal global::System.Data.SqlClient.SqlTransaction Transaction {
-            get {
-                return this._transaction;
-            }
-            set {
-                this._transaction = value;
-                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
-                    this.CommandCollection[i].Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.DeleteCommand != null))) {
-                    this.Adapter.DeleteCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.InsertCommand != null))) {
-                    this.Adapter.InsertCommand.Transaction = this._transaction;
-                }
-                if (((this.Adapter != null) 
-                            && (this.Adapter.UpdateCommand != null))) {
-                    this.Adapter.UpdateCommand.Transaction = this._transaction;
-                }
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        protected global::System.Data.SqlClient.SqlCommand[] CommandCollection {
-            get {
-                if ((this._commandCollection == null)) {
-                    this.InitCommandCollection();
-                }
-                return this._commandCollection;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public bool ClearBeforeFill {
-            get {
-                return this._clearBeforeFill;
-            }
-            set {
-                this._clearBeforeFill = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private void InitAdapter() {
-            this._adapter = new global::System.Data.SqlClient.SqlDataAdapter();
-            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
-            tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "sp_ReporteResultados_Presidente_Finales";
-            tableMapping.ColumnMappings.Add("PartidoVotado", "PartidoVotado");
-            tableMapping.ColumnMappings.Add("CantVotos", "CantVotos");
-            this._adapter.TableMappings.Add(tableMapping);
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private void InitConnection() {
-            this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::grupo01ProyectoFinal.Properties.Settings.Default.Sist_Votaciones_ElectronicosConnectionString;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
-            this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
-            this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "dbo.sp_ReporteResultados_Presidente_Finales";
-            this._commandCollection[0].CommandType = global::System.Data.CommandType.StoredProcedure;
-            this._commandCollection[0].Parameters.Add(new global::System.Data.SqlClient.SqlParameter("@RETURN_VALUE", global::System.Data.SqlDbType.Int, 4, global::System.Data.ParameterDirection.ReturnValue, 10, 0, null, global::System.Data.DataRowVersion.Current, false, null, "", "", ""));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSetReportePresidenteFinales.sp_ReporteResultados_Presidente_FinalesDataTable dataTable) {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            if ((this.ClearBeforeFill == true)) {
-                dataTable.Clear();
-            }
-            int returnValue = this.Adapter.Fill(dataTable);
-            return returnValue;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSetReportePresidenteFinales.sp_ReporteResultados_Presidente_FinalesDataTable GetData() {
-            this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSetReportePresidenteFinales.sp_ReporteResultados_Presidente_FinalesDataTable dataTable = new DataSetReportePresidenteFinales.sp_ReporteResultados_Presidente_FinalesDataTable();
-            this.Adapter.Fill(dataTable);
-            return dataTable;
-        }
-    }
-    
-    /// <summary>
-    ///TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
-    ///</summary>
-    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
-    [global::System.ComponentModel.ToolboxItem(true)]
-    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterManagerDesigner, Microsoft.VSD" +
-        "esigner, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
-    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapterManager")]
-    public partial class TableAdapterManager : global::System.ComponentModel.Component {
-        
-        private UpdateOrderOption _updateOrder;
-        
-        private bool _backupDataSetBeforeUpdate;
-        
-        private global::System.Data.IDbConnection _connection;
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public UpdateOrderOption UpdateOrder {
-            get {
-                return this._updateOrder;
-            }
-            set {
-                this._updateOrder = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public bool BackupDataSetBeforeUpdate {
-            get {
-                return this._backupDataSetBeforeUpdate;
-            }
-            set {
-                this._backupDataSetBeforeUpdate = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        public global::System.Data.IDbConnection Connection {
-            get {
-                if ((this._connection != null)) {
-                    return this._connection;
-                }
-                return null;
-            }
-            set {
-                this._connection = value;
-            }
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        [global::System.ComponentModel.Browsable(false)]
-        public int TableAdapterInstanceCount {
-            get {
-                int count = 0;
-                return count;
-            }
-        }
-        
-        /// <summary>
-        ///Update rows in top-down order.
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateUpdatedRows(DataSetReportePresidenteFinales dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
-            int result = 0;
-            return result;
-        }
-        
-        /// <summary>
-        ///Insert rows in top-down order.
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateInsertedRows(DataSetReportePresidenteFinales dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
-            int result = 0;
-            return result;
-        }
-        
-        /// <summary>
-        ///Delete rows in bottom-up order.
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private int UpdateDeletedRows(DataSetReportePresidenteFinales dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
-            int result = 0;
-            return result;
-        }
-        
-        /// <summary>
-        ///Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private global::System.Data.DataRow[] GetRealUpdatedRows(global::System.Data.DataRow[] updatedRows, global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows) {
-            if (((updatedRows == null) 
-                        || (updatedRows.Length < 1))) {
-                return updatedRows;
-            }
-            if (((allAddedRows == null) 
-                        || (allAddedRows.Count < 1))) {
-                return updatedRows;
-            }
-            global::System.Collections.Generic.List<global::System.Data.DataRow> realUpdatedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            for (int i = 0; (i < updatedRows.Length); i = (i + 1)) {
-                global::System.Data.DataRow row = updatedRows[i];
-                if ((allAddedRows.Contains(row) == false)) {
-                    realUpdatedRows.Add(row);
-                }
-            }
-            return realUpdatedRows.ToArray();
-        }
-        
-        /// <summary>
-        ///Update all changes to the dataset.
-        ///</summary>
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public virtual int UpdateAll(DataSetReportePresidenteFinales dataSet) {
-            if ((dataSet == null)) {
-                throw new global::System.ArgumentNullException("dataSet");
-            }
-            if ((dataSet.HasChanges() == false)) {
-                return 0;
-            }
-            global::System.Data.IDbConnection workConnection = this.Connection;
-            if ((workConnection == null)) {
-                throw new global::System.ApplicationException("TableAdapterManager no contiene información de conexión. Establezca cada propieda" +
-                        "d TableAdapterManager TableAdapter en una instancia TableAdapter válida.");
-            }
-            bool workConnOpened = false;
-            if (((workConnection.State & global::System.Data.ConnectionState.Broken) 
-                        == global::System.Data.ConnectionState.Broken)) {
-                workConnection.Close();
-            }
-            if ((workConnection.State == global::System.Data.ConnectionState.Closed)) {
-                workConnection.Open();
-                workConnOpened = true;
-            }
-            global::System.Data.IDbTransaction workTransaction = workConnection.BeginTransaction();
-            if ((workTransaction == null)) {
-                throw new global::System.ApplicationException("La transacción no puede comenzar. La conexión de datos actual no es compatible co" +
-                        "n las transacciones o el estado actual no permite que comience la transacción.");
-            }
-            global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            global::System.Collections.Generic.List<global::System.Data.DataRow> allAddedRows = new global::System.Collections.Generic.List<global::System.Data.DataRow>();
-            global::System.Collections.Generic.List<global::System.Data.Common.DataAdapter> adaptersWithAcceptChangesDuringUpdate = new global::System.Collections.Generic.List<global::System.Data.Common.DataAdapter>();
-            global::System.Collections.Generic.Dictionary<object, global::System.Data.IDbConnection> revertConnections = new global::System.Collections.Generic.Dictionary<object, global::System.Data.IDbConnection>();
-            int result = 0;
-            global::System.Data.DataSet backupDataSet = null;
-            if (this.BackupDataSetBeforeUpdate) {
-                backupDataSet = new global::System.Data.DataSet();
-                backupDataSet.Merge(dataSet);
-            }
-            try {
-                // ---- Prepare for update -----------
-                //
-                // 
-                //---- Perform updates -----------
-                //
-                if ((this.UpdateOrder == UpdateOrderOption.UpdateInsertDelete)) {
-                    result = (result + this.UpdateUpdatedRows(dataSet, allChangedRows, allAddedRows));
-                    result = (result + this.UpdateInsertedRows(dataSet, allAddedRows));
-                }
-                else {
-                    result = (result + this.UpdateInsertedRows(dataSet, allAddedRows));
-                    result = (result + this.UpdateUpdatedRows(dataSet, allChangedRows, allAddedRows));
-                }
-                result = (result + this.UpdateDeletedRows(dataSet, allChangedRows));
-                // 
-                //---- Commit updates -----------
-                //
-                workTransaction.Commit();
-                if ((0 < allAddedRows.Count)) {
-                    global::System.Data.DataRow[] rows = new System.Data.DataRow[allAddedRows.Count];
-                    allAddedRows.CopyTo(rows);
-                    for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                        global::System.Data.DataRow row = rows[i];
-                        row.AcceptChanges();
-                    }
-                }
-                if ((0 < allChangedRows.Count)) {
-                    global::System.Data.DataRow[] rows = new System.Data.DataRow[allChangedRows.Count];
-                    allChangedRows.CopyTo(rows);
-                    for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                        global::System.Data.DataRow row = rows[i];
-                        row.AcceptChanges();
-                    }
-                }
-            }
-            catch (global::System.Exception ex) {
-                workTransaction.Rollback();
-                // ---- Restore the dataset -----------
-                if (this.BackupDataSetBeforeUpdate) {
-                    global::System.Diagnostics.Debug.Assert((backupDataSet != null));
-                    dataSet.Clear();
-                    dataSet.Merge(backupDataSet);
-                }
-                else {
-                    if ((0 < allAddedRows.Count)) {
-                        global::System.Data.DataRow[] rows = new System.Data.DataRow[allAddedRows.Count];
-                        allAddedRows.CopyTo(rows);
-                        for (int i = 0; (i < rows.Length); i = (i + 1)) {
-                            global::System.Data.DataRow row = rows[i];
-                            row.AcceptChanges();
-                            row.SetAdded();
-                        }
-                    }
-                }
-                throw ex;
-            }
-            finally {
-                if (workConnOpened) {
-                    workConnection.Close();
-                }
-                if ((0 < adaptersWithAcceptChangesDuringUpdate.Count)) {
-                    global::System.Data.Common.DataAdapter[] adapters = new System.Data.Common.DataAdapter[adaptersWithAcceptChangesDuringUpdate.Count];
-                    adaptersWithAcceptChangesDuringUpdate.CopyTo(adapters);
-                    for (int i = 0; (i < adapters.Length); i = (i + 1)) {
-                        global::System.Data.Common.DataAdapter adapter = adapters[i];
-                        adapter.AcceptChangesDuringUpdate = true;
-                    }
-                }
-            }
-            return result;
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        protected virtual void SortSelfReferenceRows(global::System.Data.DataRow[] rows, global::System.Data.DataRelation relation, bool childFirst) {
-            global::System.Array.Sort<global::System.Data.DataRow>(rows, new SelfReferenceComparer(relation, childFirst));
-        }
-        
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        protected virtual bool MatchTableAdapterConnection(global::System.Data.IDbConnection inputConnection) {
-            if ((this._connection != null)) {
-                return true;
-            }
-            if (((this.Connection == null) 
-                        || (inputConnection == null))) {
-                return true;
-            }
-            if (string.Equals(this.Connection.ConnectionString, inputConnection.ConnectionString, global::System.StringComparison.Ordinal)) {
-                return true;
-            }
-            return false;
-        }
-        
-        /// <summary>
-        ///Update Order Option
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        public enum UpdateOrderOption {
-            
-            InsertUpdateDelete = 0,
-            
-            UpdateInsertDelete = 1,
-        }
-        
-        /// <summary>
-        ///Used to sort self-referenced table's rows
-        ///</summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-        private class SelfReferenceComparer : object, global::System.Collections.Generic.IComparer<global::System.Data.DataRow> {
-            
-            private global::System.Data.DataRelation _relation;
-            
-            private int _childFirst;
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            internal SelfReferenceComparer(global::System.Data.DataRelation relation, bool childFirst) {
-                this._relation = relation;
-                if (childFirst) {
-                    this._childFirst = -1;
-                }
-                else {
-                    this._childFirst = 1;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            private global::System.Data.DataRow GetRoot(global::System.Data.DataRow row, out int distance) {
-                global::System.Diagnostics.Debug.Assert((row != null));
-                global::System.Data.DataRow root = row;
-                distance = 0;
-
-                global::System.Collections.Generic.IDictionary<global::System.Data.DataRow, global::System.Data.DataRow> traversedRows = new global::System.Collections.Generic.Dictionary<global::System.Data.DataRow, global::System.Data.DataRow>();
-                traversedRows[row] = row;
-
-                global::System.Data.DataRow parent = row.GetParentRow(this._relation, global::System.Data.DataRowVersion.Default);
-                for (
-                ; ((parent != null) 
-                            && (traversedRows.ContainsKey(parent) == false)); 
-                ) {
-                    distance = (distance + 1);
-                    root = parent;
-                    traversedRows[parent] = parent;
-                    parent = parent.GetParentRow(this._relation, global::System.Data.DataRowVersion.Default);
-                }
-
-                if ((distance == 0)) {
-                    traversedRows.Clear();
-                    traversedRows[row] = row;
-                    parent = row.GetParentRow(this._relation, global::System.Data.DataRowVersion.Original);
-                    for (
-                    ; ((parent != null) 
-                                && (traversedRows.ContainsKey(parent) == false)); 
-                    ) {
-                        distance = (distance + 1);
-                        root = parent;
-                        traversedRows[parent] = parent;
-                        parent = parent.GetParentRow(this._relation, global::System.Data.DataRowVersion.Original);
-                    }
-                }
-
-                return root;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "18.0.0.0")]
-            public int Compare(global::System.Data.DataRow row1, global::System.Data.DataRow row2) {
-                if (object.ReferenceEquals(row1, row2)) {
-                    return 0;
-                }
-                if ((row1 == null)) {
-                    return -1;
-                }
-                if ((row2 == null)) {
-                    return 1;
-                }
-
-                int distance1 = 0;
-                global::System.Data.DataRow root1 = this.GetRoot(row1, out distance1);
-
-                int distance2 = 0;
-                global::System.Data.DataRow root2 = this.GetRoot(row2, out distance2);
-
-                if (object.ReferenceEquals(root1, root2)) {
-                    return (this._childFirst * distance1.CompareTo(distance2));
-                }
-                else {
-                    global::System.Diagnostics.Debug.Assert(((root1.Table != null) 
-                                    && (root2.Table != null)));
-                    if ((root1.Table.Rows.IndexOf(root1) < root2.Table.Rows.IndexOf(root2))) {
-                        return -1;
-                    }
-                    else {
-                        return 1;
-                    }
                 }
             }
         }

@@ -1,6 +1,4 @@
 ﻿using grupo01ProyectoFinal.Clases;
-using grupo01ProyectoFinal.DataSet_Reportes;
-using grupo01ProyectoFinal.DataSet_Reportes.DataSetReporteCandidatoTableAdapters;
 using Microsoft.Reporting.WinForms;
 using System;
 using System.Collections.Generic;
@@ -25,23 +23,22 @@ namespace grupo01ProyectoFinal.Forms
 
         private void frmShowReporteCandidato_Load(object sender, EventArgs e)
         {
-
+            DataTable dtConsulta = new DataTable();
             string nombrePartido = DevuelveNombrePartidoPolitico(CodigoPartido);
             string nombreCandidato = DevuelveNombreCandidatoPolitico(CodigoPartido);
-
-            sp_Reporte_Resultados_Presidente_x_PartidoTableAdapter1.Fill(dataSetReporteCandidato1.sp_Reporte_Resultados_Presidente_x_Partido, CodigoPartido);
+            dtConsulta = DevuelveInfoReportePresidente_x_Partido(CodigoPartido);
             reportViewer1.LocalReport.DataSources.Clear();
+
             reportViewer1.LocalReport.DataSources.Add(
-                new ReportDataSource("DS_REPORTE_CANDIDATO", (DataTable)dataSetReporteCandidato1.sp_Reporte_Resultados_Presidente_x_Partido)
+                new ReportDataSource("DS_PresidentePartido", dtConsulta)
             );
 
             reportViewer1.LocalReport.SetParameters(new ReportParameter[]
             {
-                    new ReportParameter("CodPartido", CodigoPartido),
-                    new ReportParameter("NombrePartido", nombrePartido),
-                    new ReportParameter("NombreCandidato", nombreCandidato)
+                new ReportParameter("CodPartido", CodigoPartido),
+                new ReportParameter("NombrePartido", nombrePartido),
+                new ReportParameter("NombreCandidato", nombreCandidato)
             });
-
             this.reportViewer1.RefreshReport();
         }
 
@@ -96,5 +93,22 @@ namespace grupo01ProyectoFinal.Forms
             return "";
         }
 
+        private DataTable DevuelveInfoReportePresidente_x_Partido(string codigoPartido)
+        {
+            try
+            {
+                DataTable dtConsulta = new DataTable();
+                ReportePartidoPolitico reporte = new ReportePartidoPolitico();
+                reporte.CodigoPartido = codigoPartido;
+                dtConsulta = reporte.ConsultaResultadosPresidente_x_Partido();
+                return dtConsulta;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ha ocurrido un problema al consultar la información para el reporte. [003][" + ex.Message + "]", "Alerta", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return new DataTable();
+        }
     }
 }
