@@ -64,12 +64,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CerrarSesion.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="CerrarSesion.Designer.cs">
-      <DependentUpon>CerrarSesion.cs</DependentUpon>
-    </Compile>
     <Compile Include="Clases\Candidato.cs" />
     <Compile Include="Clases\Canton.cs" />
     <Compile Include="Clases\Diputados_x_Provincia.cs" />
@@ -112,23 +106,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSetResultadosDiputados.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Estadisticas.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Estadisticas.Designer.cs">
-      <DependentUpon>Estadisticas.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\AcercaDe.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\AcercaDe.Designer.cs">
       <DependentUpon>AcercaDe.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\Botones.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Botones.Designer.cs">
-      <DependentUpon>Botones.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\Diputados.cs">
       <SubType>Form</SubType>
@@ -196,12 +178,6 @@
     <Compile Include="Forms\frmShowReportePresidenteProvincia.Designer.cs">
       <DependentUpon>frmShowReportePresidenteProvincia.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Informativa.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\Informativa.Designer.cs">
-      <DependentUpon>Informativa.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\MantenimientoDist.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -244,12 +220,6 @@
     <Compile Include="Forms\ResultadosDiputados.Designer.cs">
       <DependentUpon>ResultadosDiputados.cs</DependentUpon>
     </Compile>
-    <Compile Include="MantenimientoPartidos.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="MantenimientoPartidos.Designer.cs">
-      <DependentUpon>MantenimientoPartidos.cs</DependentUpon>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\RegistroUsuario.cs">
@@ -259,17 +229,8 @@
       <DependentUpon>RegistroUsuario.cs</DependentUpon>
     </Compile>
     <Compile Include="SqlServerTypes\Loader.cs" />
-    <EmbeddedResource Include="CerrarSesion.resx">
-      <DependentUpon>CerrarSesion.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Estadisticas.resx">
-      <DependentUpon>Estadisticas.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Botones.resx">
-      <DependentUpon>Botones.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Diputados.resx">
       <DependentUpon>Diputados.cs</DependentUpon>
@@ -304,9 +265,6 @@
     <EmbeddedResource Include="Forms\frmShowReportePresidenteProvincia.resx">
       <DependentUpon>frmShowReportePresidenteProvincia.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Informativa.resx">
-      <DependentUpon>Informativa.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\MantenimientoDist.resx">
       <DependentUpon>MantenimientoDist.cs</DependentUpon>
     </EmbeddedResource>
@@ -327,9 +285,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\ResultadosDiputados.resx">
       <DependentUpon>ResultadosDiputados.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MantenimientoPartidos.resx">
-      <DependentUpon>MantenimientoPartidos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -412,28 +367,19 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Insumos\Iconos\calc.ico" />
-    <Content Include="Insumos\Iconos\calculate_math_currency.ico" />
-    <Content Include="Insumos\Iconos\check-icon.ico" />
     <Content Include="Insumos\Iconos\cleaner_clean_icon.ico" />
-    <Content Include="Insumos\Iconos\costa_rica_15814.ico" />
     <Content Include="Insumos\Iconos\descargaPDF.ico" />
     <Content Include="Insumos\Iconos\file_icon.ico" />
     <Content Include="Insumos\Iconos\fire_exit_emergency_door_icon.ico" />
-    <Content Include="Insumos\Iconos\folders_icon.ico" />
-    <Content Include="Insumos\Iconos\garbage_trash_bin_delete_icon.ico" />
     <Content Include="Insumos\Iconos\login.ico" />
     <Content Include="Insumos\Iconos\next_arrow.ico" />
     <Content Include="Insumos\Iconos\pen_notebook_write_icon.ico" />
     <Content Include="Insumos\Iconos\plus_green.ico" />
     <Content Include="Insumos\Iconos\pointinghand_icon.ico" />
     <Content Include="Insumos\Iconos\remove_trash.ico" />
-    <Content Include="Insumos\Iconos\restart_icon.ico" />
     <Content Include="Insumos\Iconos\search-icon.ico" />
     <Content Include="Insumos\Iconos\sync-icon.ico" />
-    <Content Include="Insumos\Iconos\technical-support_icon.ico" />
     <Content Include="Insumos\Iconos\voto_emitido.ico" />
-    <Content Include="Insumos\Iconos\wall_clock_icon.ico" />
-    <Content Include="Insumos\Iconos\warning.ico" />
     <Content Include="Insumos\Imágenes\Candidatos\CandidatoPFA.png" />
     <Content Include="Insumos\Imágenes\Candidatos\CandidatoPLN.png" />
     <Content Include="Insumos\Imágenes\Candidatos\CandidatoPLP.png" />
@@ -459,7 +405,6 @@
   <ItemGroup>
     <Folder Include="BaseDatos\Stored Procedures\" />
     <Folder Include="BaseDatos\Tables\" />
-    <Folder Include="Insumos\Imágenes\BanderasPartidos\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="mylibreria2026\mylibreria2026.csproj">
