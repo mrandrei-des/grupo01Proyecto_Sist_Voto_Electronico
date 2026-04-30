@@ -221,6 +221,7 @@ namespace grupo01ProyectoFinal
 
                     if (objUsuario.ActualizarEstadoVotoDiputado())
                     {
+                        timTiempoVotacion.Stop();
                         MessageBox.Show("Voto guardado exitosamente.", "Voto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                         frmPrincipal principal = new frmPrincipal();

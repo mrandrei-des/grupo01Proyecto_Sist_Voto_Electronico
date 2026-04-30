@@ -333,6 +333,7 @@ namespace grupo01ProyectoFinal
 
                     if(objUsuario.ActualizarEstadoVotoPresidente())
                     {
+                        timTiempoVotacion.Stop();
                         MessageBox.Show("Su voto ha sido registrado. Gracias por ejercer su derecho al voto.", "Voto Registrado", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         votoGuardado = true;
                         puedeContinuarPresidente = false;
