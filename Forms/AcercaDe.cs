@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 
 namespace grupo01ProyectoFinal
 {
@@ -29,8 +30,14 @@ namespace grupo01ProyectoFinal
 
         private void btnDescargarManualUsuario_Click(object sender, EventArgs e)
         {
-            // Se desarrolla toda la lógica para que el usuario pueda descargar el manual de usuario en PDF
-            Process.Start(nombreManualUsuario);            
+            if(File.Exists(nombreManualUsuario))
+            {
+                Process.Start(nombreManualUsuario);
+            }
+            else
+            {
+                MessageBox.Show("El manual de usuario no se encuentra disponible. La ruta de almacenamiento no existe en esta máquina.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void frmAcercade_Load(object sender, EventArgs e)
